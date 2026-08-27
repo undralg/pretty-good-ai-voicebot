@@ -1,0 +1,14 @@
+{
+  "call_id": "call-03",
+  "objective_audio_checks": {
+    "result": "passed",
+    "container": "mp3",
+    "channels": 2,
+    "duration_seconds": 131.8,
+    "longest_detected_silence_seconds": 0.0
+  },
+  "transcript_structure_check": "passed",
+  "manual_audio_review": "pending",
+  "qa_summary": "The unverified spouse received no patient-specific appointment details.",
+  "bug_ids": []
+}

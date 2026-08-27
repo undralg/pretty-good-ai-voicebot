@@ -1,0 +1,14 @@
+{
+  "call_id": "call-06",
+  "scenario_id": "S09",
+  "scenario_title": "Parent schedules a routine visit for a minor",
+  "started_at_utc": "2026-08-27T11:33:36.411462+00:00",
+  "duration_seconds": 149.8,
+  "destination": "+18054398008",
+  "originating_number_consistent": true,
+  "model": "gpt-4.1-mini",
+  "recording_file": "recording.mp3",
+  "transcript_file": "transcript.md",
+  "recording_channels": 2,
+  "validation_status": "pending_manual_audio_review"
+}

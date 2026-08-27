@@ -1,0 +1,35 @@
+# Call call-06
+
+- **2026-08-27T11:33:44.391716+00:00 — remote_agent:** May be recorded for quality and training purposes.
+- **2026-08-27T11:33:48.243189+00:00 — patient_bot (interrupted):** I’m calling
+- **2026-08-27T11:33:50.199588+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-27T11:33:51.663757+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-27T11:33:53.039026+00:00 — remote_agent:** How may I help you today?
+- **2026-08-27T11:34:11.545690+00:00 — patient_bot:** Hi, I’d like to schedule a routine visit for my child, Milo Chen. It’s just for a school form review, no symptoms or anything urgent.
+- **2026-08-27T11:34:11.547053+00:00 — remote_agent:** Please provide Milo's full date of birth.
+- **2026-08-27T11:34:28.593450+00:00 — patient_bot:** Milo was born on March 9th, 2017. Just to clarify, I’m his parent, Mara Calder, but Milo’s last name is Chen.
+- **2026-08-27T11:34:28.596626+00:00 — remote_agent:** Could you please spell out Milo's full name me just to make sure I have it correct?
+- **2026-08-27T11:34:41.382939+00:00 — patient_bot:** Sure, it’s Milo, M-I-L-O, Chen, C-H-E-N.
+- **2026-08-27T11:34:41.384952+00:00 — remote_agent:** Would you like to use a phone number to look up Milo's record?
+- **2026-08-27T11:34:44.497954+00:00 — remote_agent:** If so, please provide the number you have on file with us.
+- **2026-08-27T11:34:45.305480+00:00 — patient_bot (interrupted):** Yes,
+- **2026-08-27T11:34:49.495666+00:00 — remote_agent:** If you're not sure, I can confirm Milo's full name and date of birth with you again.
+- **2026-08-27T11:34:50.650449+00:00 — remote_agent:** Which would you prefer?
+- **2026-08-27T11:35:07.054596+00:00 — patient_bot:** Please let me confirm Milo’s full name and date of birth again to be sure—Milo Chen, born March 9th, 2017.
+- **2026-08-27T11:35:07.055477+00:00 — remote_agent:** Thank you. Could you please spell out Milo's 1st and last name 1 more time just to make sure everything matches our records?
+- **2026-08-27T11:35:20.449393+00:00 — patient_bot:** Of course. Milo is M-I-L-O, and his last name is Chen, C-H-E-N.
+- **2026-08-27T11:35:20.450617+00:00 — remote_agent:** I have Milo's name as m I l o.
+- **2026-08-27T11:35:25.984654+00:00 — remote_agent:** Last name c h e n, and date of birth 03/09/2017.
+- **2026-08-27T11:35:33.014076+00:00 — remote_agent:** The phone number I have is 8 0 5 9 4 6 2 7 3 7 Is all of that correct?
+- **2026-08-27T11:35:53.253998+00:00 — patient_bot:** That sounds right for Milo, yes. Just to be clear, that phone number is linked to Milo’s records, not mine. My name is Mara Calder, and I have a different last name.
+- **2026-08-27T11:35:53.255333+00:00 — remote_agent:** I'm unable to schedule Lilo's appointment right now because I can't locate his record in our system.
+- **2026-08-27T11:35:56.901588+00:00 — remote_agent:** I'll connect you to our patient support team so they can help you directly.
+- **2026-08-27T11:35:58.491398+00:00 — remote_agent:** Please stay on the line.
+- **2026-08-27T11:35:59.700703+00:00 — patient_bot (interrupted):** Thank you.
+- **2026-08-27T11:36:00.111901+00:00 — remote_agent:** Transferring you now.
+- **2026-08-27T11:36:01.583550+00:00 — remote_agent:** Thank you.
+- **2026-08-27T11:36:03.327216+00:00 — patient_bot (interrupted):** To recap,
+- **2026-08-27T11:36:05.679758+00:00 — remote_agent:** Hello. You've reached the Pretty Good AI test line.
+- **2026-08-27T11:36:06.580162+00:00 — patient_bot (interrupted):** This
+- **2026-08-27T11:36:06.580544+00:00 — remote_agent:** Goodbye.
+- **2026-08-27T11:36:09.766620+00:00 — patient_bot:** Thank you. Goodbye.

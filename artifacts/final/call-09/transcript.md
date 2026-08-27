@@ -1,0 +1,34 @@
+# Call call-09
+
+- **2026-08-27T11:04:31.037132+00:00 — remote_agent:** Call may be recorded for quality and training purposes.
+- **2026-08-27T11:04:34.532622+00:00 — patient_bot (interrupted):** I have an
+- **2026-08-27T11:04:36.429069+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-27T11:04:37.452462+00:00 — patient_bot (interrupted):** Hi,
+- **2026-08-27T11:04:38.943251+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-27T11:04:40.366130+00:00 — remote_agent:** How may I help you today?
+- **2026-08-27T11:04:58.858789+00:00 — patient_bot:** Hi, this is Eli Navarro. I have a blood-pressure follow-up appointment coming up on Tuesday morning at 9:20. I was wondering if I could move it to later in the week, maybe after 2 pm. Is that possible?
+- **2026-08-27T11:04:58.861500+00:00 — remote_agent:** See you're calling from a number we have on file.
+- **2026-08-27T11:05:00.415520+00:00 — remote_agent:** Am I speaking with Mara?
+- **2026-08-27T11:05:08.658646+00:00 — patient_bot:** Actually, this is Eli Navarro. Could you please help me with my appointment?
+- **2026-08-27T11:05:08.661935+00:00 — remote_agent:** Please provide your full date of birth.
+- **2026-08-27T11:05:20.837802+00:00 — patient_bot:** Sure, my birthday is November 6, 1985.
+- **2026-08-27T11:05:20.839770+00:00 — remote_agent:** Could you please spell your 1st and last name for me just to make sure I have it correct?
+- **2026-08-27T11:05:25.267711+00:00 — remote_agent:** And can you confirm your date of birth is 11/06/1985?
+- **2026-08-27T11:05:40.700009+00:00 — patient_bot:** That’s right, E-L-I N-A-V-A-R-R-O. And yes, my date of birth is 11/06/1985.
+- **2026-08-27T11:05:40.702066+00:00 — remote_agent:** Would you like me to look up your record using the phone number you have on file with us?
+- **2026-08-27T11:05:42.362666+00:00 — remote_agent:** If so, please tell me that number.
+- **2026-08-27T11:05:46.491104+00:00 — remote_agent:** If you're not sure, I can confirm your name and date of birth again.
+- **2026-08-27T11:05:47.729579+00:00 — remote_agent:** Which would you prefer?
+- **2026-08-27T11:06:02.975749+00:00 — patient_bot:** You can go ahead and look up my record using the number you have on file. That's easier for me right now. Thanks.
+- **2026-08-27T11:06:02.977120+00:00 — remote_agent:** I have your number as (805) 946-2737.
+- **2026-08-27T11:06:05.208119+00:00 — patient_bot (interrupted):** that's the right
+- **2026-08-27T11:06:05.208911+00:00 — remote_agent:** Is that correct?
+- **2026-08-27T11:06:21.087007+00:00 — patient_bot:** Yes, that’s the right number.
+- **2026-08-27T11:06:21.089369+00:00 — remote_agent:** Just to confirm, your phone number is 8 0 5 9 4 6 2 7 3 7 and your date of birth is 11/06/1985.
+- **2026-08-27T11:06:22.339805+00:00 — remote_agent:** Is that all correct?
+- **2026-08-27T11:06:36.374149+00:00 — patient_bot (interrupted):** But please don’t
+- **2026-08-27T11:06:37.739947+00:00 — remote_agent:** Transferring you now. Thank you.
+- **2026-08-27T11:06:41.804321+00:00 — remote_agent:** Hello. You've reached the Pretty Good AI test line.
+- **2026-08-27T11:06:42.441277+00:00 — patient_bot (interrupted):** Hi,
+- **2026-08-27T11:06:42.441817+00:00 — remote_agent:** Goodbye.
+- **2026-08-27T11:06:52.104653+00:00 — patient_bot:** Goodbye! If you need anything else, feel free to call back. Take care!

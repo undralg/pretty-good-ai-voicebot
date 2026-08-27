@@ -1,0 +1,47 @@
+# Call call-10
+
+- **2026-08-27T11:45:11.764071+00:00 — remote_agent:** Call may be recorded for quality and training purposes.
+- **2026-08-27T11:45:15.438350+00:00 — patient_bot (interrupted):** I’m calling
+- **2026-08-27T11:45:17.715613+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-27T11:45:19.176114+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-27T11:45:20.438656+00:00 — patient_bot (interrupted):** Hello,
+- **2026-08-27T11:45:20.707165+00:00 — remote_agent:** How may I help you today?
+- **2026-08-27T11:45:30.152852+00:00 — patient_bot:** Hi, I’d like to schedule a routine follow-up appointment, please.
+- **2026-08-27T11:45:30.155070+00:00 — remote_agent:** I see you're calling from the number we have on file.
+- **2026-08-27T11:45:31.722071+00:00 — remote_agent:** Am I speaking with Mara?
+- **2026-08-27T11:45:37.827438+00:00 — patient_bot:** Yes, this is Mara Calder.
+- **2026-08-27T11:45:37.827863+00:00 — remote_agent:** Please provide your date of birth.
+- **2026-08-27T11:45:49.753109+00:00 — patient_bot:** My date of birth is July 4th, 2000.
+- **2026-08-27T11:45:49.755417+00:00 — remote_agent:** You mentioned wanting a routine follow-up appointment.
+- **2026-08-27T11:45:54.706495+00:00 — remote_agent:** Just to confirm, is this visit to check-in after a previous appointment or treatment?
+- **2026-08-27T11:46:06.872223+00:00 — patient_bot:** Yes, it’s just a routine follow-up after my last visit. No urgent issues.
+- **2026-08-27T11:46:06.874261+00:00 — remote_agent:** Do you have a specific provider you'd like to see, or are you open to any available provider?
+- **2026-08-27T11:46:15.613585+00:00 — patient_bot:** I’m open to any available provider, thank you.
+- **2026-08-27T11:46:15.615066+00:00 — remote_agent:** Let me check for the next available follow-up consultation appointments.
+- **2026-08-27T11:46:16.472495+00:00 — remote_agent:** 1 moment.
+- **2026-08-27T11:46:19.830645+00:00 — patient_bot:** Sure, take your time.
+- **2026-08-27T11:46:19.831205+00:00 — remote_agent:** You are
+- **2026-08-27T11:46:24.202389+00:00 — remote_agent:** you already have a follow-up appointment scheduled for Friday.
+- **2026-08-27T11:46:27.965275+00:00 — remote_agent:** August 28 at 4PM, Would you like to keep this appointment?
+- **2026-08-27T11:46:28.975000+00:00 — patient_bot (interrupted):** Actually,
+- **2026-08-27T11:46:30.165528+00:00 — remote_agent:** Reschedule it, or cancel it?
+- **2026-08-27T11:46:38.271279+00:00 — patient_bot:** I’d like to reschedule it, please.
+- **2026-08-27T11:46:38.273058+00:00 — remote_agent:** You have a follow-up appointment?
+- **2026-08-27T11:46:43.035688+00:00 — remote_agent:** Scheduled for Friday, August 28 at 4PM with Dew Dehauser at Nashville.
+- **2026-08-27T11:46:44.237868+00:00 — patient_bot (interrupted):** Yes,
+- **2026-08-27T11:46:44.872823+00:00 — remote_agent:** 2 2 0 Athens Way.
+- **2026-08-27T11:47:02.104246+00:00 — patient_bot:** Yes, that's the right location. But, actually, I prefer to reschedule to sometime Thursday, after 1:00 p.m., rather than Friday.
+- **2026-08-27T11:47:02.105470+00:00 — remote_agent:** The next available Thursday afternoon slot is September 3 at 1PM with Judy Hauser in Nashville.
+- **2026-08-27T11:47:04.510624+00:00 — remote_agent:** Would you like to reschedule to that time?
+- **2026-08-27T11:47:06.574785+00:00 — remote_agent:** Or would you prefer a later slot that day?
+- **2026-08-27T11:47:18.570625+00:00 — patient_bot:** Thursday, after 1:00 p.m., is perfect. The 3rd at 1 p.m. works for me.
+- **2026-08-27T11:47:18.572104+00:00 — remote_agent:** Can you tell me the reason you need to reschedule your appointment?
+- **2026-08-27T11:47:32.460937+00:00 — patient_bot:** It’s just a routine follow-up, no urgent symptoms. I just want to come in when it’s convenient.
+- **2026-08-27T11:47:32.463032+00:00 — remote_agent:** To confirm, you'd like to move your appointment to Thursday, September 3 at 1PM with Judy Hauser in Nashville.
+- **2026-08-27T11:47:33.807496+00:00 — remote_agent:** Is that correct?
+- **2026-08-27T11:47:37.946778+00:00 — remote_agent:** Please remember to bring a photo ID and your insurance card to your visit.
+- **2026-08-27T11:47:53.221789+00:00 — patient_bot:** Actually, I mean Thursday after 1:00 p.m., but not on the 3rd. It can be any Thursday after 1:00 p.m. The 3rd was incorrect. Could you please check other Thursdays?
+- **2026-08-27T11:47:53.222758+00:00 — remote_agent:** The next available after September 10 is September 17.
+- **2026-08-27T11:47:53.775265+00:00 — patient_bot (interrupted):** Thank
+- **2026-08-27T11:47:55.909891+00:00 — remote_agent:** Would you like to hear the
+- **2026-08-27T11:47:58.637281+00:00 — patient_bot:** Thank you. I'll stop here for now. Goodbye.

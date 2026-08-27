@@ -1,0 +1,31 @@
+# Call call-05
+
+- **2026-08-27T10:57:57.066807+00:00 — remote_agent:** May be recorded for quality and training purposes.
+- **2026-08-27T10:58:06.386650+00:00 — patient_bot:** Hello, this is Mara Calder. I'd like to schedule a new-patient appointment, please.
+- **2026-08-27T10:58:06.387667+00:00 — remote_agent:** Hi, Mara.
+- **2026-08-27T10:58:11.472254+00:00 — remote_agent:** Would you like to create a demo patient profile so I can help you schedule your appointment?
+- **2026-08-27T10:58:14.182261+00:00 — remote_agent:** I just need your 1st and last name to get started.
+- **2026-08-27T10:58:28.163451+00:00 — patient_bot:** Sure, my name is Mara Calder.
+- **2026-08-27T10:58:28.164642+00:00 — remote_agent:** Your patient profile is set up, and your date of birth is 07/04/2000 for demo purposes. How can I help you today?
+- **2026-08-27T10:58:45.056842+00:00 — patient_bot:** Thank you. I'd like to book a routine new-patient appointment to establish primary care and discuss recurring seasonal allergies.
+- **2026-08-27T10:58:45.058669+00:00 — remote_agent:** You mentioned wanting a routine new patient appointment to establish care and discuss your seasonal allergies.
+- **2026-08-27T10:58:46.986671+00:00 — remote_agent:** Just to confirm, is this correct?
+- **2026-08-27T10:58:56.234435+00:00 — patient_bot:** Yes, that's correct.
+- **2026-08-27T10:58:56.235925+00:00 — remote_agent:** Do you have a specific provider you'd like to see, or are you open to the 1st available?
+- **2026-08-27T10:59:05.413863+00:00 — patient_bot:** I'm open to the first available provider.
+- **2026-08-27T10:59:05.414883+00:00 — remote_agent:** We have openings this week and early next week.
+- **2026-08-27T10:59:09.784457+00:00 — remote_agent:** Are you looking for a morning or late morning appointment, or do you have a specific day in mind?
+- **2026-08-27T10:59:23.188205+00:00 — patient_bot:** I'm looking for a weekday morning appointment between 9:00 and 11:30 a.m. within the next two weeks.
+- **2026-08-27T10:59:23.190271+00:00 — remote_agent:** There is a morning slot available this Friday, August 28.
+- **2026-08-27T10:59:24.715168+00:00 — remote_agent:** At 09:45AM with provider Abricor.
+- **2026-08-27T10:59:26.355718+00:00 — remote_agent:** Would you like to book that appointment?
+- **2026-08-27T10:59:45.009031+00:00 — patient_bot:** Yes, please book the appointment for Friday, August 28 at 9:45 a.m. with provider Abricor.
+- **2026-08-27T10:59:45.010196+00:00 — remote_agent:** Your appointment is confirmed for Friday, August 28 at 09:45AM with doctor Bricker at Pivot Point Orthopedics.
+- **2026-08-27T10:59:51.959729+00:00 — remote_agent:** Please bring your photo ID, insurance card, a list of current medications, and any imaging discs you have.
+- **2026-08-27T10:59:54.787374+00:00 — remote_agent:** Would you like a text message with your appointment details?
+- **2026-08-27T11:00:04.761179+00:00 — patient_bot:** Yes, please send me a text message with the appointment details.
+- **2026-08-27T11:00:04.762578+00:00 — remote_agent:** You'll get a text with your appointment details soon.
+- **2026-08-27T11:00:06.950689+00:00 — remote_agent:** Is there anything else I can help you with today?
+- **2026-08-27T11:00:14.609653+00:00 — patient_bot:** No, that's all for now. Thank you for your help.
+- **2026-08-27T11:00:14.610539+00:00 — remote_agent:** You're all set. Have a great day.
+- **2026-08-27T11:00:19.084177+00:00 — patient_bot:** Thank you. You have a good day too. Goodbye.

@@ -1,0 +1,21 @@
+# Call call-07
+
+- **2026-08-27T11:38:01.833204+00:00 — remote_agent:** Recorded for quality and training purposes.
+- **2026-08-27T11:38:05.454223+00:00 — patient_bot (interrupted):** I’m looking
+- **2026-08-27T11:38:07.280556+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-27T11:38:08.319900+00:00 — patient_bot (interrupted):** Hello,
+- **2026-08-27T11:38:10.711367+00:00 — remote_agent:** Part of Pretty Good AI. How may I help you today?
+- **2026-08-27T11:38:25.706139+00:00 — patient_bot:** Hi, this is Mara Calder. I’m trying to find an office location with step-free access that doesn’t require using an elevator. Could you help me identify one for a weekday morning visit?
+- **2026-08-27T11:38:25.707430+00:00 — remote_agent:** Please provide your date of birth.
+- **2026-08-27T11:38:44.600467+00:00 — patient_bot:** I’m asking about office locations and accessibility right now, not making an appointment yet, so I don’t think I need to share that just yet. Could you tell me which locations have step-free and elevator-free access?
+- **2026-08-27T11:38:44.602603+00:00 — remote_agent:** Pivot Point Orthopedics has 1 main location at 1234 Recovery Way.
+- **2026-08-27T11:38:51.904576+00:00 — remote_agent:** Suite 200, Austin, This office is on the 2nd Floor and requires using an elevator to reach Suite 200.
+- **2026-08-27T11:38:56.057558+00:00 — remote_agent:** Step free access is available from the parking lot to the building entrance.
+- **2026-08-27T11:39:01.020893+00:00 — remote_agent:** But you will need to use the elevator for the clinic itself.
+- **2026-08-27T11:39:07.098133+00:00 — remote_agent:** If you need a location without elevator use, I recommend letting our team know so we can discuss possible accommodations or alternatives.
+- **2026-08-27T11:39:12.638854+00:00 — remote_agent:** You like me to have someone from the clinic support team follow-up with you about accessibility options?
+- **2026-08-27T11:39:35.720012+00:00 — patient_bot:** Thank you for explaining the elevator situation. Since I prefer not to use an elevator at all, yes, I’d appreciate a follow-up from the clinic support team about possible accommodations or alternative options. How would they typically get in touch with me?
+- **2026-08-27T11:39:35.722602+00:00 — remote_agent:** Our clinic support team can call you back to discuss accessibility options and possible alternatives.
+- **2026-08-27T11:39:39.896803+00:00 — remote_agent:** I'll connect you to our patient support team now so they can help you directly.
+- **2026-08-27T11:39:41.276234+00:00 — remote_agent:** Please stay on the line.
+- **2026-08-27T11:39:42.490096+00:00 — patient_bot:** Thank you. Goodbye.

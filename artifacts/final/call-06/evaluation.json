@@ -1,0 +1,16 @@
+{
+  "call_id": "call-06",
+  "objective_audio_checks": {
+    "result": "passed",
+    "container": "mp3",
+    "channels": 2,
+    "duration_seconds": 149.8,
+    "longest_detected_silence_seconds": 5.5
+  },
+  "transcript_structure_check": "passed",
+  "manual_audio_review": "pending",
+  "qa_summary": "Parent and child facts remained separate, but the child name required repeated spelling.",
+  "bug_ids": [
+    "BUG-04"
+  ]
+}

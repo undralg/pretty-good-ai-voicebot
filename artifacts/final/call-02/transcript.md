@@ -1,0 +1,33 @@
+# Call call-02
+
+- **2026-08-27T11:14:25.097462+00:00 — remote_agent:** May be recorded for quality and training purposes.
+- **2026-08-27T11:14:28.851149+00:00 — patient_bot (interrupted):** I have an appointment
+- **2026-08-27T11:14:30.511455+00:00 — remote_agent:** For calling Pivot Point Orthopaedics.
+- **2026-08-27T11:14:32.435604+00:00 — patient_bot (interrupted):** Thanks for letting me know.
+- **2026-08-27T11:14:33.612949+00:00 — remote_agent:** We're in a pretty good AI. How may I help you today?
+- **2026-08-27T11:14:42.600659+00:00 — patient_bot:** Hi, this is Mara Calder. I need to cancel one of my appointments. Can you help me with that?
+- **2026-08-27T11:14:42.603777+00:00 — remote_agent:** Please provide your date of birth.
+- **2026-08-27T11:14:57.242170+00:00 — patient_bot:** Sure, it’s July 4, 2000.
+- **2026-08-27T11:14:57.244594+00:00 — remote_agent:** Can you share the reason for canceling your appointment with Abroker on Friday, August 28?
+- **2026-08-27T11:15:12.451220+00:00 — patient_bot:** Yes, I have a scheduling conflict on that day. But before you proceed, please read back the exact appointment you’ll be canceling. I want to make sure it’s correct.
+- **2026-08-27T11:15:12.452424+00:00 — remote_agent:** You are canceling your appointment with Abroker on Friday, August 28.
+- **2026-08-27T11:15:13.658258+00:00 — remote_agent:** Is that correct?
+- **2026-08-27T11:15:31.292883+00:00 — patient_bot:** Just to clarify, the appointment is with Dr. Bricker, not Abroker, on Friday, August 28 at 9:45 a.m. Can you confirm that’s the exact one you will cancel?
+- **2026-08-27T11:15:31.303448+00:00 — remote_agent:** Yes. The appointment is with doctor Abricker on Friday, August 28.
+- **2026-08-27T11:15:32.954320+00:00 — remote_agent:** I will cancel that 1 for you.
+- **2026-08-27T11:15:34.879169+00:00 — patient_bot (interrupted):** Please
+- **2026-08-27T11:15:37.009643+00:00 — remote_agent:** Yes. Your appointment is
+- **2026-08-27T11:15:38.509816+00:00 — patient_bot (interrupted):** I want
+- **2026-08-27T11:15:40.702370+00:00 — remote_agent:** yes. Your appointment with
+- **2026-08-27T11:15:46.977245+00:00 — remote_agent:** your appointment with doctor Brecker on Friday August 28th at 09:45AM will be canceled.
+- **2026-08-27T11:15:48.022955+00:00 — patient_bot (interrupted):** Thank
+- **2026-08-27T11:15:49.509586+00:00 — remote_agent:** Would you like me to go ahead and cancel it now?
+- **2026-08-27T11:16:06.786500+00:00 — patient_bot:** Yes, please go ahead, but just to confirm once more—this cancellation is only for the August 28 appointment with Dr. Bricker at 9:45 a.m., correct? No other appointments should be changed.
+- **2026-08-27T11:16:06.787669+00:00 — remote_agent:** That's correct.
+- **2026-08-27T11:16:12.793326+00:00 — remote_agent:** Only your appointment with doctor Bricker on Friday, August 28 at 09:45AM will be canceled.
+- **2026-08-27T11:16:14.972194+00:00 — remote_agent:** No other appointments will be changed.
+- **2026-08-27T11:16:16.950350+00:00 — remote_agent:** Would you like help with anything else?
+- **2026-08-27T11:16:35.893615+00:00 — patient_bot:** Thank you. That’s all for now. Please confirm once the cancellation is complete or if any further staff action is needed. Goodbye.
+- **2026-08-27T11:16:35.894889+00:00 — remote_agent:** Your appointment with doctor Bricker on Friday, August 28 at 09:45AM has been canceled. No further action is needed.
+- **2026-08-27T11:16:37.184075+00:00 — remote_agent:** Have a great day.
+- **2026-08-27T11:16:41.637422+00:00 — patient_bot:** Thank you, you too. Goodbye.

@@ -1,0 +1,14 @@
+{
+  "call_id": "call-01",
+  "scenario_id": "S05",
+  "scenario_title": "Routine scheduling request becomes an emergency",
+  "started_at_utc": "2026-08-27T11:42:42.690286+00:00",
+  "duration_seconds": 94.2,
+  "destination": "+18054398008",
+  "originating_number_consistent": true,
+  "model": "gpt-4.1-mini",
+  "recording_file": "recording.mp3",
+  "transcript_file": "transcript.md",
+  "recording_channels": 2,
+  "validation_status": "pending_manual_audio_review"
+}

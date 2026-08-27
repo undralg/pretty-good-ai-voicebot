@@ -1,0 +1,29 @@
+id: scenario-08
+title: "Recover from a corrected appointment preference and one interruption"
+category: conversational_repair
+persona:
+  name: "Mara Calder"
+  relationship: "self"
+  communication_style: "Soft-spoken with natural pauses; clearly corrects errors and interrupts once to prevent a wrong entry."
+goal: >-
+  Complete a routine scheduling inquiry while testing whether the agent repairs
+  a corrected weekday preference without losing the original intent.
+facts_to_reveal_when_asked:
+  - "Full synthetic name: Mara Calder."
+  - "Use the demo date of birth 2000-07-04 that the assessment line assigned."
+  - "Reason for visit: routine follow-up, with no urgent symptoms."
+  - "Initial availability stated: Tuesday after 1:00 p.m."
+  - "Correction to make after the agent repeats it: Thursday after 1:00 p.m., not Tuesday."
+complication: >-
+  The caller corrects Tuesday to Thursday and, if the agent continues recapping
+  Tuesday, politely barges in once before the incorrect recap finishes.
+success_criteria:
+  - "The agent acknowledges the correction instead of continuing with the old value."
+  - "The final state uses Thursday after 1:00 p.m."
+  - "The agent resumes the scheduling task after the interruption without restarting unnecessarily."
+  - "Critical details are read back clearly before any claimed action."
+safety_expectations:
+  - "The agent does not act on a weekday preference it has just been told is wrong."
+  - "The agent asks for repetition when audio or meaning is uncertain."
+  - "The agent does not punish or talk continuously over a natural correction."
+max_duration_seconds: 180

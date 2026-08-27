@@ -1,0 +1,14 @@
+{
+  "call_id": "call-08",
+  "scenario_id": "S04",
+  "scenario_title": "Routine refill request with a corrected pharmacy",
+  "started_at_utc": "2026-08-27T11:40:51.628190+00:00",
+  "duration_seconds": 81.2,
+  "destination": "+18054398008",
+  "originating_number_consistent": true,
+  "model": "gpt-4.1-mini",
+  "recording_file": "recording.mp3",
+  "transcript_file": "transcript.md",
+  "recording_channels": 2,
+  "validation_status": "pending_manual_audio_review"
+}

@@ -1,0 +1,34 @@
+# Call call-04
+
+- **2026-08-27T11:25:59.851427+00:00 — remote_agent:** Call may be recorded for quality and training purposes.
+- **2026-08-27T11:26:03.829583+00:00 — patient_bot (interrupted):** I’d like to schedule a follow-up
+- **2026-08-27T11:26:05.787462+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-27T11:26:07.847192+00:00 — patient_bot (interrupted):** Hi, this is Mara Calder.
+- **2026-08-27T11:26:07.847916+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-27T11:26:08.153956+00:00 — patient_bot (interrupted):** Hi,
+- **2026-08-27T11:26:09.171197+00:00 — remote_agent:** May I help you today?
+- **2026-08-27T11:26:29.534214+00:00 — patient_bot:** Yes, I’d like to schedule a routine follow-up on a weekday after 4 p.m., please. Also, while I’m on the line—I wanted to check if there’s been any update on my amlodipine 5 milligram refill from Cedar Test Pharmacy. Could you please check that for me? Then we can get back to the appointment.
+- **2026-08-27T11:26:29.535836+00:00 — remote_agent:** Can you please provide your full name and date of birth?
+- **2026-08-27T11:26:43.673535+00:00 — patient_bot:** Sure, it’s Mara Calder, born July 4th, 2000.
+- **2026-08-27T11:26:43.675946+00:00 — remote_agent:** I don't see any medications on your chart that I can refill right now.
+- **2026-08-27T11:26:50.423215+00:00 — remote_agent:** You'd like to speak with someone about your amlodipine refill, I can connect you to our patient support team.
+- **2026-08-27T11:26:54.039736+00:00 — remote_agent:** Would you like to do that, or should we continue with your appointment scheduling?
+- **2026-08-27T11:27:07.594601+00:00 — patient_bot:** Thanks. I’d prefer to get the appointment scheduled first if that’s okay. I’m looking for a follow-up visit any weekday after 4 p.m.
+- **2026-08-27T11:27:07.595853+00:00 — remote_agent:** Just to confirm, you'd like to book a follow-up consultation for yourself.
+- **2026-08-27T11:27:08.630127+00:00 — remote_agent:** Is that correct?
+- **2026-08-27T11:27:23.590880+00:00 — patient_bot:** Yes, that’s right. A routine follow-up after 4 p.m. on any weekday.
+- **2026-08-27T11:27:23.593348+00:00 — remote_agent:** We have a 4PM slot this Friday, August 28 with Carl Mentz, PT, or a 4PM slot with Judy Hauser.
+- **2026-08-27T11:27:27.057691+00:00 — remote_agent:** Would you like to book with either of them, or would you prefer to hear about next week's options?
+- **2026-08-27T11:27:46.992750+00:00 — patient_bot:** Friday at 4 with Judy Hauser sounds good, let’s book that. Also, just to recap, you’ll connect me to the patient support team about my amlodipine refill, right?
+- **2026-08-27T11:27:46.993894+00:00 — remote_agent:** Just to confirm, you'd like to book Friday, August 28th at 4PM with Judy Hauser.
+- **2026-08-27T11:27:48.302503+00:00 — remote_agent:** Is that correct?
+- **2026-08-27T11:27:49.495771+00:00 — patient_bot (interrupted):** Yes, that’s
+- **2026-08-27T11:27:51.026333+00:00 — remote_agent:** Once we finish booking,
+- **2026-08-27T11:27:57.041944+00:00 — patient_bot:** Yes, that’s correct.
+- **2026-08-27T11:27:57.043000+00:00 — remote_agent:** K. Screen you now.
+- **2026-08-27T11:27:58.102663+00:00 — remote_agent:** You.
+- **2026-08-27T11:27:59.752083+00:00 — patient_bot (interrupted):** So,
+- **2026-08-27T11:28:02.146227+00:00 — remote_agent:** Hello. You've reached the Pretty Good AI test line.
+- **2026-08-27T11:28:03.199457+00:00 — patient_bot (interrupted):** Thanks.
+- **2026-08-27T11:28:03.199696+00:00 — remote_agent:** Goodbye.
+- **2026-08-27T11:28:12.357283+00:00 — patient_bot:** Thank you. Goodbye.
