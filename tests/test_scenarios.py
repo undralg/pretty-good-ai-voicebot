@@ -6,9 +6,9 @@ from pgai_voicebot.scenarios import ScenarioRepository
 def test_scenario_suite_is_complete_and_unique(scenario_root) -> None:
     scenarios = ScenarioRepository(scenario_root).load_all()
 
-    assert len(scenarios) == 15
-    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 16)]
-    assert len({scenario.id for scenario in scenarios}) == 15
+    assert len(scenarios) == 16
+    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 17)]
+    assert len({scenario.id for scenario in scenarios}) == 16
     assert all(60 <= scenario.max_duration_seconds <= 240 for scenario in scenarios)
 
 
@@ -94,5 +94,27 @@ def test_post_reschedule_audit_checks_exact_old_and_new_slots_without_writes(
     assert "august 28, 2026 at 4:00 p.m." in instructions
     assert "september 10, 2026 at 3:00 p.m." in instructions
     assert "read-only" in instructions
+    for forbidden_action in ("booking", "cancellation", "rescheduling", "messaging", "transfer"):
+        assert forbidden_action in instructions
+
+
+def test_hours_discovery_is_information_only_and_produces_exact_boundaries(
+    scenario_root,
+) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S16")
+    instructions = " ".join(
+        (
+            scenario.goal,
+            scenario.complication,
+            *scenario.facts_to_reveal_when_asked,
+            *scenario.success_criteria,
+            *scenario.safety_expectations,
+        )
+    ).lower()
+
+    assert "information-only" in instructions
+    assert "opening and closing" in instructions
+    assert "either weekend day" in instructions
+    assert "bookable appointment" in instructions
     for forbidden_action in ("booking", "cancellation", "rescheduling", "messaging", "transfer"):
         assert forbidden_action in instructions
