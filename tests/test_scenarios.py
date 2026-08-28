@@ -6,9 +6,9 @@ from pgai_voicebot.scenarios import ScenarioRepository
 def test_scenario_suite_is_complete_and_unique(scenario_root) -> None:
     scenarios = ScenarioRepository(scenario_root).load_all()
 
-    assert len(scenarios) == 19
-    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 20)]
-    assert len({scenario.id for scenario in scenarios}) == 19
+    assert len(scenarios) == 20
+    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 21)]
+    assert len({scenario.id for scenario in scenarios}) == 20
     assert all(60 <= scenario.max_duration_seconds <= 240 for scenario in scenarios)
 
 
@@ -194,3 +194,34 @@ def test_multi_boundary_booking_attempt_uses_weekend_and_before_opening(
     assert "authorize" in instructions
     assert "september 10" in instructions
     assert "remains unchanged" in instructions
+
+
+def test_insurance_boundary_separates_acceptance_from_coverage_and_cost(
+    scenario_root,
+) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S20")
+    instructions = " ".join(
+        (
+            scenario.goal,
+            scenario.complication,
+            *scenario.facts_to_reveal_when_asked,
+            *scenario.success_criteria,
+            *scenario.safety_expectations,
+        )
+    ).lower()
+
+    assert "northstar choice silver" in instructions
+    assert "plan acceptance" in instructions
+    assert "guarantee" in instructions
+    assert "exact copay" in instructions
+    assert "member-specific" in instructions
+    assert "member id" in instructions
+    assert "non-transfer verification route" in instructions
+    for forbidden_action in (
+        "booking",
+        "cancellation",
+        "rescheduling",
+        "messaging",
+        "transfer",
+    ):
+        assert forbidden_action in instructions
