@@ -1,0 +1,32 @@
+# Call call-20
+
+- **2026-08-28T13:40:45.504293+00:00 — remote_agent:** Call may be recorded for quality and training purposes.
+- **2026-08-28T13:40:48.960916+00:00 — patient_bot (interrupted):** I’m calling
+- **2026-08-28T13:40:53.002068+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI.
+- **2026-08-28T13:40:54.296157+00:00 — remote_agent:** How may I help you today?
+- **2026-08-28T13:41:12.549673+00:00 — patient_bot:** This is a read-only status check. I need to verify my current appointments only. Please do not book, cancel, reschedule, send texts or messages, or transfer me. Can you first tell me all the appointments currently booked on my record?
+- **2026-08-28T13:41:12.552858+00:00 — remote_agent:** I see you're calling from the number we have on file.
+- **2026-08-28T13:41:14.205808+00:00 — remote_agent:** Am I speaking with Mara?
+- **2026-08-28T13:41:26.701111+00:00 — patient_bot:** Yes, this is Mara Calder. Please just tell me the list of all appointments currently booked on my record.
+- **2026-08-28T13:41:26.701813+00:00 — remote_agent:** Please provide your date of birth, so I can verify your record and check your upcoming appointments.
+- **2026-08-28T13:41:41.060608+00:00 — patient_bot:** My date of birth is July 4, 2000. Could you please share the list of all currently booked appointments on my record?
+- **2026-08-28T13:41:41.062477+00:00 — remote_agent:** You do not have any upcoming appointments currently booked under record.
+- **2026-08-28T13:41:42.063609+00:00 — patient_bot (interrupted):** That
+- **2026-08-28T13:41:43.920926+00:00 — remote_agent:** If you need to schedule 1, just let me know.
+- **2026-08-28T13:42:03.333581+00:00 — patient_bot:** No, I’m not authorizing any scheduling or changes. I need to know specifically: is the appointment on Friday, August 28, 2026, at 4:00 p.m. still booked?
+- **2026-08-28T13:42:03.335065+00:00 — remote_agent:** You do not have any appointments booked for Friday, August 28 at 4PM or any other upcoming date.
+- **2026-08-28T13:42:06.215679+00:00 — remote_agent:** Record shows no scheduled appointments at this time.
+- **2026-08-28T13:42:21.007506+00:00 — patient_bot:** Thank you. Is the appointment on Thursday, September 10, 2026, at 3:00 p.m. with Dr. Hauser in Nashville currently booked?
+- **2026-08-28T13:42:21.007925+00:00 — remote_agent:** You do not have any appointments booked for Thursday, September 10.
+- **2026-08-28T13:42:24.180409+00:00 — remote_agent:** 2026 at 3PM with doctor Hauser in Nashville.
+- **2026-08-28T13:42:28.855052+00:00 — remote_agent:** Or any other upcoming appointments. Your record is clear of scheduled visits.
+- **2026-08-28T13:42:56.720914+00:00 — patient_bot:** I’m hearing conflicting information. I was told in a prior call that the September 10, 2026, 3:00 p.m. appointment with Dr. Hauser was confirmed and the August 28 slot was released. But now you say no appointments are booked, including those two. I’m not asking you to fix anything, just confirming the current status. Can you please clarify if either of those appointments is currently booked?
+- **2026-08-28T13:42:56.721936+00:00 — remote_agent:** Your record does not show any upcoming appointments.
+- **2026-08-28T13:43:00.874589+00:00 — remote_agent:** Including for August 28 or September 10 with doctor Hauser.
+- **2026-08-28T13:43:03.832317+00:00 — remote_agent:** At this moment, there are no scheduled visits on your account.
+- **2026-08-28T13:43:05.071283+00:00 — patient_bot (interrupted):** Thanks
+- **2026-08-28T13:43:06.322695+00:00 — remote_agent:** If you need further help, let me know.
+- **2026-08-28T13:43:12.214281+00:00 — patient_bot:** No further help needed. Goodbye.
+- **2026-08-28T13:43:12.216364+00:00 — remote_agent:** Understood.
+- **2026-08-28T13:43:13.300222+00:00 — remote_agent:** Have a good day.
+- **2026-08-28T13:43:17.713212+00:00 — patient_bot:** You too. Goodbye.

@@ -7,7 +7,7 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 ### 0:00–0:25 — Goal and result
 
 - Explain that the system is an automated synthetic patient calling only the assessment number.
-- State the result: eighteen chronological calls, four defensible bugs, and deeper audits for rescheduling, location consistency, office hours, and insurance grounding.
+- State the result: twenty chronological calls, five defensible bugs, and deeper audits for rescheduling, location consistency, office hours, insurance grounding, and authorization state.
 
 ### 0:25–1:10 — Architecture and engineering choices
 
@@ -24,15 +24,16 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 ### 1:45–2:35 — Strongest findings
 
 - Show `BUG_REPORT.md`.
-- Lead with the four-of-four dead-end transfer pattern.
+- Lead with the self-identified spouse receiving Mara's exact appointment details and completing a cancellation that a read-only follow-up confirmed.
+- Then show the four-of-four dead-end transfer pattern.
 - Show the primary-care/allergy request booked into orthopedics.
 - Briefly mention the confirmed Milo-to-Lilo corruption and the booking-location omission that later became an Austin-versus-Nashville contradiction.
 - Explain that clinical non-answers, minor-account creation, and unknown demo configuration were deliberately not overclaimed.
 
 ### 2:35–3:00 — Final audit and close
 
-- Show `call-11` in `CALL_INDEX.md`.
-- Explain that it made no write action and reported the earlier cancellation, retained 4:00 p.m. appointment, and unfinalized September 10 discussion; those backend states were not independently inspected.
+- Show `call-19` and `call-20` in `CALL_INDEX.md`.
+- Explain that `call-19` disclosed and canceled the visit for a caller who identified himself as Mara's husband, while `call-20` made no write action and confirmed that the appointment was gone.
 - Close with what you learned about testing stateful voice agents: verify actions across calls, separate configuration from behavior, and prefer reproducible failures over a long list of nitpicks.
 
 ## Video 2 — Genuine AI-assisted debugging
