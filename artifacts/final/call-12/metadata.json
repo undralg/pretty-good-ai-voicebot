@@ -1,0 +1,14 @@
+{
+  "call_id": "call-12",
+  "scenario_id": "S12",
+  "scenario_title": "Preserve the original appointment until a replacement is confirmed",
+  "started_at_utc": "2026-08-28T09:49:02.493900+00:00",
+  "duration_seconds": 222.5,
+  "destination": "+18054398008",
+  "originating_number_consistent": true,
+  "model": "gpt-4.1-mini",
+  "recording_file": "recording.mp3",
+  "transcript_file": "transcript.md",
+  "recording_channels": 2,
+  "validation_status": "pending_manual_audio_review"
+}

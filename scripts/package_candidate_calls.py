@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 from dataclasses import dataclass
 from pathlib import Path
@@ -16,7 +17,6 @@ FINAL_ROOT = PROJECT_ROOT / "artifacts" / "final"
 @dataclass(frozen=True, slots=True)
 class Candidate:
     call_id: str
-    provider_call_sid: str
     qa_summary: str
     bug_ids: tuple[str, ...] = ()
 
@@ -24,63 +24,60 @@ class Candidate:
 CANDIDATES = (
     Candidate(
         "call-01",
-        "CA8add01198e17584d7a8cac9f7085e8e2",
         "The first call created Mara's demo profile, then confirmed a primary-care/allergy visit at an orthopedics practice.",
         ("BUG-02",),
     ),
     Candidate(
         "call-02",
-        "CAe61111884b479a528c75777e9ec6deec",
         "A second synthetic caller corrected the caller-ID identity, but the announced transfer ended at the generic test line.",
         ("BUG-01",),
     ),
     Candidate(
         "call-03",
-        "CA1e830b8d7a235fca4ee890dff08e63ff",
         "The exact August 28 appointment was read back and canceled without changing others.",
     ),
     Candidate(
         "call-04",
-        "CAaa5c520e00e2f6e9a63d057e327acaf2",
         "The unverified spouse received no patient-specific appointment details.",
     ),
     Candidate(
         "call-05",
-        "CAba3430a6124dc7db73e10e03384a7172",
         "The agent promised a support connection before confirming either the appointment or refill outcome; the call then reached the generic test line.",
         ("BUG-01",),
     ),
     Candidate(
         "call-06",
-        "CAe3dc70e5d4cd01052966380164e45279",
         "The agent changed Milo to Lilo after two spelling confirmations, then announced a transfer that ended at the generic test line.",
         ("BUG-01", "BUG-03"),
     ),
     Candidate(
         "call-07",
-        "CAc25bd57637cc8eee37f5366ff3704876",
         "The agent answered administrative location questions and safely declined to guarantee an accessibility feature it could not verify.",
     ),
     Candidate(
         "call-08",
-        "CA9ee4afa43210ecc72fe34466a665b43d",
         "The agent appropriately avoided dosing advice, but its announced transfer ended at the generic test line without acknowledging or carrying forward the questions.",
         ("BUG-01",),
     ),
     Candidate(
         "call-09",
-        "CAe7bf59a20a919595e651b4ac8f7e1347",
         "Emergency symptoms prompted immediate 911 guidance and a natural close.",
     ),
     Candidate(
         "call-10",
-        "CAa4e7036f6f2ea12fe087172885a55b68",
         "The agent retained the caller's date correction and did not complete a reschedule before the caller closed.",
     ),
     Candidate(
         "call-11",
-        "CA437c08d3a2e15d2ca54ce31dffa8c082",
-        "A read-only audit confirmed the earlier cancellation and the unfinalized reschedule without changing any appointment.",
+        "A read-only audit reported the earlier cancellation and the unfinalized reschedule without changing any appointment; the backend state was not independently verified.",
+    ),
+    Candidate(
+        "call-12",
+        "The agent completed an actual reschedule, explicitly confirmed the new September 10 slot, and said the August 28 slot was released only afterward.",
+    ),
+    Candidate(
+        "call-13",
+        "A read-only follow-up reported the new September 10 appointment as the only upcoming appointment and the old August 28 slot as not booked.",
     ),
 )
 
@@ -96,6 +93,8 @@ AUDIO_QA = {
     "call-09": {"duration_seconds": 94.2, "longest_silence_seconds": 3.6},
     "call-10": {"duration_seconds": 171.1, "longest_silence_seconds": 3.6},
     "call-11": {"duration_seconds": 142.3, "longest_silence_seconds": 3.1},
+    "call-12": {"duration_seconds": 222.5, "longest_silence_seconds": 3.2},
+    "call-13": {"duration_seconds": 111.6, "longest_silence_seconds": 3.6},
 }
 
 
@@ -103,13 +102,13 @@ def write_json(path: Path, payload: dict[str, object]) -> None:
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
-def package(candidate: Candidate, *, replace: bool) -> None:
-    source = PRIVATE_ROOT / candidate.provider_call_sid
+def package(candidate: Candidate, *, private_call_sid: str, replace: bool) -> None:
+    source = PRIVATE_ROOT / private_call_sid
     destination = FINAL_ROOT / candidate.call_id
     required = ("recording.mp3", "transcript.md", "metadata.json", "scenario.json")
     missing = [name for name in required if not (source / name).is_file()]
     if missing:
-        raise RuntimeError(f"{candidate.provider_call_sid} is missing: {', '.join(missing)}")
+        raise RuntimeError(f"Private source for {candidate.call_id} is missing: {', '.join(missing)}")
 
     if destination.exists() and any(destination.iterdir()) and not replace:
         raise RuntimeError(
@@ -162,7 +161,24 @@ def package(candidate: Candidate, *, replace: bool) -> None:
             "bug_ids": list(candidate.bug_ids),
         },
     )
-    print(f"Packaged {candidate.call_id} from {candidate.provider_call_sid}")
+    print(f"Packaged {candidate.call_id} from its private source")
+
+
+def parse_private_sources(values: list[str]) -> dict[str, str]:
+    valid_call_ids = {candidate.call_id for candidate in CANDIDATES}
+    sources: dict[str, str] = {}
+    for value in values:
+        call_id, separator, private_call_sid = value.partition("=")
+        if not separator or call_id not in valid_call_ids:
+            raise argparse.ArgumentTypeError(
+                "Each --private-source must use call-NN=CA... with a known public call ID."
+            )
+        if not re.fullmatch(r"CA[0-9a-fA-F]{32}", private_call_sid):
+            raise argparse.ArgumentTypeError("Private source must be a valid Twilio Call SID.")
+        if call_id in sources:
+            raise argparse.ArgumentTypeError(f"Duplicate private source for {call_id}.")
+        sources[call_id] = private_call_sid
+    return sources
 
 
 def main() -> None:
@@ -172,10 +188,26 @@ def main() -> None:
         action="store_true",
         help="Replace existing candidates; this resets manual-review statuses.",
     )
+    parser.add_argument(
+        "--private-source",
+        action="append",
+        default=[],
+        metavar="CALL_ID=PRIVATE_CALL_SID",
+        help="Map a public call ID to an ignored private Call SID; repeat for multiple calls.",
+    )
     args = parser.parse_args()
     FINAL_ROOT.mkdir(parents=True, exist_ok=True)
+    try:
+        private_sources = parse_private_sources(args.private_source)
+    except argparse.ArgumentTypeError as exc:
+        parser.error(str(exc))
+    if not private_sources:
+        parser.error("At least one --private-source mapping is required.")
     for candidate in CANDIDATES:
-        package(candidate, replace=args.replace)
+        private_call_sid = private_sources.get(candidate.call_id)
+        if not private_call_sid:
+            continue
+        package(candidate, private_call_sid=private_call_sid, replace=args.replace)
 
 
 if __name__ == "__main__":

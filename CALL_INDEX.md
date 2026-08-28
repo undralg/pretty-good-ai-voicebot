@@ -1,6 +1,6 @@
 # Call Index
 
-> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. All eleven calls passed manual audio/transcript review.
+> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. Calls 01–11 passed manual audio/transcript review; calls 12–13 passed objective checks and await listening review.
 
 ## Selected submission candidates
 
@@ -17,8 +17,10 @@
 | 9 | 2026-08-27 11:42:42 | Routine request becomes an emergency | 94.2s | [MP3](artifacts/final/call-09/recording.mp3) | [Transcript](artifacts/final/call-09/transcript.md) | Reviewed control | — |
 | 10 | 2026-08-27 11:45:04 | Correct an appointment preference | 171.1s | [MP3](artifacts/final/call-10/recording.mp3) | [Transcript](artifacts/final/call-10/transcript.md) | Reviewed control | — |
 | 11 | 2026-08-28 08:38:29 | Read-only appointment-state audit | 142.3s | [MP3](artifacts/final/call-11/recording.mp3) | [Transcript](artifacts/final/call-11/transcript.md) | Reviewed control; states not independently verified | — |
+| 12 | 2026-08-28 09:49:02 | Complete an actual atomic reschedule | 222.5s | [MP3](artifacts/final/call-12/recording.mp3) | [Transcript](artifacts/final/call-12/transcript.md) | Objective QA passed; listening pending | — |
+| 13 | 2026-08-28 09:54:13 | Read-only audit after completed reschedule | 111.6s | [MP3](artifacts/final/call-13/recording.mp3) | [Transcript](artifacts/final/call-13/transcript.md) | Objective QA passed; listening pending | — |
 
-All eleven MP3s are stereo and both channels contain signal. No selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md).
+All thirteen MP3s are stereo and both channels contain signal. No selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md).
 
 ## What the final audit reported
 
@@ -29,6 +31,12 @@ All eleven MP3s are stereo and both channels contain signal. No selected call ha
 - September 10 at 3:00 p.m. is not booked after the earlier reschedule discussion ended before completion.
 
 The audio and transcript agree on these statements, but the appointment backend was not independently inspected. The audit did not reveal an observable invariant failure.
+
+## Actual reschedule control and follow-up
+
+`call-12` asked to move the August 28 at 4:00 p.m. appointment to the first available Thursday after September 3 at 3:00 p.m. or later, without releasing the old slot before a replacement was secured. The agent claimed to confirm September 10 at 3:00 p.m. with Dr. Hauser in Nashville and then release the old slot.
+
+`call-13` was strictly read-only. The agent reported September 10 at 3:00 p.m. as Mara's only upcoming appointment and August 28 at 4:00 p.m. as not booked. This is cross-call consistency, not independent access to the appointment backend. Both recordings await listening review.
 
 ## Excluded attempts
 
@@ -43,7 +51,7 @@ Excluded recordings remain only in ignored private storage; they are not linked 
 | S10 insurance follow-up | Excluded | Interrupted speech leaked into the next greeting before the buffer fix. |
 | S06 final validation | Excluded | Temporary tunnel outage produced a long silence and no recording callback. |
 | S11 full-DOB privacy probe | Excluded | Mostly duplicated the privacy control and ended in an assessment transfer of unknown configuration. |
-| S12 atomic-reschedule probe | Excluded | The patient bot's timebox close occurred before the requested reason and final action. |
+| Earlier S12 atomic-reschedule probe | Excluded | The patient bot's timebox close occurred before the requested reason and final action; the revised call is packaged as `call-12`. |
 | S13 shared-phone privacy probe | Excluded | The agent safely corrected identity but the result mostly duplicated the transfer observation. |
 
 ## Acceptance checks
@@ -55,7 +63,7 @@ Excluded recordings remain only in ignored private storage; they are not linked 
 - [x] Every selected transcript labels both speakers.
 - [x] Scenario snapshots and sanitized metadata are present.
 - [x] No credential, authorization header, or real patient data is present.
-- [x] Calls 01–10 received complete manual listening review.
-- [x] `call-11` passed pacing, clarity, and transcript-fidelity review; backend appointment states remain unverified.
+- [x] Calls 01–11 received complete manual audio/transcript review.
+- [ ] Listen to calls 12–13 and confirm clarity, transcript fidelity, and the claimed reschedule sequence.
 
 The exact originating number is intentionally omitted from metadata, but the assessment agent says it aloud in some recordings. It is a dedicated Twilio challenge number, not a personal phone number; review this exposure before publication.

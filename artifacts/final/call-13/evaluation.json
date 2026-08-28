@@ -1,0 +1,14 @@
+{
+  "call_id": "call-13",
+  "objective_audio_checks": {
+    "result": "passed",
+    "container": "mp3",
+    "channels": 2,
+    "duration_seconds": 111.6,
+    "longest_detected_silence_seconds": 3.6
+  },
+  "transcript_structure_check": "passed",
+  "manual_audio_review": "pending",
+  "qa_summary": "A read-only follow-up reported the new September 10 appointment as the only upcoming appointment and the old August 28 slot as not booked.",
+  "bug_ids": []
+}

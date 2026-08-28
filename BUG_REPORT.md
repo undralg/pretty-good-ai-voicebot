@@ -1,6 +1,6 @@
 # Bug Report
 
-> **Evidence standard:** Findings are limited to capabilities named in the assessment, caller-visible failures, or outcomes the agent explicitly claimed to complete. Calls 01–10 were manually reviewed against their audio on August 27, 2026, and call 11 passed audio/transcript review on August 28, 2026. The report describes observable behavior and does not infer which backend component caused it.
+> **Evidence standard:** Findings are limited to capabilities named in the assessment, caller-visible failures, or outcomes the agent explicitly claimed to complete. Calls 01–10 were manually reviewed against their audio on August 27, 2026, and call 11 passed audio/transcript review on August 28, 2026. Calls 12–13 are new controls that passed objective checks but are not used as bug evidence until listening review. The report describes observable behavior and does not infer which backend component caused it.
 
 ## Confirmed findings
 

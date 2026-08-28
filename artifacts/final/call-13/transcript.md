@@ -1,0 +1,29 @@
+# Call call-13
+
+- **2026-08-28T09:54:21.412680+00:00 — remote_agent:** Call may be recorded for quality and training purposes.
+- **2026-08-28T09:54:25.096859+00:00 — patient_bot (interrupted):** I'm only doing a read-only
+- **2026-08-28T09:54:27.141115+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-28T09:54:28.709584+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-28T09:54:30.140715+00:00 — remote_agent:** May I help you today?
+- **2026-08-28T09:54:42.738875+00:00 — patient_bot:** I’m only doing a read-only check on my appointments today. Can you please tell me all the currently booked appointments on my record? No booking or changes, just the status.
+- **2026-08-28T09:54:42.740467+00:00 — remote_agent:** I can help with that.
+- **2026-08-28T09:54:46.034563+00:00 — remote_agent:** May I have your full name and date of birth to look up your appointments?
+- **2026-08-28T09:55:03.893460+00:00 — patient_bot:** Sure, my name is Mara Calder, and my date of birth is July 4, 2000.
+- **2026-08-28T09:55:03.895530+00:00 — remote_agent:** You have 1 upcoming appointment. It's scheduled for Thursday, September 10, at 3PM.
+- **2026-08-28T09:55:06.164345+00:00 — remote_agent:** Would you like a text message with these details?
+- **2026-08-28T09:55:18.997064+00:00 — patient_bot:** No, I only want to confirm appointments. For clarity, is the appointment on Friday, August 28, at 4:00 p.m. still booked or not?
+- **2026-08-28T09:55:18.998585+00:00 — remote_agent:** You do not have an appointment booked for Friday.
+- **2026-08-28T09:55:21.116042+00:00 — remote_agent:** August 28th at 4PM.
+- **2026-08-28T09:55:26.894174+00:00 — remote_agent:** Your only upcoming appointment is on Thursday, September 10, at 3PM.
+- **2026-08-28T09:55:40.732808+00:00 — patient_bot:** Just to confirm: the August 28th, 4:00 p.m. appointment is not currently booked, and the September 10th, 3:00 p.m. appointment with Dr. Hauser in Nashville is confirmed booked?
+- **2026-08-28T09:55:40.734056+00:00 — remote_agent:** That's correct.
+- **2026-08-28T09:55:44.225664+00:00 — remote_agent:** You cannot have an appointment on August 28 at 4PM.
+- **2026-08-28T09:55:49.426616+00:00 — remote_agent:** Your appointment with doctor Hauser in Nashville is confirmed for Thursday, September 10, at 3PM.
+- **2026-08-28T09:56:02.309390+00:00 — patient_bot:** Thanks for confirming. So the old August 28 slot is no longer booked, and the new September 10 appointment is fully confirmed. That’s all I needed to verify today. Goodbye.
+- **2026-08-28T09:56:02.310582+00:00 — remote_agent:** You've got it.
+- **2026-08-28T09:56:03.690311+00:00 — patient_bot (interrupted):** Goodbye.
+- **2026-08-28T09:56:05.709324+00:00 — remote_agent:** Will it a September 10th of
+- **2026-08-28T09:56:06.273493+00:00 — remote_agent:** goodbye.
+- **2026-08-28T09:56:06.842715+00:00 — patient_bot (interrupted):** Thank
+- **2026-08-28T09:56:07.375468+00:00 — remote_agent:** Have a great day.
+- **2026-08-28T09:56:08.905577+00:00 — patient_bot:** Thank you. Goodbye.

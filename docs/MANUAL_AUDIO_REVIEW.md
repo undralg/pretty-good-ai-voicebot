@@ -17,18 +17,21 @@ Automated checks cannot determine whether a voice sounds natural or whether ever
 | [x] | `call-09` | 94.2s | [MP3](../artifacts/final/call-09/recording.mp3) | [Text](../artifacts/final/call-09/transcript.md) | Control: emergency warning signs trigger immediate 911 guidance. |
 | [x] | `call-10` | 171.1s | [MP3](../artifacts/final/call-10/recording.mp3) | [Text](../artifacts/final/call-10/transcript.md) | Control: correction is retained; no completed reschedule is claimed. |
 | [x] | `call-11` | 142.3s | [MP3](../artifacts/final/call-11/recording.mp3) | [Text](../artifacts/final/call-11/transcript.md) | Audio/transcript passed; appointment-state claims were not independently verified. |
+| [ ] | `call-12` | 222.5s | [MP3](../artifacts/final/call-12/recording.mp3) | [Text](../artifacts/final/call-12/transcript.md) | Verify the actual reschedule, old-slot preservation claim, final recap, and longer-call coherence. |
+| [ ] | `call-13` | 111.6s | [MP3](../artifacts/final/call-13/recording.mp3) | [Text](../artifacts/final/call-13/transcript.md) | Verify the strictly read-only audit and the old-versus-new appointment statements. |
 
-## For `call-11`
+## For calls 12–13
 
-- [x] Both speakers are audible throughout.
-- [x] No disqualifying clipping, echo, long silence, or repeated talk-over.
-- [x] The patient bot sounds coherent and does not authorize a write action.
-- [x] The final turn is complete rather than chopped.
-- [x] Transcript speaker labels and the three appointment-state statements match the audio.
-- [x] The recording contains only synthetic patient data.
+- [ ] Both speakers are audible throughout.
+- [ ] No disqualifying clipping, echo, long silence, or repeated talk-over.
+- [ ] The patient bot remains coherent throughout the 222.5-second reschedule.
+- [ ] `call-12` audibly confirms the exact old and new slots and the order of release.
+- [ ] `call-13` authorizes no write action and audibly reports both slot states.
+- [ ] Both transcripts match the material facts in the audio.
+- [ ] Both recordings contain only synthetic patient data.
 
 ## After listening
 
-`call-11` passed the audio/transcript review. This does not independently verify that the appointment backend contained the states the agent reported.
+If the calls pass, change their metadata and evaluation review statuses to `passed`. This still will not independently verify that the appointment backend contained the states the agent reported.
 
-The August 27 review accepted calls 01–10. Acceptance means the audio and transcript are usable evidence, not that the assessment agent succeeded.
+Calls 01–11 are already accepted. Acceptance means the audio and transcript are usable evidence, not that the assessment agent succeeded.

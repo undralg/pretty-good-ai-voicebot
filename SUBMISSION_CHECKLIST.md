@@ -6,13 +6,14 @@
 - [x] Calls are numbered in actual chronological order.
 - [x] Calls 01–10 passed manual listening review.
 - [x] `call-11` passed audio/transcript review; document that appointment states were not independently verified.
+- [ ] Listen to calls 12–13 and mark them passed or exclude them.
 - [x] Bug report is limited to three defensible findings with explicit limitations.
 - [x] Capability matrix separates assessment requirements from unknown test-line configuration.
 
 ## Code and documentation
 
 - [x] Python implementation, README, architecture document, `.env.example`, scenarios, and tests are present.
-- [x] Test suite, Ruff, artifact validation, chronology checks, and tracked-file secret scans pass.
+- [x] Test suite, Ruff, artifact validation, chronology checks, and tracked-file secret scans pass for the reviewed set.
 - [ ] Resolve or consciously document the remaining third-party test-client deprecation warning.
 - [x] Review the complete Git diff and preserve the post-listening iteration as a separate commit.
 

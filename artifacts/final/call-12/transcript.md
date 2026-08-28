@@ -1,0 +1,38 @@
+# Call call-12
+
+- **2026-08-28T09:49:10.370853+00:00 — remote_agent:** May be recorded for quality and training purposes.
+- **2026-08-28T09:49:15.962387+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-28T09:49:17.939458+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-28T09:49:19.630083+00:00 — remote_agent:** How may I help you today?
+- **2026-08-28T09:49:48.629519+00:00 — patient_bot:** Hello, this is Mara Calder. I have an appointment already scheduled for Friday, August 28, 2026, at 4:00 p.m. I'd like to see if it’s possible to reschedule that to a Thursday instead. But I want to be clear: please do not cancel or release my August 28 appointment slot unless you have a Thursday replacement available at 3:00 p.m. or later. Could you help me with that?
+- **2026-08-28T09:49:48.635001+00:00 — remote_agent:** I can help check for a Thursday appointment at 3PM or later.
+- **2026-08-28T09:49:51.533654+00:00 — remote_agent:** But 1st, I need to verify your date of birth.
+- **2026-08-28T09:49:53.672812+00:00 — remote_agent:** Could you please provide your date of birth?
+- **2026-08-28T09:50:21.512036+00:00 — patient_bot:** Certainly, my date of birth is July 4, 2000. Could you please check for the first available Thursday appointment after September 3, 2026, at 3:00 p.m. or later? Remember, please do not cancel my original August 28 slot unless you find a suitable Thursday replacement.
+- **2026-08-28T09:50:21.514296+00:00 — remote_agent:** I found a Thursday appointment on September 10 at 3PM with Doogie Howser in Nashville.
+- **2026-08-28T09:50:24.004485+00:00 — remote_agent:** Would you like to move your current appointment to this time?
+- **2026-08-28T09:50:27.356036+00:00 — remote_agent:** If so, can you tell me the reason you need to reschedule?
+- **2026-08-28T09:50:49.724587+00:00 — patient_bot (interrupted):** Please let me know if you need any other information to finalize this change.
+- **2026-08-28T09:50:51.700178+00:00 — remote_agent:** You'd like to move your
+- **2026-08-28T09:51:21.460632+00:00 — patient_bot:** Yes, I would like to move my appointment to Thursday, September 10, 2026, at 3:00 p.m. with Dr. Howser in Nashville, while making sure my original August 28 appointment remains booked until this one is confirmed. The reason for the reschedule is due to a scheduling conflict at work on Fridays. Please let me know if you need any more details from me to complete the reschedule.
+- **2026-08-28T09:51:21.462798+00:00 — remote_agent:** Your appointment has been successfully moved to Thursday, September 10th at 3PM with doctor Hauser in Nashville.
+- **2026-08-28T09:51:24.842049+00:00 — remote_agent:** Your original August 28 slot is now released.
+- **2026-08-28T09:51:25.836594+00:00 — patient_bot (interrupted):** To
+- **2026-08-28T09:51:28.388945+00:00 — remote_agent:** Would you like a text message with your new appointment details?
+- **2026-08-28T09:51:50.253166+00:00 — patient_bot:** Wait, I need to make sure I understand correctly before agreeing. Could you please read back to me the old appointment date and time, the new appointment date and time, and the current status of each? I want to confirm that my original August 28 slot was not released until the September 10 Thursday appointment at 3:00 p.m. was fully confirmed.
+- **2026-08-28T09:51:50.254471+00:00 — remote_agent:** Of course.
+- **2026-08-28T09:51:54.458034+00:00 — remote_agent:** Your original appointment was Friday, August 28, at 4PM.
+- **2026-08-28T09:51:59.461415+00:00 — remote_agent:** Your new appointment is Thursday, September 10 at 3PM.
+- **2026-08-28T09:52:00.461195+00:00 — remote_agent:** With doctor Hauser in Nashville.
+- **2026-08-28T09:52:07.311401+00:00 — remote_agent:** The new appointment is fully confirmed in your original August 28 slot was only released after the new 1 was secured.
+- **2026-08-28T09:52:10.904915+00:00 — remote_agent:** Would you like a text message with your updated appointment detail?
+- **2026-08-28T09:52:34.684064+00:00 — patient_bot:** Thank you for clarifying. Yes, the original August 28 appointment was only released after the new Thursday, September 10 at 3:00 p.m. slot was fully confirmed. That is exactly what I asked for. Yes, please send me a text message with the updated appointment details.
+- **2026-08-28T09:52:34.685465+00:00 — remote_agent:** You will get a text message with your updated appointment details soon.
+- **2026-08-28T09:52:36.978941+00:00 — remote_agent:** If you need anything else, just let me know.
+- **2026-08-28T09:52:43.933874+00:00 — patient_bot:** Thank you very much for your help today. That will be all. Goodbye.
+- **2026-08-28T09:52:43.934444+00:00 — remote_agent:** You're welcome.
+- **2026-08-28T09:52:45.385527+00:00 — remote_agent:** Appointment is all set.
+- **2026-08-28T09:52:46.447170+00:00 — remote_agent:** Have a great day.
+- **2026-08-28T09:52:47.159183+00:00 — patient_bot (interrupted):** Thank you.
+- **2026-08-28T09:52:47.159611+00:00 — remote_agent:** Goodbye.
+- **2026-08-28T09:52:48.678515+00:00 — patient_bot:** Thank you. Goodbye.
