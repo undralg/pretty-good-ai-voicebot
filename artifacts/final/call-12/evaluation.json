@@ -8,7 +8,7 @@
     "longest_detected_silence_seconds": 3.2
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
+  "manual_audio_review": "passed",
   "qa_summary": "The agent completed an actual reschedule, explicitly confirmed the new September 10 slot, and said the August 28 slot was released only afterward.",
   "bug_ids": []
 }

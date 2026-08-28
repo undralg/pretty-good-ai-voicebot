@@ -10,5 +10,5 @@
   "recording_file": "recording.mp3",
   "transcript_file": "transcript.md",
   "recording_channels": 2,
-  "validation_status": "pending_manual_audio_review"
+  "validation_status": "passed"
 }

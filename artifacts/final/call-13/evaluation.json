@@ -8,7 +8,7 @@
     "longest_detected_silence_seconds": 3.6
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
+  "manual_audio_review": "passed",
   "qa_summary": "A read-only follow-up reported the new September 10 appointment as the only upcoming appointment and the old August 28 slot as not booked.",
   "bug_ids": []
 }

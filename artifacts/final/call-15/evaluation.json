@@ -8,7 +8,7 @@
     "longest_detected_silence_seconds": 0.0
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
+  "manual_audio_review": "passed",
   "qa_summary": "The agent rejected a 7:30 p.m. Wednesday request beyond its stated hours, created no new appointment, and said the existing appointment remained unchanged.",
   "bug_ids": []
 }

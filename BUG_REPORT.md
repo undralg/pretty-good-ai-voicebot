@@ -1,6 +1,6 @@
 # Bug Report
 
-> **Evidence standard:** Findings are limited to capabilities named in the assessment, caller-visible failures, or outcomes the agent explicitly claimed to complete. Calls 01–10 were manually reviewed against their audio on August 27, 2026, and call 11 passed audio/transcript review on August 28, 2026. Calls 12–17 passed objective checks but still require listening review; evidence from those calls is labeled provisional below. The report describes observable behavior and does not infer which backend component caused it.
+> **Evidence standard:** Findings are limited to capabilities named in the assessment, caller-visible failures, or outcomes the agent explicitly claimed to complete. All 17 packaged calls passed manual audio/transcript review by August 28, 2026. The report describes observable behavior and does not infer which backend component caused it.
 
 ## Confirmed findings
 
@@ -9,7 +9,7 @@
 | BUG-01 | Transfer paths repeatedly terminate at the generic test line without completing the handoff | High | `call-02`, `call-05`, `call-06`, `call-08` | 4/4 tested transfer paths | High for caller-visible behavior; transfer configuration is unknown |
 | BUG-02 | A primary-care/allergy request is confirmed at an orthopedics practice without disclosing the specialty mismatch | High | `call-01` | 1/1 tested new-patient booking | High |
 | BUG-03 | A child's name changes from Milo to Lilo after two spelling confirmations | Medium | `call-06` | 1/1 tested dependent lookup | High; confirmed in audio |
-| BUG-04 | Scheduling omits location confirmation; a later audit contradicts the reported appointment location | High | `call-01`, `call-05`, `call-07`, `call-10`; provisional: `call-12`, `call-13`, `call-16` | 2/2 initial booking flows omitted location; one cross-call location contradiction awaits audio review | High for the reviewed omission; provisional for the stronger contradiction |
+| BUG-04 | Scheduling omits location and practice-affiliation confirmation; later calls contradict the reported appointment location | High | `call-01`, `call-05`, `call-07`, `call-10`, `call-12`, `call-13`, `call-16` | 2/2 initial booking flows omitted location; the Nashville appointment was contradicted by a later location audit | High |
 
 ## BUG-01 — Transfer paths repeatedly end at a dead-end test line
 
@@ -87,12 +87,12 @@ Corrupting a dependent's name can cause a false record-not-found result or assoc
 - **Severity:** High
 - **Primary calls:** `call-01`, `call-05`, `call-10`
 - **Supporting location call:** `call-07`
-- **Provisional contradiction calls:** `call-12`, `call-13`, `call-16` (objective QA passed; listening review pending)
+- **Contradiction calls:** `call-12`, `call-13`, `call-16`
 - **Reviewed recordings:** [call-01](artifacts/final/call-01/recording.mp3), [call-05](artifacts/final/call-05/recording.mp3), [call-07](artifacts/final/call-07/recording.mp3), [call-10](artifacts/final/call-10/recording.mp3)
 - **Reviewed transcripts:** [call-01](artifacts/final/call-01/transcript.md), [call-05](artifacts/final/call-05/transcript.md), [call-07](artifacts/final/call-07/transcript.md), [call-10](artifacts/final/call-10/transcript.md)
-- **Provisional recordings:** [call-12](artifacts/final/call-12/recording.mp3), [call-13](artifacts/final/call-13/recording.mp3), [call-16](artifacts/final/call-16/recording.mp3)
-- **Provisional transcripts:** [call-12](artifacts/final/call-12/transcript.md), [call-13](artifacts/final/call-13/transcript.md), [call-16](artifacts/final/call-16/transcript.md)
-- **Confidence:** High for the reviewed location omission and later Nashville report; provisional for the stronger cross-call contradiction until calls 12, 13, and 16 are heard
+- **Contradiction recordings:** [call-12](artifacts/final/call-12/recording.mp3), [call-13](artifacts/final/call-13/recording.mp3), [call-16](artifacts/final/call-16/recording.mp3)
+- **Contradiction transcripts:** [call-12](artifacts/final/call-12/transcript.md), [call-13](artifacts/final/call-13/transcript.md), [call-16](artifacts/final/call-16/transcript.md)
+- **Confidence:** High
 
 **Observed behavior**
 
@@ -100,13 +100,13 @@ In `call-01`, the agent asks about provider and time preferences, then confirms 
 
 The caller says Nashville is the right location only after `call-10` reveals where the already-existing appointment was placed. That later acknowledgment does not establish that location was disclosed or agreed during the original scheduling flow.
 
-**Provisional strengthening evidence**
+**Cross-call contradiction**
 
-In `call-12`, the agent says it moved the appointment to September 10 with Dr. Hauser in Nashville. In the read-only `call-13`, it again reports that appointment as confirmed in Nashville. But in the read-only location audit `call-16`, the agent says Austin at 1234 Recovery Way is the only bookable site, explicitly says there are no appointments at 220 Athens Way in Nashville, and says a Nashville listing may be an error. This is a direct contradiction in the agent's own reported information. It becomes confirmed bug evidence after those three recordings pass listening review.
+In `call-12`, the Pivot Point agent says it moved the appointment to September 10 with Dr. Hauser in Nashville. In the read-only `call-13`, it again reports that appointment as confirmed in Nashville. But in the read-only location audit `call-16`, the agent says Austin at 1234 Recovery Way is the only bookable Pivot Point site, explicitly says there are no appointments at 220 Athens Way in Nashville, and says a Nashville listing may be an error or relate to another provider. No earlier booking or rescheduling call disclosed a different practice or external-provider affiliation.
 
 **Expected behavior**
 
-Before an appointment is created, the agent should clearly state the proposed city and address and obtain confirmation. If more than one site is actually available, it should first ask for a location preference. Appointment lookups and general location information should then report the same configured site.
+Before an appointment is created, the agent should clearly state the proposed practice, provider affiliation, city, and address and obtain confirmation. If more than one site is actually available, it should first ask for a location preference. Appointment lookups and general location information should then report the same configured site.
 
 **Why this matters**
 
@@ -114,7 +114,7 @@ A patient can reasonably assume a familiar or previously described office and di
 
 **Limitation**
 
-The demo practice's exact location configuration is not independently available, so this finding does not claim whether Austin or Nashville is correct. The reviewed defect is the observable omission of location confirmation before booking. The stronger provisional defect is that the agent reports both “confirmed in Nashville” and “Nashville is not an active site” across state-preserving calls.
+The demo practice's exact location configuration is not independently available, so this finding does not claim whether Austin or Nashville is correct. If Nashville belongs to an outside provider rather than Pivot Point, the defect is the undisclosed change in practice or provider affiliation. If it belongs to Pivot Point, the defect is the direct location contradiction. Under either interpretation, the caller was not told enough to give informed booking confirmation.
 
 ## Controls and observations intentionally not reported as bugs
 
