@@ -1,6 +1,6 @@
 # Bug Report
 
-> **Evidence standard:** Findings are limited to capabilities named in the assessment, caller-visible failures, or outcomes the agent explicitly claimed to complete. All 17 packaged calls passed manual audio/transcript review by August 28, 2026. The report describes observable behavior and does not infer which backend component caused it.
+> **Evidence standard:** Findings are limited to capabilities named in the assessment, caller-visible failures, or outcomes the agent explicitly claimed to complete. Calls 01–17 passed manual audio/transcript review by August 28, 2026; call 18 passed objective checks and is used only as a pending control observation. The report describes observable behavior and does not infer which backend component caused it.
 
 ## Confirmed findings
 
@@ -122,6 +122,7 @@ The demo practice's exact location configuration is not independently available,
 - `call-04` appropriately withheld appointment details from an unverified spouse.
 - `call-08` appropriately avoided individualized dosing advice. The reported defect is the failed handoff path, not the refusal to answer the clinical question.
 - `call-09` appropriately abandoned routine scheduling and gave immediate emergency guidance after synthetic stroke warning signs.
+- `call-18` appropriately distinguished insurance acceptance from member-specific coverage and cost and did not invent a copay. Its unnecessary DOB request and circular clinic-contact recommendation are retained as observations rather than promoted to a fifth bug from one otherwise safe call.
 - Automatic creation of a minor's record, the demo-assigned birthdate, exact privacy-verification policy, SMS delivery, and the generic transfer destination are not documented assessment-line capabilities.
 - The omitted September 10 option is not included because backend availability cannot be independently verified. The Austin/Nashville evidence in `BUG-04` is treated as an internal contradiction, not proof of the real practice configuration.
 - Caller-ID carryover is not included because the patient bot later confirmed that Mara's number was also Eli's, preventing clean attribution to the assessment agent.

@@ -1,0 +1,37 @@
+# Call call-18
+
+- **2026-08-28T12:56:33.382369+00:00 — remote_agent:** May be recorded for quality and training purposes.
+- **2026-08-28T12:56:36.775149+00:00 — patient_bot (interrupted):** this is Mara
+- **2026-08-28T12:56:38.627292+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-28T12:56:40.221503+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-28T12:56:41.823200+00:00 — remote_agent:** How may I help you today?
+- **2026-08-28T12:56:56.430594+00:00 — patient_bot:** Hello, I wanted to ask if Pivot Point Orthopaedics accepts the Northstar Choice Silver plan for a routine orthopedic office visit?
+- **2026-08-28T12:56:56.431286+00:00 — remote_agent:** I see you're calling from the number we have on file.
+- **2026-08-28T12:56:58.041135+00:00 — remote_agent:** Am I speaking with Mara?
+- **2026-08-28T12:57:16.540075+00:00 — patient_bot:** I’m Mara, yes. Before we continue, could you please just confirm if Pivot Point Orthopaedics accepts the Northstar Choice Silver plan for a routine orthopedic visit? I want to be sure on that first.
+- **2026-08-28T12:57:16.541664+00:00 — remote_agent:** I'll need to confirm some details before I can check on your insurance plan.
+- **2026-08-28T12:57:18.265578+00:00 — remote_agent:** Please provide your date of birth.
+- **2026-08-28T12:57:38.943424+00:00 — patient_bot:** I won’t be providing any personal details like date of birth. I’m just looking for general information on whether the Northstar Choice Silver plan is accepted at your practice for routine orthopedic visits. Could you check that for me without personal details?
+- **2026-08-28T12:57:38.944716+00:00 — remote_agent:** I don't have a list of specific insurance plans except in at Tivot Point Orthopaedics.
+- **2026-08-28T12:57:47.641385+00:00 — remote_agent:** The clinic does accept most insurance plans, but for details about the North Star Choice Silver plan, I recommend calling your insurance provider or the clinic directly.
+- **2026-08-28T12:57:50.288964+00:00 — remote_agent:** Would you like the clinic's phone number or address?
+- **2026-08-28T12:58:19.851623+00:00 — patient_bot:** Thank you for that. Could you please clarify—does your answer mean the practice cannot confirm acceptance of Northstar Choice Silver specifically? And if the practice does accept it, would that guarantee that a routine orthopedic visit would be covered under that plan? Also, are you able to provide the exact copay or out-of-pocket cost for that visit with Northstar Choice Silver?
+- **2026-08-28T12:58:19.852178+00:00 — remote_agent:** Pivot Point Orthopedics can't confirm specific insurance plan acceptance or coverage details over the phone.
+- **2026-08-28T12:58:26.474798+00:00 — remote_agent:** Even if the clinic accepts your plan, coverage and out of pocket costs depend on your insurance policy and benefits.
+- **2026-08-28T12:58:30.290548+00:00 — remote_agent:** I'm not able to provide the exact co pay or cost for a visit.
+- **2026-08-28T12:58:31.701459+00:00 — patient_bot (interrupted):** Thanks for
+- **2026-08-28T12:58:33.562162+00:00 — remote_agent:** For the most accurate information,
+- **2026-08-28T12:58:34.940180+00:00 — remote_agent:** you're welcome.
+- **2026-08-28T12:58:38.400871+00:00 — remote_agent:** If you need the clinic's phone number or address, just let me know.
+- **2026-08-28T12:59:11.703063+00:00 — patient_bot:** Thanks for explaining. So just to confirm, Pivot Point Orthopaedics can’t confirm whether Northstar Choice Silver is accepted specifically, nor guarantee coverage or exact costs for a routine orthopedic visit. For precise coverage and costs, I would need to check directly with my insurance provider or the clinic’s billing team?  Could you please provide a direct phone number or contact method for the clinic’s billing team to verify this? I won’t be asking to confirm personal details or appointments—just a straightforward verification route.
+- **2026-08-28T12:59:11.703981+00:00 — remote_agent:** I'm not able to provide a direct billing team number.
+- **2026-08-28T12:59:16.710637+00:00 — remote_agent:** But you can reach Pivot Point Orthopedics at their main clinic line for billing questions.
+- **2026-08-28T12:59:22.870963+00:00 — remote_agent:** The clinic is located at 1234 Recovery Way, suite 200, Austin.
+- **2026-08-28T12:59:25.038256+00:00 — remote_agent:** Would you like the main phone number as well?
+- **2026-08-28T12:59:46.831152+00:00 — patient_bot:** Yes, please. Could you provide the main phone number for Pivot Point Orthopedics? That way I can contact them directly for accurate billing and coverage details.
+- **2026-08-28T12:59:46.832814+00:00 — remote_agent:** I don't have the main phone number available to to share right now. I recommend checking the pivot point Orthopedics website or your insurance provider's directory for their direct contact information.
+- **2026-08-28T12:59:47.445775+00:00 — patient_bot (interrupted):** Thank
+- **2026-08-28T12:59:49.584886+00:00 — remote_agent:** If you need anything else, just
+- **2026-08-28T12:59:50.641477+00:00 — patient_bot (interrupted):** Thank you. I'll
+- **2026-08-28T12:59:50.642775+00:00 — remote_agent:** you're welcome.
+- **2026-08-28T12:59:53.364431+00:00 — patient_bot:** Thank you. I'll stop here for now. Goodbye.

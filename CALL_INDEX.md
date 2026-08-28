@@ -1,6 +1,6 @@
 # Call Index
 
-> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. All 17 calls passed manual audio/transcript review.
+> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. Calls 01–17 passed manual audio/transcript review; call 18 passed objective checks and awaits listening review.
 
 ## Selected submission candidates
 
@@ -23,8 +23,9 @@
 | 15 | 2026-08-28 10:04:01 | Attempt booking beyond stated weekday hours | 153.0s | [MP3](artifacts/final/call-15/recording.mp3) | [Transcript](artifacts/final/call-15/transcript.md) | Reviewed control | — |
 | 16 | 2026-08-28 10:37:45 | Read-only audit of every bookable location | 171.2s | [MP3](artifacts/final/call-16/recording.mp3) | [Transcript](artifacts/final/call-16/transcript.md) | Reviewed; bug evidence | `BUG-04` |
 | 17 | 2026-08-28 10:41:47 | Attempt Saturday and pre-opening Austin bookings | 151.4s | [MP3](artifacts/final/call-17/recording.mp3) | [Transcript](artifacts/final/call-17/transcript.md) | Reviewed control | — |
+| 18 | 2026-08-28 12:56:25 | Insurance acceptance, coverage, and cost boundary | 204.3s | [MP3](artifacts/final/call-18/recording.mp3) | [Transcript](artifacts/final/call-18/transcript.md) | Objective QA passed; listening pending | — |
 
-All seventeen MP3s are stereo and both channels contain signal. No selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md).
+All eighteen MP3s are stereo and both channels contain signal. No selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md).
 
 ## What the final audit reported
 
@@ -54,6 +55,10 @@ The audio and transcript agree on these statements, but the appointment backend 
 
 `call-16` was strictly read-only and asked for every bookable location. The agent said Austin at 1234 Recovery Way is the only active site, explicitly said Nashville at 220 Athens Way is not a booking location, and suggested a Nashville listing could be an error or relate to another provider. That contradicts the Nashville appointment reported in `call-12` and `call-13`; none of those Pivot Point calls disclosed a different practice. The reviewed contradiction is `BUG-04` evidence, but it does not establish which city or affiliation is configured correctly.
 
+## Insurance boundary control
+
+`call-18` used the synthetic Northstar Choice Silver plan and requested general information only. The agent correctly said that accepting a plan does not guarantee member-specific coverage or cost and declined to invent an exact copay. It initially requested a date of birth unnecessarily, said the clinic accepts “most” plans without a verifiable basis, and ultimately directed the caller to the clinic main line while being unable to provide that number. Those are usability and grounding concerns, but the insurer directory and practice website remained usable next steps; this single call is not promoted to a fifth bug. The recording awaits listening review.
+
 ## Excluded attempts
 
 Excluded recordings remain only in ignored private storage; they are not linked as submission evidence.
@@ -80,5 +85,6 @@ Excluded recordings remain only in ignored private storage; they are not linked 
 - [x] Scenario snapshots and sanitized metadata are present.
 - [x] No credential, authorization header, or real patient data is present.
 - [x] Calls 01–17 received complete manual audio/transcript review.
+- [ ] Listen to `call-18` and verify the insurance distinction, unnecessary DOB request, circular clinic-contact path, and transcript fidelity.
 
 The exact originating number is intentionally omitted from metadata, but the assessment agent says it aloud in some recordings. It is a dedicated Twilio challenge number, not a personal phone number; review this exposure before publication.

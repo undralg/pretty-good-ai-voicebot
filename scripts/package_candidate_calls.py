@@ -97,6 +97,10 @@ CANDIDATES = (
         "call-17",
         "The agent rejected both a Saturday request and a Monday request before opening at its stated Austin location, created no substitute, and said the existing appointment remained unchanged.",
     ),
+    Candidate(
+        "call-18",
+        "The agent correctly separated plan acceptance from member-specific coverage and cost, but requested unnecessary identity information and provided a circular verification route without a clinic phone number.",
+    ),
 )
 
 AUDIO_QA = {
@@ -117,6 +121,7 @@ AUDIO_QA = {
     "call-15": {"duration_seconds": 153.0, "longest_silence_seconds": 0.0},
     "call-16": {"duration_seconds": 171.2, "longest_silence_seconds": 1.9},
     "call-17": {"duration_seconds": 151.4, "longest_silence_seconds": 2.9},
+    "call-18": {"duration_seconds": 204.3, "longest_silence_seconds": 3.7},
 }
 
 

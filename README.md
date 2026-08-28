@@ -2,11 +2,11 @@
 
 Python automated-patient simulator for the Pretty Good AI engineering challenge.
 
-> **Current status:** The live voice stack is implemented, tested, and published at [github.com/undralg/pretty-good-ai-voicebot](https://github.com/undralg/pretty-good-ai-voicebot). Twenty-six sequential attempts produced 25 recordings; seventeen chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. All 17 passed manual audio/transcript review. Appointment states, locations, and practice hours are agent-reported rather than independently inspected. The two required Loom videos and final form submission remain.
+> **Current status:** The live voice stack is implemented, tested, and published at [github.com/undralg/pretty-good-ai-voicebot](https://github.com/undralg/pretty-good-ai-voicebot). Twenty-seven sequential attempts produced 26 recordings; eighteen chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. Calls 01–17 passed manual audio/transcript review; the new insurance control passed objective checks and awaits listening review. Appointment states, locations, and practice hours are agent-reported rather than independently inspected. The two required Loom videos and final form submission remain.
 
 ## What it does
 
-The bot calls only the assessment line at `+18054398008`, acts as a synthetic patient, and steers toward a scenario goal while responding naturally to the assessment agent. Nineteen authored scenarios cover scheduling, rescheduling, cancellation, refill safety, urgent symptoms, privacy, multiple intents, correction handling, parent/child identity separation, accessibility, insurance grounding, location consistency, office-hours consistency, and cross-call state integrity.
+The bot calls only the assessment line at `+18054398008`, acts as a synthetic patient, and steers toward a scenario goal while responding naturally to the assessment agent. Twenty authored scenarios cover scheduling, rescheduling, cancellation, refill safety, urgent symptoms, privacy, multiple intents, correction handling, parent/child identity separation, accessibility, insurance grounding, location consistency, office-hours consistency, and cross-call state integrity.
 
 No real patient data is used. The destination cannot be supplied through the CLI or environment, and live execution requires two separate acknowledgements.
 
@@ -24,7 +24,7 @@ Official references:
 
 ## Evidence
 
-- [Call index](CALL_INDEX.md) — seventeen selected recordings and transcripts in actual chronological order
+- [Call index](CALL_INDEX.md) — eighteen selected recordings and transcripts in actual chronological order
 - [Bug report](BUG_REPORT.md) — evidence-backed candidates, with manual-audio status stated
 - [Capability matrix](docs/CAPABILITY_MATRIX.md) — separates assessment requirements, broader product claims, and unknown test-line configuration
 - [Manual audio review](docs/MANUAL_AUDIO_REVIEW.md) — final human listening checklist
@@ -95,7 +95,7 @@ The automated suite covers:
 - deterministic transfer/goodbye and graceful end-session messages;
 - callback ordering, absent recordings, scenario snapshots, and artifact paths.
 
-Current local result: **46 tests passed** and Ruff passed.
+Current local result: **47 tests passed** and Ruff passed.
 
 ## Artifact handling
 
@@ -105,8 +105,9 @@ The transcripts and audio may still contain the dedicated Twilio originating num
 
 ## Remaining human checkpoints
 
-1. Record two public Loom videos with the submitter's own webcam and voice: a project walkthrough and a genuine AI-assisted debugging session.
-2. Open the public repository, Looms, recordings, and transcripts while signed out.
-3. Obtain explicit approval before submitting the external form.
+1. Listen to `call-18` and either mark it passed or keep the already-reviewed 17-call set.
+2. Record two public Loom videos with the submitter's own webcam and voice: a project walkthrough and a genuine AI-assisted debugging session.
+3. Open the public repository, Looms, recordings, and transcripts while signed out.
+4. Obtain explicit approval before submitting the external form.
 
 The project deliberately stops at these checkpoints because an automated assistant cannot truthfully perform the user's listening, webcam narration, publication approval, or final-submission approval.

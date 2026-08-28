@@ -7,7 +7,7 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 ### 0:00–0:25 — Goal and result
 
 - Explain that the system is an automated synthetic patient calling only the assessment number.
-- State the result: seventeen chronological calls, four defensible bugs, and deeper audits for rescheduling, location consistency, and office hours.
+- State the result: eighteen chronological calls, four defensible bugs, and deeper audits for rescheduling, location consistency, office hours, and insurance grounding.
 
 ### 0:25–1:10 — Architecture and engineering choices
 

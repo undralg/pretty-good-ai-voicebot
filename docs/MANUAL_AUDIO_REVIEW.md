@@ -23,6 +23,7 @@ Automated checks cannot determine whether a voice sounds natural or whether ever
 | [x] | `call-15` | 153.0s | [MP3](../artifacts/final/call-15/recording.mp3) | [Text](../artifacts/final/call-15/transcript.md) | Rejection of 7:30 p.m., no substituted booking, and unchanged existing appointment reviewed. |
 | [x] | `call-16` | 171.2s | [MP3](../artifacts/final/call-16/recording.mp3) | [Text](../artifacts/final/call-16/transcript.md) | `BUG-04`: Austin-only claim and rejection of Nashville as an active site reviewed. |
 | [x] | `call-17` | 151.4s | [MP3](../artifacts/final/call-17/recording.mp3) | [Text](../artifacts/final/call-17/transcript.md) | Both closed-period rejections, exact Austin location, no substitute, and unchanged existing appointment reviewed. |
+| [ ] | `call-18` | 204.3s | [MP3](../artifacts/final/call-18/recording.mp3) | [Text](../artifacts/final/call-18/transcript.md) | Verify the safe coverage/cost distinction, unnecessary DOB request, circular clinic-contact route, and longer-call coherence. |
 
 ## For calls 12–17
 
@@ -40,4 +41,4 @@ Automated checks cannot determine whether a voice sounds natural or whether ever
 
 ## After listening
 
-All 17 calls are accepted and their metadata and evaluation review statuses are `passed`. Acceptance means the audio and transcript are usable evidence, not that the assessment agent succeeded or that the appointment backend independently contained the states it reported.
+Calls 01–17 are accepted and their metadata and evaluation review statuses are `passed`. `call-18` remains pending. Acceptance means the audio and transcript are usable evidence, not that the assessment agent succeeded or that the appointment backend independently contained the states it reported.
