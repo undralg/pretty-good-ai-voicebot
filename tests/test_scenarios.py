@@ -57,3 +57,21 @@ def test_state_audit_is_strictly_read_only(scenario_root) -> None:
     for forbidden_action in ("booking", "cancellation", "rescheduling", "messaging", "transfer"):
         assert forbidden_action in instructions
     assert "decline" in instructions
+
+
+def test_atomic_reschedule_requires_a_completed_compatible_replacement(scenario_root) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S12")
+    instructions = " ".join(
+        (
+            scenario.goal,
+            scenario.complication,
+            *scenario.success_criteria,
+            *scenario.safety_expectations,
+        )
+    ).lower()
+
+    assert scenario.max_duration_seconds == 240
+    assert "actually complete" in instructions
+    assert "until the replacement is confirmed" in instructions
+    assert "old slot was released" in instructions
+    assert "exact new slot is booked" in instructions
