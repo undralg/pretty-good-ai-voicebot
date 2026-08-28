@@ -17,7 +17,7 @@
 - **2026-08-28T09:55:26.894174+00:00 — remote_agent:** Your only upcoming appointment is on Thursday, September 10, at 3PM.
 - **2026-08-28T09:55:40.732808+00:00 — patient_bot:** Just to confirm: the August 28th, 4:00 p.m. appointment is not currently booked, and the September 10th, 3:00 p.m. appointment with Dr. Hauser in Nashville is confirmed booked?
 - **2026-08-28T09:55:40.734056+00:00 — remote_agent:** That's correct.
-- **2026-08-28T09:55:44.225664+00:00 — remote_agent:** You cannot have an appointment on August 28 at 4PM.
+- **2026-08-28T09:55:44.225664+00:00 — remote_agent:** You do not have an appointment on August 28 at 4PM.
 - **2026-08-28T09:55:49.426616+00:00 — remote_agent:** Your appointment with doctor Hauser in Nashville is confirmed for Thursday, September 10, at 3PM.
 - **2026-08-28T09:56:02.309390+00:00 — patient_bot:** Thanks for confirming. So the old August 28 slot is no longer booked, and the new September 10 appointment is fully confirmed. That’s all I needed to verify today. Goodbye.
 - **2026-08-28T09:56:02.310582+00:00 — remote_agent:** You've got it.
