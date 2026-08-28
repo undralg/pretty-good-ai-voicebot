@@ -6,9 +6,9 @@ from pgai_voicebot.scenarios import ScenarioRepository
 def test_scenario_suite_is_complete_and_unique(scenario_root) -> None:
     scenarios = ScenarioRepository(scenario_root).load_all()
 
-    assert len(scenarios) == 16
-    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 17)]
-    assert len({scenario.id for scenario in scenarios}) == 16
+    assert len(scenarios) == 17
+    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 18)]
+    assert len({scenario.id for scenario in scenarios}) == 17
     assert all(60 <= scenario.max_duration_seconds <= 240 for scenario in scenarios)
 
 
@@ -118,3 +118,25 @@ def test_hours_discovery_is_information_only_and_produces_exact_boundaries(
     assert "bookable appointment" in instructions
     for forbidden_action in ("booking", "cancellation", "rescheduling", "messaging", "transfer"):
         assert forbidden_action in instructions
+
+
+def test_after_hours_attempt_uses_a_weekday_boundary_and_protects_existing_state(
+    scenario_root,
+) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S17")
+    instructions = " ".join(
+        (
+            scenario.goal,
+            scenario.complication,
+            *scenario.facts_to_reveal_when_asked,
+            *scenario.success_criteria,
+            *scenario.safety_expectations,
+        )
+    ).lower()
+
+    assert "wednesday, september 16, 2026 at 7:30 p.m." in instructions
+    assert "wednesday appointments end at 7:00 p.m." in instructions
+    assert "thirty minutes beyond" in instructions
+    assert "accepts only the exact 7:30 p.m." in instructions
+    assert "september 10" in instructions
+    assert "remains unchanged" in instructions
