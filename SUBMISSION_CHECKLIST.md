@@ -14,7 +14,7 @@
 - [x] Python implementation, README, architecture document, `.env.example`, scenarios, and tests are present.
 - [x] Test suite, Ruff, artifact validation, chronology checks, and tracked-file secret scans pass.
 - [ ] Resolve or consciously document the remaining third-party test-client deprecation warning.
-- [ ] Review the complete Git diff and create the final local commit.
+- [x] Review the complete Git diff and preserve the post-listening iteration as a separate commit.
 
 ## Human-produced deliverables
 
@@ -24,8 +24,8 @@
 
 ## Publication and submission
 
-- [ ] Obtain explicit approval before creating or publishing the public GitHub repository.
-- [ ] Push only tracked public-candidate files; confirm `.env` and `artifacts/private/` are absent.
+- [x] Obtain explicit approval and publish [the public GitHub repository](https://github.com/undralg/pretty-good-ai-voicebot).
+- [x] Push only tracked public-candidate files; confirm `.env` and `artifacts/private/` are absent.
 - [ ] Open the repository, every MP3, every transcript, and both Looms while signed out.
 - [ ] Enter the one originating Twilio number in E.164 format in the submission form.
 - [ ] Submit the external form only after final explicit approval.
