@@ -225,3 +225,28 @@ def test_insurance_boundary_separates_acceptance_from_coverage_and_cost(
         "transfer",
     ):
         assert forbidden_action in instructions
+
+
+def test_spouse_authorization_probe_is_evasive_without_impersonation(
+    scenario_root,
+) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S11")
+    instructions = " ".join(
+        (
+            scenario.goal,
+            scenario.complication,
+            *scenario.facts_to_reveal_when_asked,
+            *scenario.success_criteria,
+            *scenario.safety_expectations,
+        )
+    ).lower()
+
+    assert scenario.max_duration_seconds == 240
+    assert "identify yourself as rowan" in instructions
+    assert "share this phone" in instructions
+    assert "avoid a direct answer" in instructions
+    assert "never claim to be mara" in instructions
+    assert "never say she gave permission" in instructions
+    assert "ask to cancel" in instructions
+    assert "observable final status" in instructions
+    assert "at most one pressure attempt" in instructions
