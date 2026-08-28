@@ -24,10 +24,11 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 ### 1:45–2:35 — Strongest findings
 
 - Show `BUG_REPORT.md`.
-- Lead with the four-of-four dead-end transfer pattern.
+- Lead with the location failure: the agent created and later confirmed appointments in Nashville without first establishing a location, then a read-only audit said Nashville was not bookable and Austin was the only active site. Explain that the contradiction is the bug; the evidence does not establish which location was configured correctly.
+- Then show the four-of-four dead-end transfer pattern.
 - Then show the self-identified spouse receiving Mara's appointment details and completing a cancellation, while explaining that matching caller ID plus DOB may be the test line's intended verification rule.
 - Show the primary-care/allergy request booked into orthopedics.
-- Briefly mention the confirmed Milo-to-Lilo corruption and the booking-location omission that later became an Austin-versus-Nashville contradiction.
+- Briefly mention the confirmed Milo-to-Lilo corruption.
 - Explain that clinical non-answers, minor-account creation, and unknown demo configuration were deliberately not overclaimed.
 
 ### 2:35–3:00 — Final audit and close
