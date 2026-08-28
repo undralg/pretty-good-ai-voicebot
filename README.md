@@ -2,11 +2,11 @@
 
 Python automated-patient simulator for the Pretty Good AI engineering challenge.
 
-> **Current status:** The live voice stack is implemented and tested. Sixteen sequential attempts produced 15 recordings; ten selected calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. Automated and objective audio checks pass. Manual listening, the two required Loom videos, public GitHub publication, and final form submission remain explicit human checkpoints.
+> **Current status:** The live voice stack is implemented and tested. Twenty sequential attempts produced 19 recordings; eleven chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. Calls 01–10 passed manual listening review. The final read-only state audit, `call-11`, passed objective QA and awaits the submitter's listening review. The two required Loom videos, public GitHub publication, and final form submission remain.
 
 ## What it does
 
-The bot calls only the assessment line at `+18054398008`, acts as a synthetic patient, and steers toward a scenario goal while responding naturally to the assessment agent. The ten scenarios cover scheduling, rescheduling, cancellation, refill safety, urgent symptoms, privacy, multiple intents, correction handling, parent/child identity separation, accessibility, and insurance grounding.
+The bot calls only the assessment line at `+18054398008`, acts as a synthetic patient, and steers toward a scenario goal while responding naturally to the assessment agent. Fourteen authored scenarios cover scheduling, rescheduling, cancellation, refill safety, urgent symptoms, privacy, multiple intents, correction handling, parent/child identity separation, accessibility, insurance grounding, and cross-call state integrity.
 
 No real patient data is used. The destination cannot be supplied through the CLI or environment, and live execution requires two separate acknowledgements.
 
@@ -24,10 +24,12 @@ Official references:
 
 ## Evidence
 
-- [Call index](CALL_INDEX.md) — direct links to ten selected recordings and transcripts
+- [Call index](CALL_INDEX.md) — eleven selected recordings and transcripts in actual chronological order
 - [Bug report](BUG_REPORT.md) — evidence-backed candidates, with manual-audio status stated
+- [Capability matrix](docs/CAPABILITY_MATRIX.md) — separates assessment requirements, broader product claims, and unknown test-line configuration
 - [Manual audio review](docs/MANUAL_AUDIO_REVIEW.md) — final human listening checklist
 - [Scenario suite](scenarios/) — synthetic inputs and expected behavior
+- [Loom recording guide](docs/LOOM_GUIDE.md) and [submission checklist](SUBMISSION_CHECKLIST.md) — remaining human and publication steps
 
 Objective QA confirmed that every selected MP3 is stereo, both channels carry non-silent audio, durations are 81–172 seconds, and the longest detected silence is 5.5 seconds. These checks do not replace listening.
 
@@ -51,7 +53,7 @@ TWILIO_API_KEY_SECRET=
 TWILIO_AUTH_TOKEN=
 TWILIO_FROM_NUMBER=
 TWILIO_VALIDATE_SIGNATURES=true
-CALL_TIME_LIMIT_SECONDS=180
+CALL_TIME_LIMIT_SECONDS=240
 ARTIFACT_ROOT=artifacts/private
 ```
 
@@ -78,14 +80,14 @@ make live-stack
 .venv/bin/pgai-voicebot live-call --scenario S01 --execute
 ```
 
-There is deliberately no `--to` option. Calls are run sequentially so status callbacks, recordings, transcripts, and scenario versions cannot be mixed. The 180-second limit is a watchdog that supports the brief's typical one-to-three-minute range; sequential execution and this exact watchdog are project safeguards, not extra Pretty Good AI requirements.
+There is deliberately no `--to` option. Calls are run sequentially so status callbacks, recordings, transcripts, and scenario versions cannot be mixed. The brief describes full calls as typically one to three minutes rather than imposing a hard maximum. The project therefore uses a configurable 240-second watchdog while individual scenarios may select shorter limits; this watchdog and sequential execution are project safeguards, not extra Pretty Good AI requirements.
 
 ## Tests
 
 The automated suite covers:
 
 - immutable destination and dual live-call gates;
-- scenario schema and 180-second maximum;
+- scenario schema and configurable 240-second watchdog;
 - TwiML generation and signed HTTP/WSS callbacks;
 - restricted-key call/recording paths;
 - streaming token termination and spacing;
@@ -93,21 +95,20 @@ The automated suite covers:
 - deterministic transfer/goodbye and graceful end-session messages;
 - callback ordering, absent recordings, scenario snapshots, and artifact paths.
 
-Current local result: **36 tests passed** and Ruff passed.
+Current local result: **40 tests passed** and Ruff passed.
 
 ## Artifact handling
 
-`artifacts/private/` is ignored and contains all attempts, including excluded failures. `scripts/package_candidate_calls.py` copies an explicit allowlist into `artifacts/final/`, removes the source number and provider Call SID from metadata, and marks every selection `pending_manual_audio_review`. It never promotes calls by globbing or by provider status alone.
+`artifacts/private/` is ignored and contains all attempts, including excluded failures. `scripts/package_candidate_calls.py` copies an explicit chronological allowlist into `artifacts/final/`, removes the source number and provider Call SID from metadata, and marks every selection `pending_manual_audio_review`. It never promotes calls by globbing or by provider status alone.
 
 The transcripts and audio may still contain the dedicated Twilio originating number when the assessment agent says it aloud. Review that privacy tradeoff before making the repository public.
 
 ## Remaining human checkpoints
 
-1. Listen to all ten selected MP3s while following the transcripts; update each evaluation and metadata status only after confirming clarity and fidelity.
-2. Confirm or remove each bug candidate based on the recording, not the transcript alone.
-3. Record two public Loom videos with the submitter's own webcam and voice: a project walkthrough and a genuine AI-assisted debugging session.
-4. Run a secret/privacy scan and review the complete Git diff.
-5. Obtain explicit approval before creating or publishing the public GitHub repository.
-6. Open the repository, Looms, recordings, and transcripts signed out, then obtain explicit approval before submitting the external form.
+1. Listen to `call-11` and either mark it passed or exclude it; the ten reviewed calls already satisfy the minimum.
+2. Record two public Loom videos with the submitter's own webcam and voice: a project walkthrough and a genuine AI-assisted debugging session.
+3. Run a secret/privacy scan and review the complete Git diff.
+4. Obtain explicit approval before creating or publishing the public GitHub repository.
+5. Open the repository, Looms, recordings, and transcripts signed out, then obtain explicit approval before submitting the external form.
 
 The project deliberately stops at these checkpoints because an automated assistant cannot truthfully perform the user's listening, webcam narration, publication approval, or final-submission approval.

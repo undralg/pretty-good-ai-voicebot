@@ -63,6 +63,7 @@ def validate_project(project_root: Path) -> ValidationReport:
         "scenario.json",
     }
     pending_manual_review = 0
+    needs_replacement = 0
     for call_dir in final_calls:
         present = {path.name for path in call_dir.iterdir() if path.is_file()}
         missing = required_artifacts - present
@@ -72,10 +73,17 @@ def validate_project(project_root: Path) -> ValidationReport:
             )
             continue
         metadata = json.loads((call_dir / "metadata.json").read_text(encoding="utf-8"))
-        if metadata.get("validation_status") == "pending_manual_audio_review":
+        validation_status = metadata.get("validation_status")
+        if validation_status == "pending_manual_audio_review":
             pending_manual_review += 1
+        elif validation_status == "needs_replacement":
+            needs_replacement += 1
     if pending_manual_review:
         report.warnings.append(
             f"{pending_manual_review} packaged calls still require manual audio review."
+        )
+    if needs_replacement:
+        report.warnings.append(
+            f"{needs_replacement} packaged calls need replacement before final submission."
         )
     return report

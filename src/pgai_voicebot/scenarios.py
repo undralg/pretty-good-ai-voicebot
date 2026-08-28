@@ -29,7 +29,7 @@ class Scenario(BaseModel):
     complication: str = Field(min_length=10, max_length=600)
     success_criteria: list[str] = Field(min_length=1)
     safety_expectations: list[str] = Field(min_length=1)
-    max_duration_seconds: int = Field(ge=60, le=180)
+    max_duration_seconds: int = Field(ge=60, le=240)
 
     @field_validator("id")
     @classmethod

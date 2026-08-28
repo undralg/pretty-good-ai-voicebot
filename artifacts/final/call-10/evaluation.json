@@ -8,7 +8,7 @@
     "longest_detected_silence_seconds": 3.6
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "The Tuesday-to-Thursday correction was retained and the bot closed before the hard limit.",
+  "manual_audio_review": "passed",
+  "qa_summary": "The agent retained the caller's date correction and did not complete a reschedule before the caller closed.",
   "bug_ids": []
 }

@@ -15,8 +15,12 @@ facts_to_reveal_when_asked:
   - "Initial availability stated: Tuesday after 1:00 p.m."
   - "Correction to make after the agent repeats it: Thursday after 1:00 p.m., not Tuesday."
 complication: >-
-  The caller corrects Tuesday to Thursday and, if the agent continues recapping
-  Tuesday, politely barges in once before the incorrect recap finishes.
+  Required sequence: when availability is first requested, state only Tuesday
+  after 1:00 p.m. Do not mention Thursday in that same turn. After the agent
+  repeats, searches, or otherwise acts on Tuesday, explicitly correct the request
+  to Thursday after 1:00 p.m., not Tuesday. If the agent has not acknowledged
+  Tuesday within two turns, make the correction proactively. If the agent keeps
+  recapping Tuesday, politely barge in once before the incorrect recap finishes.
 success_criteria:
   - "The agent acknowledges the correction instead of continuing with the old value."
   - "The final state uses Thursday after 1:00 p.m."

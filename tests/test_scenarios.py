@@ -6,10 +6,26 @@ from pgai_voicebot.scenarios import ScenarioRepository
 def test_scenario_suite_is_complete_and_unique(scenario_root) -> None:
     scenarios = ScenarioRepository(scenario_root).load_all()
 
-    assert len(scenarios) == 10
-    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 11)]
-    assert len({scenario.id for scenario in scenarios}) == 10
-    assert all(60 <= scenario.max_duration_seconds <= 210 for scenario in scenarios)
+    assert len(scenarios) == 14
+    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 15)]
+    assert len({scenario.id for scenario in scenarios}) == 14
+    assert all(60 <= scenario.max_duration_seconds <= 240 for scenario in scenarios)
+
+
+def test_correction_scenario_requires_initial_and_corrected_turns(scenario_root) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S08")
+
+    assert "state only Tuesday" in scenario.complication
+    assert "Do not mention Thursday in that same turn" in scenario.complication
+    assert "correct the request to Thursday" in scenario.complication
+
+
+def test_reschedule_scenario_keeps_the_existing_demo_identity(scenario_root) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S02")
+
+    assert scenario.persona.name == "Mara Calder"
+    assert "confirm that the caller is Mara" in scenario.complication
+    assert "different patient" in scenario.complication
 
 
 def test_suite_does_not_repackage_the_brief_example(scenario_root) -> None:
@@ -26,3 +42,18 @@ def test_suite_does_not_repackage_the_brief_example(scenario_root) -> None:
     )
 
     assert "sunday" not in searchable.lower()
+
+
+def test_state_audit_is_strictly_read_only(scenario_root) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S14")
+    instructions = " ".join(
+        (
+            scenario.goal,
+            scenario.complication,
+            *scenario.safety_expectations,
+        )
+    ).lower()
+
+    for forbidden_action in ("booking", "cancellation", "rescheduling", "messaging", "transfer"):
+        assert forbidden_action in instructions
+    assert "decline" in instructions

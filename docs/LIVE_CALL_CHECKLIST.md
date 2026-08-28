@@ -1,6 +1,6 @@
 # Live Call Checklist
 
-> **Current status:** Live calling is complete. Sixteen sequential attempts produced 15 MP3s; ten candidates are packaged. Automated tests, callbacks, transcripts, stereo/channel checks, duration checks, and silence checks pass. Manual listening, Loom recording, publication, and final submission remain pending.
+> **Current status:** Live calling is complete. Twenty sequential attempts produced 19 MP3s; eleven chronological candidates are packaged. Automated tests, callbacks, transcripts, stereo/channel checks, duration checks, and silence checks pass. Calls 01–10 passed manual listening; only the read-only `call-11`, Loom recording, publication, and final submission remain pending.
 
 Use this checklist in order. A dry run is not a substitute for a live pilot, and a live pilot is not permission to publish or submit.
 

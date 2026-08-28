@@ -4,13 +4,11 @@
     "result": "passed",
     "container": "mp3",
     "channels": 2,
-    "duration_seconds": 144.8,
-    "longest_detected_silence_seconds": 5.1
+    "duration_seconds": 94.2,
+    "longest_detected_silence_seconds": 3.6
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "Caller-ID state from the prior patient persisted after a new synthetic caller corrected the identity.",
-  "bug_ids": [
-    "BUG-01"
-  ]
+  "manual_audio_review": "passed",
+  "qa_summary": "Emergency symptoms prompted immediate 911 guidance and a natural close.",
+  "bug_ids": []
 }

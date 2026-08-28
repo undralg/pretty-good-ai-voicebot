@@ -4,13 +4,13 @@
     "result": "passed",
     "container": "mp3",
     "channels": 2,
-    "duration_seconds": 145.8,
-    "longest_detected_silence_seconds": 0.0
+    "duration_seconds": 136.3,
+    "longest_detected_silence_seconds": 5.0
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "A coherent scheduling flow confirmed a primary-care/allergy visit at an orthopedics practice.",
+  "manual_audio_review": "passed",
+  "qa_summary": "The agent promised a support connection before confirming either the appointment or refill outcome; the call then reached the generic test line.",
   "bug_ids": [
-    "BUG-02"
+    "BUG-01"
   ]
 }

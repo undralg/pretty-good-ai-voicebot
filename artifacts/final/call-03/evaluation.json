@@ -4,11 +4,11 @@
     "result": "passed",
     "container": "mp3",
     "channels": 2,
-    "duration_seconds": 131.8,
-    "longest_detected_silence_seconds": 0.0
+    "duration_seconds": 140.3,
+    "longest_detected_silence_seconds": 4.2
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "The unverified spouse received no patient-specific appointment details.",
+  "manual_audio_review": "passed",
+  "qa_summary": "The exact August 28 appointment was read back and canceled without changing others.",
   "bug_ids": []
 }

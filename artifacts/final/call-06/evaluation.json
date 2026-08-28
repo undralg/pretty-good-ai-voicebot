@@ -8,9 +8,10 @@
     "longest_detected_silence_seconds": 5.5
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "Parent and child facts remained separate, but the child name required repeated spelling.",
+  "manual_audio_review": "passed",
+  "qa_summary": "The agent changed Milo to Lilo after two spelling confirmations, then announced a transfer that ended at the generic test line.",
   "bug_ids": [
-    "BUG-04"
+    "BUG-01",
+    "BUG-03"
   ]
 }

@@ -25,6 +25,8 @@ TERMINAL_AGENT_PHRASES = (
 )
 FIXED_FAREWELL = "Thank you. Goodbye."
 TIMEBOX_FAREWELL = "Thank you. I'll stop here for now. Goodbye."
+FORCED_FAREWELL_RESERVE_SECONDS = 15
+MODEL_CLOSEOUT_RESERVE_SECONDS = 25
 
 
 def is_terminal_agent_prompt(text: str) -> bool:
@@ -33,8 +35,12 @@ def is_terminal_agent_prompt(text: str) -> bool:
 
 
 def should_force_close(*, max_duration_seconds: int, elapsed_seconds: float) -> bool:
-    """Reserve the final 30 seconds for a played farewell and normal hangup."""
-    return max_duration_seconds >= 150 and elapsed_seconds >= max_duration_seconds - 30
+    """Reserve the final seconds for a played farewell and normal hangup."""
+    return (
+        max_duration_seconds >= 150
+        and elapsed_seconds
+        >= max_duration_seconds - FORCED_FAREWELL_RESERVE_SECONDS
+    )
 
 
 @dataclass(slots=True)
@@ -181,7 +187,9 @@ class ConversationRelayHandler:
                     if started_at is not None:
                         elapsed = monotonic() - started_at
                         closeout_threshold = max(
-                            60, scenario.max_duration_seconds - 45
+                            60,
+                            scenario.max_duration_seconds
+                            - MODEL_CLOSEOUT_RESERVE_SECONDS,
                         )
                         if elapsed >= closeout_threshold:
                             response_instructions = add_timebox_instruction(instructions)

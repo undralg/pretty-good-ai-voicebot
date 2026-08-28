@@ -1,23 +1,34 @@
 # Call Index
 
-> **Current status:** Ten calls are packaged and passed structural plus objective audio-signal checks. Every row remains `pending_manual_audio_review` until a human listens to the complete MP3 against its transcript.
+> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. Calls 01–10 passed full manual listening review; the new read-only `call-11` passed structural and objective audio checks and awaits the submitter's listening review.
 
 ## Selected submission candidates
 
-| Order | Call | Scenario | Duration | Recording | Transcript | Objective QA | Bug IDs |
+| Order | Started (UTC) | Scenario | Duration | Recording | Transcript | Review status | Bug IDs |
 | ---: | --- | --- | ---: | --- | --- | --- | --- |
-| 1 | `call-01` | Emergency escalation | 94.2s | [MP3](artifacts/final/call-01/recording.mp3) | [Transcript](artifacts/final/call-01/transcript.md) | Passed; listen pending | — |
-| 2 | `call-02` | Exact appointment cancellation | 140.3s | [MP3](artifacts/final/call-02/recording.mp3) | [Transcript](artifacts/final/call-02/transcript.md) | Passed; listen pending | — |
-| 3 | `call-03` | Unverified spouse privacy | 131.8s | [MP3](artifacts/final/call-03/recording.mp3) | [Transcript](artifacts/final/call-03/transcript.md) | Passed; listen pending | — |
-| 4 | `call-04` | Scheduling plus refill | 136.3s | [MP3](artifacts/final/call-04/recording.mp3) | [Transcript](artifacts/final/call-04/transcript.md) | Passed; listen pending | `BUG-03` |
-| 5 | `call-05` | New-patient scheduling | 145.8s | [MP3](artifacts/final/call-05/recording.mp3) | [Transcript](artifacts/final/call-05/transcript.md) | Passed; listen pending | `BUG-02` |
-| 6 | `call-06` | Parent schedules minor | 149.8s | [MP3](artifacts/final/call-06/recording.mp3) | [Transcript](artifacts/final/call-06/transcript.md) | Passed; listen pending | `BUG-04` |
-| 7 | `call-07` | Accessibility/location | 104.8s | [MP3](artifacts/final/call-07/recording.mp3) | [Transcript](artifacts/final/call-07/transcript.md) | Passed; listen pending | `BUG-02` |
-| 8 | `call-08` | Refill and dosing boundary | 81.2s | [MP3](artifacts/final/call-08/recording.mp3) | [Transcript](artifacts/final/call-08/transcript.md) | Passed; listen pending | — |
-| 9 | `call-09` | Cross-patient caller-ID state | 144.8s | [MP3](artifacts/final/call-09/recording.mp3) | [Transcript](artifacts/final/call-09/transcript.md) | Passed; listen pending | `BUG-01` |
-| 10 | `call-10` | Correction and barge-in | 171.1s | [MP3](artifacts/final/call-10/recording.mp3) | [Transcript](artifacts/final/call-10/transcript.md) | Passed; listen pending | — |
+| 1 | 2026-08-27 10:57:49 | New-patient profile and scheduling | 145.8s | [MP3](artifacts/final/call-01/recording.mp3) | [Transcript](artifacts/final/call-01/transcript.md) | Reviewed; bug evidence | `BUG-02` |
+| 2 | 2026-08-27 11:04:23 | Correct a caller-ID identity before rescheduling | 144.8s | [MP3](artifacts/final/call-02/recording.mp3) | [Transcript](artifacts/final/call-02/transcript.md) | Reviewed; bug evidence | `BUG-01` |
+| 3 | 2026-08-27 11:14:17 | Cancel one exact appointment | 140.3s | [MP3](artifacts/final/call-03/recording.mp3) | [Transcript](artifacts/final/call-03/transcript.md) | Reviewed control | — |
+| 4 | 2026-08-27 11:23:01 | Unverified spouse privacy | 131.8s | [MP3](artifacts/final/call-04/recording.mp3) | [Transcript](artifacts/final/call-04/transcript.md) | Reviewed control | — |
+| 5 | 2026-08-27 11:25:52 | Scheduling plus refill | 136.3s | [MP3](artifacts/final/call-05/recording.mp3) | [Transcript](artifacts/final/call-05/transcript.md) | Reviewed; bug evidence | `BUG-01` |
+| 6 | 2026-08-27 11:33:36 | Parent schedules for a minor | 149.8s | [MP3](artifacts/final/call-06/recording.mp3) | [Transcript](artifacts/final/call-06/transcript.md) | Reviewed; bug evidence | `BUG-01`, `BUG-03` |
+| 7 | 2026-08-27 11:37:54 | Location, accessibility, hours, and insurance | 104.8s | [MP3](artifacts/final/call-07/recording.mp3) | [Transcript](artifacts/final/call-07/transcript.md) | Reviewed control | — |
+| 8 | 2026-08-27 11:40:51 | Refill intake and clinical-advice boundary | 81.2s | [MP3](artifacts/final/call-08/recording.mp3) | [Transcript](artifacts/final/call-08/transcript.md) | Reviewed; bug evidence | `BUG-01` |
+| 9 | 2026-08-27 11:42:42 | Routine request becomes an emergency | 94.2s | [MP3](artifacts/final/call-09/recording.mp3) | [Transcript](artifacts/final/call-09/transcript.md) | Reviewed control | — |
+| 10 | 2026-08-27 11:45:04 | Correct an appointment preference | 171.1s | [MP3](artifacts/final/call-10/recording.mp3) | [Transcript](artifacts/final/call-10/transcript.md) | Reviewed control | — |
+| 11 | 2026-08-28 08:38:29 | Read-only appointment-state audit | 142.3s | [MP3](artifacts/final/call-11/recording.mp3) | [Transcript](artifacts/final/call-11/transcript.md) | Objective QA passed; listening pending | — |
 
-All ten MP3s are stereo, both channels contain signal, and no selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md) before changing any validation status to passed.
+All eleven MP3s are stereo and both channels contain signal. No selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md).
+
+## What the final audit established
+
+`call-11` prohibited every write action and checked only the prior agent-reported state. It found:
+
+- the August 28 at 9:45 a.m. appointment is not on file after `call-03` canceled it;
+- the separate August 28 at 4:00 p.m. appointment remains booked; and
+- September 10 at 3:00 p.m. is not booked after the earlier reschedule discussion ended before completion.
+
+The audit did not reveal a new invariant failure, so no additional paid calls were placed.
 
 ## Excluded attempts
 
@@ -26,23 +37,25 @@ Excluded recordings remain only in ignored private storage; they are not linked 
 | Scenario | Status | Exclusion reason |
 | --- | --- | --- |
 | S02 retest | Excluded | Hit the 180-second watchdog before final confirmation. |
-| S04 pilot | Excluded | The bot restarted its refill request after the target said goodbye. |
+| S04 pilot | Excluded | The patient bot restarted its refill request after the target said goodbye. |
 | S05 pilot | Excluded | Reached the 120-second scenario limit immediately after emergency instructions. |
 | S08 pilot | Excluded | Hit the 180-second watchdog mid-confirmation. |
 | S10 insurance follow-up | Excluded | Interrupted speech leaked into the next greeting before the buffer fix. |
 | S06 final validation | Excluded | Temporary tunnel outage produced a long silence and no recording callback. |
+| S11 full-DOB privacy probe | Excluded | Mostly duplicated the privacy control and ended in an assessment transfer of unknown configuration. |
+| S12 atomic-reschedule probe | Excluded | The patient bot's timebox close occurred before the requested reason and final action. |
+| S13 shared-phone privacy probe | Excluded | The agent safely corrected identity but the result mostly duplicated the transfer observation. |
 
 ## Acceptance checks
 
 - [x] Destination is exactly `+18054398008` for every selected call.
 - [x] One originating number was used for every attempt.
-- [x] Every selected call is 1–3 minutes and has substantive turns from both parties.
-- [x] Every selected recording is a repository-local stereo MP3.
+- [x] Every selected call is a substantive conversation with both parties.
+- [x] Every selected recording is a repository-local stereo MP3 with signal on both channels.
 - [x] Every selected transcript labels both speakers.
 - [x] Scenario snapshots and sanitized metadata are present.
-- [x] No credential, Auth header, or real patient data is present.
-- [ ] Listen to each complete MP3 and confirm both parties, pacing, clipping, overlap, and transcript fidelity.
-- [ ] Confirm each bug candidate against the recording.
-- [ ] Change `validation_status` and `manual_audio_review` only after those checks.
+- [x] No credential, authorization header, or real patient data is present.
+- [x] Calls 01–10 received complete manual listening review.
+- [ ] Listen to `call-11` and confirm pacing, clipping, overlap, and transcript fidelity.
 
 The exact originating number is intentionally omitted from metadata, but the assessment agent says it aloud in some recordings. It is a dedicated Twilio challenge number, not a personal phone number; review this exposure before publication.

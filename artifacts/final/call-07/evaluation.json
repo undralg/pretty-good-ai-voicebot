@@ -8,9 +8,7 @@
     "longest_detected_silence_seconds": 0.0
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "Accessibility uncertainty was handed off, but the stated sole location conflicts with other calls.",
-  "bug_ids": [
-    "BUG-02"
-  ]
+  "manual_audio_review": "passed",
+  "qa_summary": "The agent answered administrative location questions and safely declined to guarantee an accessibility feature it could not verify.",
+  "bug_ids": []
 }

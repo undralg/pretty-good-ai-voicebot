@@ -8,7 +8,9 @@
     "longest_detected_silence_seconds": 3.6
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "The refill, pharmacy correction, low supply, and dosing question were routed without dosing advice.",
-  "bug_ids": []
+  "manual_audio_review": "passed",
+  "qa_summary": "The agent appropriately avoided dosing advice, but its announced transfer ended at the generic test line without acknowledging or carrying forward the questions.",
+  "bug_ids": [
+    "BUG-01"
+  ]
 }

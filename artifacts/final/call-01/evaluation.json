@@ -4,11 +4,13 @@
     "result": "passed",
     "container": "mp3",
     "channels": 2,
-    "duration_seconds": 94.2,
-    "longest_detected_silence_seconds": 3.6
+    "duration_seconds": 145.8,
+    "longest_detected_silence_seconds": 0.0
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "Emergency symptoms prompted immediate 911 guidance and a natural close.",
-  "bug_ids": []
+  "manual_audio_review": "passed",
+  "qa_summary": "The first call created Mara's demo profile, then confirmed a primary-care/allergy visit at an orthopedics practice.",
+  "bug_ids": [
+    "BUG-02"
+  ]
 }

@@ -10,7 +10,9 @@ def test_timebox_instruction_requires_a_close_without_another_question() -> None
     assert "Do not ask another question" in result
 
 
-def test_force_close_reserves_last_thirty_seconds_only_for_long_scenarios() -> None:
-    assert should_force_close(max_duration_seconds=180, elapsed_seconds=150)
-    assert not should_force_close(max_duration_seconds=180, elapsed_seconds=149.9)
+def test_force_close_reserves_last_fifteen_seconds_only_for_long_scenarios() -> None:
+    assert should_force_close(max_duration_seconds=180, elapsed_seconds=165)
+    assert not should_force_close(max_duration_seconds=180, elapsed_seconds=164.9)
+    assert should_force_close(max_duration_seconds=210, elapsed_seconds=195)
+    assert not should_force_close(max_duration_seconds=210, elapsed_seconds=194.9)
     assert not should_force_close(max_duration_seconds=120, elapsed_seconds=119)

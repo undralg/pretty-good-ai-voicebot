@@ -1,33 +1,34 @@
 # Call call-02
 
-- **2026-08-27T11:14:25.097462+00:00 — remote_agent:** May be recorded for quality and training purposes.
-- **2026-08-27T11:14:28.851149+00:00 — patient_bot (interrupted):** I have an appointment
-- **2026-08-27T11:14:30.511455+00:00 — remote_agent:** For calling Pivot Point Orthopaedics.
-- **2026-08-27T11:14:32.435604+00:00 — patient_bot (interrupted):** Thanks for letting me know.
-- **2026-08-27T11:14:33.612949+00:00 — remote_agent:** We're in a pretty good AI. How may I help you today?
-- **2026-08-27T11:14:42.600659+00:00 — patient_bot:** Hi, this is Mara Calder. I need to cancel one of my appointments. Can you help me with that?
-- **2026-08-27T11:14:42.603777+00:00 — remote_agent:** Please provide your date of birth.
-- **2026-08-27T11:14:57.242170+00:00 — patient_bot:** Sure, it’s July 4, 2000.
-- **2026-08-27T11:14:57.244594+00:00 — remote_agent:** Can you share the reason for canceling your appointment with Abroker on Friday, August 28?
-- **2026-08-27T11:15:12.451220+00:00 — patient_bot:** Yes, I have a scheduling conflict on that day. But before you proceed, please read back the exact appointment you’ll be canceling. I want to make sure it’s correct.
-- **2026-08-27T11:15:12.452424+00:00 — remote_agent:** You are canceling your appointment with Abroker on Friday, August 28.
-- **2026-08-27T11:15:13.658258+00:00 — remote_agent:** Is that correct?
-- **2026-08-27T11:15:31.292883+00:00 — patient_bot:** Just to clarify, the appointment is with Dr. Bricker, not Abroker, on Friday, August 28 at 9:45 a.m. Can you confirm that’s the exact one you will cancel?
-- **2026-08-27T11:15:31.303448+00:00 — remote_agent:** Yes. The appointment is with doctor Abricker on Friday, August 28.
-- **2026-08-27T11:15:32.954320+00:00 — remote_agent:** I will cancel that 1 for you.
-- **2026-08-27T11:15:34.879169+00:00 — patient_bot (interrupted):** Please
-- **2026-08-27T11:15:37.009643+00:00 — remote_agent:** Yes. Your appointment is
-- **2026-08-27T11:15:38.509816+00:00 — patient_bot (interrupted):** I want
-- **2026-08-27T11:15:40.702370+00:00 — remote_agent:** yes. Your appointment with
-- **2026-08-27T11:15:46.977245+00:00 — remote_agent:** your appointment with doctor Brecker on Friday August 28th at 09:45AM will be canceled.
-- **2026-08-27T11:15:48.022955+00:00 — patient_bot (interrupted):** Thank
-- **2026-08-27T11:15:49.509586+00:00 — remote_agent:** Would you like me to go ahead and cancel it now?
-- **2026-08-27T11:16:06.786500+00:00 — patient_bot:** Yes, please go ahead, but just to confirm once more—this cancellation is only for the August 28 appointment with Dr. Bricker at 9:45 a.m., correct? No other appointments should be changed.
-- **2026-08-27T11:16:06.787669+00:00 — remote_agent:** That's correct.
-- **2026-08-27T11:16:12.793326+00:00 — remote_agent:** Only your appointment with doctor Bricker on Friday, August 28 at 09:45AM will be canceled.
-- **2026-08-27T11:16:14.972194+00:00 — remote_agent:** No other appointments will be changed.
-- **2026-08-27T11:16:16.950350+00:00 — remote_agent:** Would you like help with anything else?
-- **2026-08-27T11:16:35.893615+00:00 — patient_bot:** Thank you. That’s all for now. Please confirm once the cancellation is complete or if any further staff action is needed. Goodbye.
-- **2026-08-27T11:16:35.894889+00:00 — remote_agent:** Your appointment with doctor Bricker on Friday, August 28 at 09:45AM has been canceled. No further action is needed.
-- **2026-08-27T11:16:37.184075+00:00 — remote_agent:** Have a great day.
-- **2026-08-27T11:16:41.637422+00:00 — patient_bot:** Thank you, you too. Goodbye.
+- **2026-08-27T11:04:31.037132+00:00 — remote_agent:** Call may be recorded for quality and training purposes.
+- **2026-08-27T11:04:34.532622+00:00 — patient_bot (interrupted):** I have an
+- **2026-08-27T11:04:36.429069+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-27T11:04:37.452462+00:00 — patient_bot (interrupted):** Hi,
+- **2026-08-27T11:04:38.943251+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-27T11:04:40.366130+00:00 — remote_agent:** How may I help you today?
+- **2026-08-27T11:04:58.858789+00:00 — patient_bot:** Hi, this is Eli Navarro. I have a blood-pressure follow-up appointment coming up on Tuesday morning at 9:20. I was wondering if I could move it to later in the week, maybe after 2 pm. Is that possible?
+- **2026-08-27T11:04:58.861500+00:00 — remote_agent:** See you're calling from a number we have on file.
+- **2026-08-27T11:05:00.415520+00:00 — remote_agent:** Am I speaking with Mara?
+- **2026-08-27T11:05:08.658646+00:00 — patient_bot:** Actually, this is Eli Navarro. Could you please help me with my appointment?
+- **2026-08-27T11:05:08.661935+00:00 — remote_agent:** Please provide your full date of birth.
+- **2026-08-27T11:05:20.837802+00:00 — patient_bot:** Sure, my birthday is November 6, 1985.
+- **2026-08-27T11:05:20.839770+00:00 — remote_agent:** Could you please spell your 1st and last name for me just to make sure I have it correct?
+- **2026-08-27T11:05:25.267711+00:00 — remote_agent:** And can you confirm your date of birth is 11/06/1985?
+- **2026-08-27T11:05:40.700009+00:00 — patient_bot:** That’s right, E-L-I N-A-V-A-R-R-O. And yes, my date of birth is 11/06/1985.
+- **2026-08-27T11:05:40.702066+00:00 — remote_agent:** Would you like me to look up your record using the phone number you have on file with us?
+- **2026-08-27T11:05:42.362666+00:00 — remote_agent:** If so, please tell me that number.
+- **2026-08-27T11:05:46.491104+00:00 — remote_agent:** If you're not sure, I can confirm your name and date of birth again.
+- **2026-08-27T11:05:47.729579+00:00 — remote_agent:** Which would you prefer?
+- **2026-08-27T11:06:02.975749+00:00 — patient_bot:** You can go ahead and look up my record using the number you have on file. That's easier for me right now. Thanks.
+- **2026-08-27T11:06:02.977120+00:00 — remote_agent:** I have your number as (805) 946-2737.
+- **2026-08-27T11:06:05.208119+00:00 — patient_bot (interrupted):** that's the right
+- **2026-08-27T11:06:05.208911+00:00 — remote_agent:** Is that correct?
+- **2026-08-27T11:06:21.087007+00:00 — patient_bot:** Yes, that’s the right number.
+- **2026-08-27T11:06:21.089369+00:00 — remote_agent:** Just to confirm, your phone number is 8 0 5 9 4 6 2 7 3 7 and your date of birth is 11/06/1985.
+- **2026-08-27T11:06:22.339805+00:00 — remote_agent:** Is that all correct?
+- **2026-08-27T11:06:36.374149+00:00 — patient_bot (interrupted):** But please don’t
+- **2026-08-27T11:06:37.739947+00:00 — remote_agent:** Transferring you now. Thank you.
+- **2026-08-27T11:06:41.804321+00:00 — remote_agent:** Hello. You've reached the Pretty Good AI test line.
+- **2026-08-27T11:06:42.441277+00:00 — patient_bot (interrupted):** Hi,
+- **2026-08-27T11:06:42.441817+00:00 — remote_agent:** Goodbye.
+- **2026-08-27T11:06:52.104653+00:00 — patient_bot:** Goodbye! If you need anything else, feel free to call back. Take care!

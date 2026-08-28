@@ -4,11 +4,13 @@
     "result": "passed",
     "container": "mp3",
     "channels": 2,
-    "duration_seconds": 140.3,
-    "longest_detected_silence_seconds": 4.2
+    "duration_seconds": 144.8,
+    "longest_detected_silence_seconds": 5.1
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "The exact August 28 appointment was read back and canceled without changing others.",
-  "bug_ids": []
+  "manual_audio_review": "passed",
+  "qa_summary": "A second synthetic caller corrected the caller-ID identity, but the announced transfer ended at the generic test line.",
+  "bug_ids": [
+    "BUG-01"
+  ]
 }

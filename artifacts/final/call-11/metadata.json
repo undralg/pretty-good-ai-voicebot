@@ -1,0 +1,14 @@
+{
+  "call_id": "call-11",
+  "scenario_id": "S14",
+  "scenario_title": "Read-only audit of previously discussed appointment states",
+  "started_at_utc": "2026-08-28T08:38:29.091983+00:00",
+  "duration_seconds": 142.3,
+  "destination": "+18054398008",
+  "originating_number_consistent": true,
+  "model": "gpt-4.1-mini",
+  "recording_file": "recording.mp3",
+  "transcript_file": "transcript.md",
+  "recording_channels": 2,
+  "validation_status": "pending_manual_audio_review"
+}
