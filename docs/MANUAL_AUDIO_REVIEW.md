@@ -21,8 +21,10 @@ Automated checks cannot determine whether a voice sounds natural or whether ever
 | [ ] | `call-13` | 111.6s | [MP3](../artifacts/final/call-13/recording.mp3) | [Text](../artifacts/final/call-13/transcript.md) | Verify the strictly read-only audit and the old-versus-new appointment statements. |
 | [ ] | `call-14` | 112.8s | [MP3](../artifacts/final/call-14/recording.mp3) | [Text](../artifacts/final/call-14/transcript.md) | Verify the information-only request and exact stated office/appointment hours. |
 | [ ] | `call-15` | 153.0s | [MP3](../artifacts/final/call-15/recording.mp3) | [Text](../artifacts/final/call-15/transcript.md) | Verify rejection of 7:30 p.m., no substituted booking, and unchanged existing appointment. |
+| [ ] | `call-16` | 171.2s | [MP3](../artifacts/final/call-16/recording.mp3) | [Text](../artifacts/final/call-16/transcript.md) | `BUG-04`: verify the agent audibly says Austin is the sole bookable site and Nashville is not active. |
+| [ ] | `call-17` | 151.4s | [MP3](../artifacts/final/call-17/recording.mp3) | [Text](../artifacts/final/call-17/transcript.md) | Verify both closed-period rejections, exact Austin location, no substitute, and unchanged existing appointment. |
 
-## For calls 12–15
+## For calls 12–17
 
 - [ ] Both speakers are audible throughout.
 - [ ] No disqualifying clipping, echo, long silence, or repeated talk-over.
@@ -31,8 +33,10 @@ Automated checks cannot determine whether a voice sounds natural or whether ever
 - [ ] `call-13` authorizes no write action and audibly reports both slot states.
 - [ ] `call-14` remains information-only and audibly states exact weekday boundaries.
 - [ ] `call-15` rejects 7:30 p.m., creates no substitute, and leaves September 10 unchanged.
-- [ ] All four transcripts match the material facts in the audio.
-- [ ] All four recordings contain only synthetic patient data.
+- [ ] `call-16` clearly states that Austin is the only bookable site and Nashville is not active.
+- [ ] `call-17` rejects Saturday at 10:00 a.m. and Monday at 8:30 a.m. in Austin without creating a substitute.
+- [ ] All six transcripts match the material facts in the audio.
+- [ ] All six recordings contain only synthetic patient data.
 
 ## After listening
 

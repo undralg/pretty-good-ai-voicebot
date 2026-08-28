@@ -1,0 +1,34 @@
+# Call call-16
+
+- **2026-08-28T10:37:53.025455+00:00 — remote_agent:** May be recorded for quality and training purposes.
+- **2026-08-28T10:37:56.511214+00:00 — patient_bot (interrupted):** this is Mara Calder.
+- **2026-08-28T10:37:58.296625+00:00 — remote_agent:** For calling Pivot Point Orthopedics.
+- **2026-08-28T10:38:00.404845+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-28T10:38:01.792593+00:00 — remote_agent:** How may I help you today?
+- **2026-08-28T10:38:24.145347+00:00 — patient_bot:** Hi. I’m checking about the locations where I can book appointments. I heard Austin is the main office. Can you tell me every active city and full street address where appointments are bookable?
+- **2026-08-28T10:38:24.147599+00:00 — remote_agent:** Our main office is in Austin. To confirm all active locations and addresses where you can book appointments, I'll need to verify your information 1st.
+- **2026-08-28T10:38:25.854510+00:00 — remote_agent:** May I get started with that?
+- **2026-08-28T10:38:41.305888+00:00 — patient_bot:** I’m not asking for my identity verification today. I just want to know all the places I can book an appointment. Could you just list every current appointment location with exact city and street address?
+- **2026-08-28T10:38:41.307064+00:00 — remote_agent:** Sure.
+- **2026-08-28T10:38:43.330165+00:00 — remote_agent:** Vivint Point Orthopedics currently has 1 main location for appointments.
+- **2026-08-28T10:38:45.196886+00:00 — patient_bot (interrupted):** You
+- **2026-08-28T10:38:51.993470+00:00 — remote_agent:** 1234 Recovery Way, suite 200, Austin. If you need more details or want to book an appointment, just let me know.
+- **2026-08-28T10:39:14.020646+00:00 — patient_bot:** Thank you. I also have a September 10 appointment listed at 220 Athens Way in Nashville. Is Nashville also an active booking location? Or is Austin the only one? How is the appointment location usually chosen—by the patient, provider, or your system?
+- **2026-08-28T10:39:14.022186+00:00 — remote_agent:** Austin is the only booking location for Pivot Point Orthopedics.
+- **2026-08-28T10:39:18.212138+00:00 — remote_agent:** We do not have appointments at 220 Athens Way in Nashville.
+- **2026-08-28T10:39:21.053251+00:00 — remote_agent:** All appointments are scheduled at our Austin office.
+- **2026-08-28T10:39:24.949946+00:00 — remote_agent:** The appointment location is chosen based on the clinic's available sites.
+- **2026-08-28T10:39:31.499133+00:00 — remote_agent:** Patients can select from the active locations when booking, but currently, only Austin is available.
+- **2026-08-28T10:39:36.069473+00:00 — remote_agent:** If you have a listing for Nashville, it may be an error or related to another provider.
+- **2026-08-28T10:39:39.153591+00:00 — remote_agent:** Would you like me to check your upcoming appointments to confirm?
+- **2026-08-28T10:40:06.428964+00:00 — patient_bot:** No, thank you. I’m not asking to review or change any appointments. I just wanted a comprehensive list of where appointments can actually be booked. You confirmed the only bookable location is: 1234 Recovery Way, Suite 200, Austin. There is no active Nashville booking site under Pivot Point Orthopedics. And the location is chosen by the clinic’s available sites, though patients can select among them if there were more than one. Is that all correct?
+- **2026-08-28T10:40:06.429526+00:00 — remote_agent:** That's correct.
+- **2026-08-28T10:40:15.262857+00:00 — remote_agent:** The only bookable location for Pivot Point Orthopedics is 1234 Recovery Way, suite 200, Austin.
+- **2026-08-28T10:40:17.725821+00:00 — remote_agent:** There is no active Nashville site.
+- **2026-08-28T10:40:22.615090+00:00 — remote_agent:** Patients choose from available clinic locations, but right now, Austin is the only option.
+- **2026-08-28T10:40:24.727702+00:00 — remote_agent:** Let me know if you need anything else.
+- **2026-08-28T10:40:35.063699+00:00 — patient_bot:** That answers my questions fully. Thanks for clarifying all active appointment locations and how the site is selected. Goodbye.
+- **2026-08-28T10:40:35.064800+00:00 — remote_agent:** You're welcome.
+- **2026-08-28T10:40:37.699658+00:00 — remote_agent:** You have more questions in the future, feel free to call.
+- **2026-08-28T10:40:38.463689+00:00 — remote_agent:** Goodbye.
+- **2026-08-28T10:40:39.888234+00:00 — patient_bot:** Thank you. Goodbye.

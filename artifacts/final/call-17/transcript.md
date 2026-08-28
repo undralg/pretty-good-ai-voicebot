@@ -1,0 +1,48 @@
+# Call call-17
+
+- **2026-08-28T10:41:54.929508+00:00 — remote_agent:** Call may be recorded for quality and training purposes.
+- **2026-08-28T10:41:58.642751+00:00 — patient_bot (interrupted):** I'd like to book an
+- **2026-08-28T10:42:00.472638+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopaedics.
+- **2026-08-28T10:42:01.804208+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-28T10:42:03.546142+00:00 — remote_agent:** How may I help you today?
+- **2026-08-28T10:42:16.741366+00:00 — patient_bot:** Hi, I want to book an appointment on Saturday, September 19, 2026, at 10:00 a.m. at your Austin location, please.
+- **2026-08-28T10:42:16.742050+00:00 — remote_agent:** I see you're calling from the number we have on file.
+- **2026-08-28T10:42:18.434134+00:00 — remote_agent:** Am I speaking with Mara?
+- **2026-08-28T10:42:24.362646+00:00 — patient_bot:** Yes, this is Mara Calder.
+- **2026-08-28T10:42:24.363964+00:00 — remote_agent:** Please provide your date of birth.
+- **2026-08-28T10:42:33.283501+00:00 — patient_bot:** It’s July 4, 2000.
+- **2026-08-28T10:42:33.284793+00:00 — remote_agent:** What type of appointment do you need?
+- **2026-08-28T10:42:34.794289+00:00 — patient_bot (interrupted):** I’m looking
+- **2026-08-28T10:42:36.689814+00:00 — remote_agent:** For example, is this for
+- **2026-08-28T10:42:46.284773+00:00 — patient_bot:** a follow-up or new patient visit? It should be at your Austin location.
+- **2026-08-28T10:42:46.285828+00:00 — remote_agent:** Is this a follow-up visit after a previous appointment?
+- **2026-08-28T10:42:50.099484+00:00 — remote_agent:** Or will this be your 1st time seeing us at the Austin location?
+- **2026-08-28T10:42:59.518509+00:00 — patient_bot:** This will be a new patient visit at your Austin location.
+- **2026-08-28T10:42:59.520075+00:00 — remote_agent:** Thanks for confirming.
+- **2026-08-28T10:43:03.399128+00:00 — remote_agent:** Let me check for available appointments on Saturday, September 19.
+- **2026-08-28T10:43:04.719669+00:00 — remote_agent:** At 10AM at the Austin location.
+- **2026-08-28T10:43:06.172674+00:00 — patient_bot (interrupted):** Please confirm
+- **2026-08-28T10:43:07.929747+00:00 — remote_agent:** There are no
+- **2026-08-28T10:43:10.726252+00:00 — remote_agent:** there are no available appointments on Saturday.
+- **2026-08-28T10:43:13.873202+00:00 — remote_agent:** September 19th, at the Austin location.
+- **2026-08-28T10:43:14.898023+00:00 — patient_bot (interrupted):** Thanks
+- **2026-08-28T10:43:18.153928+00:00 — remote_agent:** The soonest opening is Monday, September 21 at 9AM with Averker.
+- **2026-08-28T10:43:20.795866+00:00 — remote_agent:** Would you like to book that or hear other times?
+- **2026-08-28T10:43:38.400889+00:00 — patient_bot:** I need the exact Monday, September 21, 2026, appointment at 8:30 a.m. at the Austin location, please. No other times or dates. Is that available?
+- **2026-08-28T10:43:38.403179+00:00 — remote_agent:** There is no no 08:30AM slot available on Monday, September 21.
+- **2026-08-28T10:43:41.309619+00:00 — remote_agent:** The earliest opening that day is at 9AM.
+- **2026-08-28T10:43:43.426174+00:00 — remote_agent:** Would you like to book the 9AM slot?
+- **2026-08-28T10:43:44.685876+00:00 — patient_bot (interrupted):** No,
+- **2026-08-28T10:43:45.406737+00:00 — remote_agent:** Or would you prefer not to schedule?
+- **2026-08-28T10:44:03.365259+00:00 — patient_bot:** No, I only want to book Monday, September 21 at 8:30 a.m. at the Austin location. Since that's not available, please confirm that no new appointment was created. And I’m not changing my existing appointment on September 10 at 3:00 p.m. either.
+- **2026-08-28T10:44:03.366625+00:00 — remote_agent:** No needle appointment has been created for you.
+- **2026-08-28T10:44:07.506015+00:00 — remote_agent:** Your existing appointment on September 10 at 3PM remains unchanged.
+- **2026-08-28T10:44:09.241076+00:00 — patient_bot (interrupted):** Thank you for confirming.
+- **2026-08-28T10:44:10.964000+00:00 — remote_agent:** If need anything else, just let me
+- **2026-08-28T10:44:12.334780+00:00 — patient_bot (interrupted):** I'm all
+- **2026-08-28T10:44:12.335893+00:00 — remote_agent:** you're welcome.
+- **2026-08-28T10:44:14.417547+00:00 — remote_agent:** If you need
+- **2026-08-28T10:44:19.586812+00:00 — patient_bot:** I'm all set. Goodbye.
+- **2026-08-28T10:44:19.588031+00:00 — remote_agent:** Take care.
+- **2026-08-28T10:44:20.356919+00:00 — remote_agent:** Goodbye.
+- **2026-08-28T10:44:22.074327+00:00 — patient_bot:** Thank you. Goodbye.

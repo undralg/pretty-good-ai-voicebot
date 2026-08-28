@@ -7,7 +7,7 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 ### 0:00–0:25 — Goal and result
 
 - Explain that the system is an automated synthetic patient calling only the assessment number.
-- State the result: fifteen chronological calls, four defensible bugs, and two deeper control pairs for rescheduling and office hours.
+- State the result: seventeen chronological calls, four defensible bugs, and deeper audits for rescheduling, location consistency, and office hours.
 
 ### 0:25–1:10 — Architecture and engineering choices
 
@@ -26,7 +26,7 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 - Show `BUG_REPORT.md`.
 - Lead with the four-of-four dead-end transfer pattern.
 - Show the primary-care/allergy request booked into orthopedics.
-- Briefly mention the confirmed Milo-to-Lilo corruption and the booking-location omission that later surfaced as Nashville.
+- Briefly mention the confirmed Milo-to-Lilo corruption and the booking-location omission that later became an Austin-versus-Nashville contradiction.
 - Explain that clinical non-answers, minor-account creation, and unknown demo configuration were deliberately not overclaimed.
 
 ### 2:35–3:00 — Final audit and close

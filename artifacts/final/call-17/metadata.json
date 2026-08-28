@@ -1,0 +1,14 @@
+{
+  "call_id": "call-17",
+  "scenario_id": "S19",
+  "scenario_title": "Attempt Austin bookings on a weekend and before weekday opening",
+  "started_at_utc": "2026-08-28T10:41:47.613841+00:00",
+  "duration_seconds": 151.4,
+  "destination": "+18054398008",
+  "originating_number_consistent": true,
+  "model": "gpt-4.1-mini",
+  "recording_file": "recording.mp3",
+  "transcript_file": "transcript.md",
+  "recording_channels": 2,
+  "validation_status": "pending_manual_audio_review"
+}

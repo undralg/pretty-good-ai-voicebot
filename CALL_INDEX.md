@@ -1,6 +1,6 @@
 # Call Index
 
-> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. Calls 01–11 passed manual audio/transcript review; calls 12–15 passed objective checks and await listening review.
+> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. Calls 01–11 passed manual audio/transcript review; calls 12–17 passed objective checks and await listening review.
 
 ## Selected submission candidates
 
@@ -21,8 +21,10 @@
 | 13 | 2026-08-28 09:54:13 | Read-only audit after completed reschedule | 111.6s | [MP3](artifacts/final/call-13/recording.mp3) | [Transcript](artifacts/final/call-13/transcript.md) | Objective QA passed; listening pending | — |
 | 14 | 2026-08-28 10:01:08 | Read-only office-hours discovery | 112.8s | [MP3](artifacts/final/call-14/recording.mp3) | [Transcript](artifacts/final/call-14/transcript.md) | Objective QA passed; listening pending | — |
 | 15 | 2026-08-28 10:04:01 | Attempt booking beyond stated weekday hours | 153.0s | [MP3](artifacts/final/call-15/recording.mp3) | [Transcript](artifacts/final/call-15/transcript.md) | Objective QA passed; listening pending | — |
+| 16 | 2026-08-28 10:37:45 | Read-only audit of every bookable location | 171.2s | [MP3](artifacts/final/call-16/recording.mp3) | [Transcript](artifacts/final/call-16/transcript.md) | Objective QA passed; listening pending | `BUG-04` (provisional) |
+| 17 | 2026-08-28 10:41:47 | Attempt Saturday and pre-opening Austin bookings | 151.4s | [MP3](artifacts/final/call-17/recording.mp3) | [Transcript](artifacts/final/call-17/transcript.md) | Objective QA passed; listening pending | — |
 
-All fifteen MP3s are stereo and both channels contain signal. No selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md).
+All seventeen MP3s are stereo and both channels contain signal. No selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md).
 
 ## What the final audit reported
 
@@ -45,6 +47,12 @@ The audio and transcript agree on these statements, but the appointment backend 
 `call-14` asked for information only. The agent stated that appointments run Monday, Tuesday, and Thursday 9:00 a.m.–4:00 p.m., Wednesday 12:00 p.m.–7:00 p.m., Friday 9:00 a.m.–12:00 p.m., with no weekend hours.
 
 `call-15` then requested a separate Wednesday appointment at 7:30 p.m. while protecting the existing September 10 appointment. The agent rejected 7:30 p.m., offered 3:30 p.m., accepted the refusal, and stated that no new appointment was created and the existing one remained unchanged. This is a passed boundary control, subject to listening review; the exact practice hours are not independently verifiable.
+
+`call-17` broadened the boundary test at the stated Austin site. The agent rejected Saturday at 10:00 a.m. and Monday at 8:30 a.m., offered Monday at 9:00 a.m., and stated that no new appointment was created and the September 10 appointment remained unchanged. This is also a passed control, subject to listening review.
+
+## Location consistency audit
+
+`call-16` was strictly read-only and asked for every bookable location. The agent said Austin at 1234 Recovery Way is the only active site, explicitly said Nashville at 220 Athens Way is not a booking location, and suggested a Nashville listing could be an error. That contradicts the Nashville appointment reported in `call-12` and `call-13`. The contradiction is provisional `BUG-04` evidence until all three recordings pass listening review; it does not establish which city is configured correctly.
 
 ## Excluded attempts
 
@@ -72,6 +80,6 @@ Excluded recordings remain only in ignored private storage; they are not linked 
 - [x] Scenario snapshots and sanitized metadata are present.
 - [x] No credential, authorization header, or real patient data is present.
 - [x] Calls 01–11 received complete manual audio/transcript review.
-- [ ] Listen to calls 12–15 and confirm clarity, transcript fidelity, the reschedule sequence, and the office-hours boundary behavior.
+- [ ] Listen to calls 12–17 and confirm clarity, transcript fidelity, the reschedule sequence, the location contradiction, and the office-hours boundary behavior.
 
 The exact originating number is intentionally omitted from metadata, but the assessment agent says it aloud in some recordings. It is a dedicated Twilio challenge number, not a personal phone number; review this exposure before publication.

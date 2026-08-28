@@ -88,6 +88,15 @@ CANDIDATES = (
         "call-15",
         "The agent rejected a 7:30 p.m. Wednesday request beyond its stated hours, created no new appointment, and said the existing appointment remained unchanged.",
     ),
+    Candidate(
+        "call-16",
+        "The agent said Austin is the only bookable location and explicitly rejected Nashville as an active site, contradicting the Nashville appointment reported in earlier calls.",
+        ("BUG-04",),
+    ),
+    Candidate(
+        "call-17",
+        "The agent rejected both a Saturday request and a Monday request before opening at its stated Austin location, created no substitute, and said the existing appointment remained unchanged.",
+    ),
 )
 
 AUDIO_QA = {
@@ -106,6 +115,8 @@ AUDIO_QA = {
     "call-13": {"duration_seconds": 111.6, "longest_silence_seconds": 3.6},
     "call-14": {"duration_seconds": 112.8, "longest_silence_seconds": 0.0},
     "call-15": {"duration_seconds": 153.0, "longest_silence_seconds": 0.0},
+    "call-16": {"duration_seconds": 171.2, "longest_silence_seconds": 1.9},
+    "call-17": {"duration_seconds": 151.4, "longest_silence_seconds": 2.9},
 }
 
 
