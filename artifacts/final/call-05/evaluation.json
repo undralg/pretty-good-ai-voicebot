@@ -9,8 +9,9 @@
   },
   "transcript_structure_check": "passed",
   "manual_audio_review": "passed",
-  "qa_summary": "The agent promised a support connection before confirming either the appointment or refill outcome; the call then reached the generic test line.",
+  "qa_summary": "The agent did not establish an appointment location, then promised a support connection before confirming either the appointment or refill outcome; the call reached the generic test line.",
   "bug_ids": [
-    "BUG-01"
+    "BUG-01",
+    "BUG-04"
   ]
 }

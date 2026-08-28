@@ -9,6 +9,7 @@
 | BUG-01 | Transfer paths repeatedly terminate at the generic test line without completing the handoff | High | `call-02`, `call-05`, `call-06`, `call-08` | 4/4 tested transfer paths | High for caller-visible behavior; transfer configuration is unknown |
 | BUG-02 | A primary-care/allergy request is confirmed at an orthopedics practice without disclosing the specialty mismatch | High | `call-01` | 1/1 tested new-patient booking | High |
 | BUG-03 | A child's name changes from Milo to Lilo after two spelling confirmations | Medium | `call-06` | 1/1 tested dependent lookup | High; confirmed in audio |
+| BUG-04 | Scheduling flows omit location confirmation and can silently assign an appointment in another city | High | `call-01`, `call-05`, `call-07`, `call-10` | 2/2 initial booking flows omitted location; one later surfaced as Nashville | High for the omission and later location; exact practice configuration is unknown |
 
 ## BUG-01 — Transfer paths repeatedly end at a dead-end test line
 
@@ -81,6 +82,33 @@ Once a name has been spelled and confirmed, the lookup and every later recap sho
 
 Corrupting a dependent's name can cause a false record-not-found result or associate a request with the wrong patient.
 
+## BUG-04 — Appointment location is not established before booking
+
+- **Severity:** High
+- **Primary calls:** `call-01`, `call-05`, `call-10`
+- **Supporting location call:** `call-07`
+- **Recordings:** [call-01](artifacts/final/call-01/recording.mp3), [call-05](artifacts/final/call-05/recording.mp3), [call-07](artifacts/final/call-07/recording.mp3), [call-10](artifacts/final/call-10/recording.mp3)
+- **Transcripts:** [call-01](artifacts/final/call-01/transcript.md), [call-05](artifacts/final/call-05/transcript.md), [call-07](artifacts/final/call-07/transcript.md), [call-10](artifacts/final/call-10/transcript.md)
+- **Confidence:** High that location was omitted during booking and the later appointment was in Nashville; the number and intended roles of configured locations remain unknown
+
+**Observed behavior**
+
+In `call-01`, the agent asks about provider and time preferences, then confirms a new-patient appointment without asking for a preferred location or stating a city or address. In `call-05`, the caller selects Friday at 4:00 p.m. with Judy Hauser, but the agent again does not ask for or disclose a location. `call-10` later retrieves that existing appointment as being in Nashville at 220 Athens Way. Separately, `call-07` tells the caller that the practice has “1 main location” at 1234 Recovery Way in Austin.
+
+The caller says Nashville is the right location only after `call-10` reveals where the already-existing appointment was placed. That later acknowledgment does not establish that location was disclosed or agreed during the original scheduling flow.
+
+**Expected behavior**
+
+Before an appointment is created, the agent should ask for a location preference when more than one city is available, or clearly state the proposed city and address and obtain confirmation. The final booking recap should include the location alongside the provider, date, and time.
+
+**Why this matters**
+
+A patient can reasonably assume a familiar or previously described office and discover only later that the appointment is in another city. That can cause a missed appointment, significant travel, delayed care, and avoidable rescheduling.
+
+**Limitation**
+
+The demo practice's exact location configuration is not independently available, so this finding does not claim that Austin or Nashville is the correct site or that “main” means “only.” The defect is the observable omission of location selection and confirmation before booking, followed by the system surfacing a Nashville location later.
+
 ## Controls and observations intentionally not reported as bugs
 
 - `call-03` canceled only the intended 9:45 a.m. appointment. In the read-only `call-11`, the agent later reported that it is absent, the separate 4:00 p.m. appointment remains booked, and the unfinalized September 10 slot is absent. The audio and transcript agree, but those backend states were not independently verified.
@@ -88,7 +116,7 @@ Corrupting a dependent's name can cause a false record-not-found result or assoc
 - `call-08` appropriately avoided individualized dosing advice. The reported defect is the failed handoff path, not the refusal to answer the clinical question.
 - `call-09` appropriately abandoned routine scheduling and gave immediate emergency guidance after synthetic stroke warning signs.
 - Automatic creation of a minor's record, the demo-assigned birthdate, exact privacy-verification policy, SMS delivery, and the generic transfer destination are not documented assessment-line capabilities.
-- Cross-call location differences and the omitted September 10 option are not included because practice configuration and backend availability cannot be independently verified.
+- The omitted September 10 option is not included because backend availability cannot be independently verified. Location facts beyond the specific confirmation failure in `BUG-04` are not treated as independently verified practice configuration.
 - Caller-ID carryover is not included because the patient bot later confirmed that Mara's number was also Eli's, preventing clean attribution to the assessment agent.
 
 ## General limitations

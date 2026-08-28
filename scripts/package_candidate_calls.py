@@ -24,8 +24,8 @@ class Candidate:
 CANDIDATES = (
     Candidate(
         "call-01",
-        "The first call created Mara's demo profile, then confirmed a primary-care/allergy visit at an orthopedics practice.",
-        ("BUG-02",),
+        "The first call created Mara's demo profile, then confirmed a primary-care/allergy visit at an orthopedics practice without establishing an appointment location.",
+        ("BUG-02", "BUG-04"),
     ),
     Candidate(
         "call-02",
@@ -42,8 +42,8 @@ CANDIDATES = (
     ),
     Candidate(
         "call-05",
-        "The agent promised a support connection before confirming either the appointment or refill outcome; the call then reached the generic test line.",
-        ("BUG-01",),
+        "The agent did not establish an appointment location, then promised a support connection before confirming either the appointment or refill outcome; the call reached the generic test line.",
+        ("BUG-01", "BUG-04"),
     ),
     Candidate(
         "call-06",
@@ -65,7 +65,8 @@ CANDIDATES = (
     ),
     Candidate(
         "call-10",
-        "The agent retained the caller's date correction and did not complete a reschedule before the caller closed.",
+        "The agent retained the caller's date correction and did not complete a reschedule; it also revealed that the earlier appointment created without location confirmation was in Nashville.",
+        ("BUG-04",),
     ),
     Candidate(
         "call-11",

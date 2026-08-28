@@ -9,6 +9,8 @@
   },
   "transcript_structure_check": "passed",
   "manual_audio_review": "passed",
-  "qa_summary": "The agent retained the caller's date correction and did not complete a reschedule before the caller closed.",
-  "bug_ids": []
+  "qa_summary": "The agent retained the caller's date correction and did not complete a reschedule; it also revealed that the earlier appointment created without location confirmation was in Nashville.",
+  "bug_ids": [
+    "BUG-04"
+  ]
 }

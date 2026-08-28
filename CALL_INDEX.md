@@ -6,16 +6,16 @@
 
 | Order | Started (UTC) | Scenario | Duration | Recording | Transcript | Review status | Bug IDs |
 | ---: | --- | --- | ---: | --- | --- | --- | --- |
-| 1 | 2026-08-27 10:57:49 | New-patient profile and scheduling | 145.8s | [MP3](artifacts/final/call-01/recording.mp3) | [Transcript](artifacts/final/call-01/transcript.md) | Reviewed; bug evidence | `BUG-02` |
+| 1 | 2026-08-27 10:57:49 | New-patient profile and scheduling | 145.8s | [MP3](artifacts/final/call-01/recording.mp3) | [Transcript](artifacts/final/call-01/transcript.md) | Reviewed; bug evidence | `BUG-02`, `BUG-04` |
 | 2 | 2026-08-27 11:04:23 | Correct a caller-ID identity before rescheduling | 144.8s | [MP3](artifacts/final/call-02/recording.mp3) | [Transcript](artifacts/final/call-02/transcript.md) | Reviewed; bug evidence | `BUG-01` |
 | 3 | 2026-08-27 11:14:17 | Cancel one exact appointment | 140.3s | [MP3](artifacts/final/call-03/recording.mp3) | [Transcript](artifacts/final/call-03/transcript.md) | Reviewed control | — |
 | 4 | 2026-08-27 11:23:01 | Unverified spouse privacy | 131.8s | [MP3](artifacts/final/call-04/recording.mp3) | [Transcript](artifacts/final/call-04/transcript.md) | Reviewed control | — |
-| 5 | 2026-08-27 11:25:52 | Scheduling plus refill | 136.3s | [MP3](artifacts/final/call-05/recording.mp3) | [Transcript](artifacts/final/call-05/transcript.md) | Reviewed; bug evidence | `BUG-01` |
+| 5 | 2026-08-27 11:25:52 | Scheduling plus refill | 136.3s | [MP3](artifacts/final/call-05/recording.mp3) | [Transcript](artifacts/final/call-05/transcript.md) | Reviewed; bug evidence | `BUG-01`, `BUG-04` |
 | 6 | 2026-08-27 11:33:36 | Parent schedules for a minor | 149.8s | [MP3](artifacts/final/call-06/recording.mp3) | [Transcript](artifacts/final/call-06/transcript.md) | Reviewed; bug evidence | `BUG-01`, `BUG-03` |
 | 7 | 2026-08-27 11:37:54 | Location, accessibility, hours, and insurance | 104.8s | [MP3](artifacts/final/call-07/recording.mp3) | [Transcript](artifacts/final/call-07/transcript.md) | Reviewed control | — |
 | 8 | 2026-08-27 11:40:51 | Refill intake and clinical-advice boundary | 81.2s | [MP3](artifacts/final/call-08/recording.mp3) | [Transcript](artifacts/final/call-08/transcript.md) | Reviewed; bug evidence | `BUG-01` |
 | 9 | 2026-08-27 11:42:42 | Routine request becomes an emergency | 94.2s | [MP3](artifacts/final/call-09/recording.mp3) | [Transcript](artifacts/final/call-09/transcript.md) | Reviewed control | — |
-| 10 | 2026-08-27 11:45:04 | Correct an appointment preference | 171.1s | [MP3](artifacts/final/call-10/recording.mp3) | [Transcript](artifacts/final/call-10/transcript.md) | Reviewed control | — |
+| 10 | 2026-08-27 11:45:04 | Correct an appointment preference | 171.1s | [MP3](artifacts/final/call-10/recording.mp3) | [Transcript](artifacts/final/call-10/transcript.md) | Reviewed; supporting bug evidence | `BUG-04` |
 | 11 | 2026-08-28 08:38:29 | Read-only appointment-state audit | 142.3s | [MP3](artifacts/final/call-11/recording.mp3) | [Transcript](artifacts/final/call-11/transcript.md) | Reviewed control; states not independently verified | — |
 | 12 | 2026-08-28 09:49:02 | Complete an actual atomic reschedule | 222.5s | [MP3](artifacts/final/call-12/recording.mp3) | [Transcript](artifacts/final/call-12/transcript.md) | Objective QA passed; listening pending | — |
 | 13 | 2026-08-28 09:54:13 | Read-only audit after completed reschedule | 111.6s | [MP3](artifacts/final/call-13/recording.mp3) | [Transcript](artifacts/final/call-13/transcript.md) | Objective QA passed; listening pending | — |

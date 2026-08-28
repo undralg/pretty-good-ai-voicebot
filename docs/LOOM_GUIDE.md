@@ -7,7 +7,7 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 ### 0:00–0:25 — Goal and result
 
 - Explain that the system is an automated synthetic patient calling only the assessment number.
-- State the result: eleven chronological calls, three defensible bugs, and one final read-only state audit.
+- State the result: fifteen chronological calls, four defensible bugs, and two deeper control pairs for rescheduling and office hours.
 
 ### 0:25–1:10 — Architecture and engineering choices
 
@@ -26,13 +26,13 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 - Show `BUG_REPORT.md`.
 - Lead with the four-of-four dead-end transfer pattern.
 - Show the primary-care/allergy request booked into orthopedics.
-- Briefly mention the confirmed Milo-to-Lilo corruption.
+- Briefly mention the confirmed Milo-to-Lilo corruption and the booking-location omission that later surfaced as Nashville.
 - Explain that clinical non-answers, minor-account creation, and unknown demo configuration were deliberately not overclaimed.
 
 ### 2:35–3:00 — Final audit and close
 
 - Show `call-11` in `CALL_INDEX.md`.
-- Explain that it made no write action and confirmed the earlier cancellation, retained 4:00 p.m. appointment, and unfinalized September 10 discussion.
+- Explain that it made no write action and reported the earlier cancellation, retained 4:00 p.m. appointment, and unfinalized September 10 discussion; those backend states were not independently inspected.
 - Close with what you learned about testing stateful voice agents: verify actions across calls, separate configuration from behavior, and prefer reproducible failures over a long list of nitpicks.
 
 ## Video 2 — Genuine AI-assisted debugging
