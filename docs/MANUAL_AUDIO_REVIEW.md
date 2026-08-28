@@ -19,16 +19,20 @@ Automated checks cannot determine whether a voice sounds natural or whether ever
 | [x] | `call-11` | 142.3s | [MP3](../artifacts/final/call-11/recording.mp3) | [Text](../artifacts/final/call-11/transcript.md) | Audio/transcript passed; appointment-state claims were not independently verified. |
 | [ ] | `call-12` | 222.5s | [MP3](../artifacts/final/call-12/recording.mp3) | [Text](../artifacts/final/call-12/transcript.md) | Verify the actual reschedule, old-slot preservation claim, final recap, and longer-call coherence. |
 | [ ] | `call-13` | 111.6s | [MP3](../artifacts/final/call-13/recording.mp3) | [Text](../artifacts/final/call-13/transcript.md) | Verify the strictly read-only audit and the old-versus-new appointment statements. |
+| [ ] | `call-14` | 112.8s | [MP3](../artifacts/final/call-14/recording.mp3) | [Text](../artifacts/final/call-14/transcript.md) | Verify the information-only request and exact stated office/appointment hours. |
+| [ ] | `call-15` | 153.0s | [MP3](../artifacts/final/call-15/recording.mp3) | [Text](../artifacts/final/call-15/transcript.md) | Verify rejection of 7:30 p.m., no substituted booking, and unchanged existing appointment. |
 
-## For calls 12–13
+## For calls 12–15
 
 - [ ] Both speakers are audible throughout.
 - [ ] No disqualifying clipping, echo, long silence, or repeated talk-over.
 - [ ] The patient bot remains coherent throughout the 222.5-second reschedule.
 - [ ] `call-12` audibly confirms the exact old and new slots and the order of release.
 - [ ] `call-13` authorizes no write action and audibly reports both slot states.
-- [ ] Both transcripts match the material facts in the audio.
-- [ ] Both recordings contain only synthetic patient data.
+- [ ] `call-14` remains information-only and audibly states exact weekday boundaries.
+- [ ] `call-15` rejects 7:30 p.m., creates no substitute, and leaves September 10 unchanged.
+- [ ] All four transcripts match the material facts in the audio.
+- [ ] All four recordings contain only synthetic patient data.
 
 ## After listening
 

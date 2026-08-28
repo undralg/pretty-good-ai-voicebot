@@ -1,6 +1,6 @@
 # Live Call Checklist
 
-> **Current status:** Twenty-two sequential attempts produced 21 MP3s; thirteen chronological candidates are packaged. Calls 01–11 passed manual audio/transcript review, while the new actual-reschedule control and its read-only audit await listening review. Automated tests, callbacks, transcripts, stereo/channel checks, duration checks, and silence checks pass. The public repository is live; Loom recording and final submission remain pending.
+> **Current status:** Twenty-four sequential attempts produced 23 MP3s; fifteen chronological candidates are packaged. Calls 01–11 passed manual audio/transcript review, while the new reschedule, audit, hours, and outside-hours controls await listening review. Automated tests, callbacks, transcripts, stereo/channel checks, duration checks, and silence checks pass. The public repository is live; Loom recording and final submission remain pending.
 
 Use this checklist in order. A dry run is not a substitute for a live pilot, and a live pilot is not permission to publish or submit.
 

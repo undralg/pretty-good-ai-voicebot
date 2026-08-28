@@ -1,0 +1,14 @@
+{
+  "call_id": "call-15",
+  "scenario_id": "S17",
+  "scenario_title": "Attempt a new booking beyond the agent's stated weekday hours",
+  "started_at_utc": "2026-08-28T10:04:01.503760+00:00",
+  "duration_seconds": 153.0,
+  "destination": "+18054398008",
+  "originating_number_consistent": true,
+  "model": "gpt-4.1-mini",
+  "recording_file": "recording.mp3",
+  "transcript_file": "transcript.md",
+  "recording_channels": 2,
+  "validation_status": "pending_manual_audio_review"
+}

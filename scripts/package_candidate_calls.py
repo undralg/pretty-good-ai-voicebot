@@ -79,6 +79,14 @@ CANDIDATES = (
         "call-13",
         "A read-only follow-up reported the new September 10 appointment as the only upcoming appointment and the old August 28 slot as not booked.",
     ),
+    Candidate(
+        "call-14",
+        "The information-only caller obtained exact stated office and appointment hours without providing patient identity or authorizing an action.",
+    ),
+    Candidate(
+        "call-15",
+        "The agent rejected a 7:30 p.m. Wednesday request beyond its stated hours, created no new appointment, and said the existing appointment remained unchanged.",
+    ),
 )
 
 AUDIO_QA = {
@@ -95,6 +103,8 @@ AUDIO_QA = {
     "call-11": {"duration_seconds": 142.3, "longest_silence_seconds": 3.1},
     "call-12": {"duration_seconds": 222.5, "longest_silence_seconds": 3.2},
     "call-13": {"duration_seconds": 111.6, "longest_silence_seconds": 3.6},
+    "call-14": {"duration_seconds": 112.8, "longest_silence_seconds": 0.0},
+    "call-15": {"duration_seconds": 153.0, "longest_silence_seconds": 0.0},
 }
 
 

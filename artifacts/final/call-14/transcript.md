@@ -1,0 +1,30 @@
+# Call call-14
+
+- **2026-08-28T10:01:15.718890+00:00 — remote_agent:** May be recorded for quality and training purposes.
+- **2026-08-28T10:01:19.155279+00:00 — patient_bot (interrupted):** I’m calling for information only.
+- **2026-08-28T10:01:20.809435+00:00 — remote_agent:** Thanks for calling Pinna Point Orthopedics.
+- **2026-08-28T10:01:21.863786+00:00 — patient_bot (interrupted):** Hi,
+- **2026-08-28T10:01:23.051050+00:00 — remote_agent:** Part of Pretty Good AI.
+- **2026-08-28T10:01:24.472600+00:00 — remote_agent:** How may I help you today?
+- **2026-08-28T10:01:42.053752+00:00 — patient_bot:** I’d like to ask about your regular office hours, please. Could you tell me the opening and closing times for each weekday? Also, do you have weekend hours? Lastly, are there differences between your office hours and appointment booking times?
+- **2026-08-28T10:01:42.054406+00:00 — remote_agent:** Our clinic is open Monday through Friday.
+- **2026-08-28T10:01:44.390474+00:00 — remote_agent:** Here are the hours for each day.
+- **2026-08-28T10:01:48.619921+00:00 — remote_agent:** Monday, Tuesday, and Thursday, 9AM to 4PM, Wednesday.
+- **2026-08-28T10:01:49.666301+00:00 — patient_bot (interrupted):** Thanks for that,
+- **2026-08-28T10:01:54.523236+00:00 — remote_agent:** 12PM to 7PM, Friday, 9AM to 12PM. We are closed on weekends.
+- **2026-08-28T10:01:55.767653+00:00 — patient_bot (interrupted):** Okay,
+- **2026-08-28T10:01:57.960462+00:00 — remote_agent:** Appointments are available during these
+- **2026-08-28T10:02:02.233352+00:00 — remote_agent:** Let me know if you have any other questions or need help with appointments or anything else.
+- **2026-08-28T10:02:21.038464+00:00 — patient_bot:** Please just the exact appointment times for weekdays. I'm not looking to book or manage anything. What time can someone book the earliest and latest appointment each open weekday?
+- **2026-08-28T10:02:21.039655+00:00 — remote_agent:** The earliest appointment times are Monday Tuesday, Thursday, and Friday at 9AM, Wednesday at 12PM.
+- **2026-08-28T10:02:27.714821+00:00 — remote_agent:** The latest appointments are Monday, Tuesday, and Thursday at 4PM, Wednesday at 7PM, Friday 12PM.
+- **2026-08-28T10:02:29.484960+00:00 — remote_agent:** Me know if you need more details.
+- **2026-08-28T10:02:49.395797+00:00 — patient_bot:** Thanks for the details. To confirm: office hours are Monday, Tuesday, and Thursday 9AM to 4PM; Wednesday 12PM to 7PM; Friday 9AM to 12PM; closed weekends. Appointment slots match office hours exactly on those days. Is that correct?
+- **2026-08-28T10:02:49.397089+00:00 — remote_agent:** Yes. That's correct.
+- **2026-08-28T10:02:54.430884+00:00 — remote_agent:** Office hours and appointment slots match exactly on those days, and we're closed on weekends.
+- **2026-08-28T10:03:02.373079+00:00 — patient_bot:** Great, that’s exactly the info I needed. Thanks for your help today. Goodbye.
+- **2026-08-28T10:03:02.374539+00:00 — remote_agent:** You're welcome.
+- **2026-08-28T10:03:03.647075+00:00 — remote_agent:** Have a great day.
+- **2026-08-28T10:03:04.311529+00:00 — patient_bot:** Thank you. Goodbye.
+- **2026-08-28T10:03:04.313204+00:00 — remote_agent:** Goodbye.
+- **2026-08-28T10:03:04.398236+00:00 — patient_bot:** Thank you. Goodbye.

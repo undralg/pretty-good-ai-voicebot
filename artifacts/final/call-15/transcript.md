@@ -1,0 +1,32 @@
+# Call call-15
+
+- **2026-08-28T10:04:08.999444+00:00 — remote_agent:** Call may be recorded for quality and training purposes.
+- **2026-08-28T10:04:12.457323+00:00 — patient_bot (interrupted):** I already
+- **2026-08-28T10:04:13.980596+00:00 — remote_agent:** Thanks for calling Pivot Point Orthopedic.
+- **2026-08-28T10:04:14.990619+00:00 — patient_bot (interrupted):** Hi,
+- **2026-08-28T10:04:17.444843+00:00 — remote_agent:** Part of Pretty Good AI. How may I help you today?
+- **2026-08-28T10:04:37.767245+00:00 — patient_bot:** Hi, this is Mara Calder. I want to book a new appointment for persistent knee pain on Wednesday, September 16, 2026, at 7:30 p.m. But please don’t change my existing appointment on Thursday, September 10, 2026, at 3:00 p.m. Can you schedule that for me?
+- **2026-08-28T10:04:37.769553+00:00 — remote_agent:** Can you please provide your date of birth?
+- **2026-08-28T10:04:46.993572+00:00 — patient_bot:** Sure, it’s July 4, 2000. Is that enough to look me up?
+- **2026-08-28T10:04:46.995232+00:00 — remote_agent:** Thanks, Mara.
+- **2026-08-28T10:04:50.863127+00:00 — remote_agent:** I see you want to book an appointment for persistent knee pain.
+- **2026-08-28T10:04:57.439782+00:00 — remote_agent:** This for a general office visit, or do you need something more urgent or specific like a procedure or physical therapy?
+- **2026-08-28T10:05:09.670888+00:00 — patient_bot:** It’s just a general office visit for the knee pain, nothing urgent or specialized.
+- **2026-08-28T10:05:09.672857+00:00 — remote_agent:** I found several openings on Wednesday, September 16.
+- **2026-08-28T10:05:15.873922+00:00 — remote_agent:** But nothing at 07:30PM, The latest available slot that day is at 03:30PM.
+- **2026-08-28T10:05:20.787863+00:00 — remote_agent:** You like to book the 03:30PM slot, or would you prefer a different day or time?
+- **2026-08-28T10:05:42.833440+00:00 — patient_bot:** No, I specifically want the 7:30 p.m. on Wednesday, September 16. Please don’t change anything about my 3:00 p.m. appointment on September 10. Can you confirm if 7:30 p.m. is available or not?
+- **2026-08-28T10:05:42.835823+00:00 — remote_agent:** There are no appointments available at 07:30PM on Wednesday. September 16. The latest slot that day is 03:30PM.
+- **2026-08-28T10:05:45.636308+00:00 — patient_bot:** Okay, then please do not schedule any new appointment on September 16 at 7:30 p.m. And don’t change my September 10 appointment either. Can you confirm that no new appointment was created for September 16?
+- **2026-08-28T10:05:45.637253+00:00 — remote_agent:** Would you like to choose an earlier time or look at other days?
+- **2026-08-28T10:06:13.294140+00:00 — patient_bot:** Okay, then please do not schedule any new appointment on September 16 at 7:30 p.m. And don’t change my September 10 appointment either. Can you confirm that no new appointment was created for September 16?No, I do not want any other time or day besides 7:30 p.m. on September 16. Please make sure no appointment is created now. Can you confirm that?
+- **2026-08-28T10:06:13.295132+00:00 — remote_agent:** No appointment has been created for September 16 at 07:30PM.
+- **2026-08-28T10:06:16.588260+00:00 — remote_agent:** And your September 10 appointment remains unchanged.
+- **2026-08-28T10:06:18.535574+00:00 — remote_agent:** Nothing has been scheduled.
+- **2026-08-28T10:06:30.350467+00:00 — patient_bot:** Thank you for confirming that. My September 10 appointment stays as is, and no new appointment for September 16 was made. Goodbye.
+- **2026-08-28T10:06:30.351465+00:00 — remote_agent:** That's correct.
+- **2026-08-28T10:06:33.351438+00:00 — remote_agent:** Your September 10 appointment is unchanged.
+- **2026-08-28T10:06:35.266761+00:00 — remote_agent:** And no new appointment was made.
+- **2026-08-28T10:06:35.958954+00:00 — patient_bot (interrupted):** Goodbye.
+- **2026-08-28T10:06:35.959496+00:00 — remote_agent:** Goodbye.
+- **2026-08-28T10:06:37.871134+00:00 — patient_bot:** GoodbyeThank you. Goodbye.

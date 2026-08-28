@@ -1,6 +1,6 @@
 # Architecture
 
-> **Status:** Implemented and exercised across live PSTN calls. Thirteen chronological dual-channel MP3s and two-sided transcripts are packaged under `artifacts/final`; calls 01–11 passed manual audio/transcript review and calls 12–13 await listening review.
+> **Status:** Implemented and exercised across live PSTN calls. Fifteen chronological dual-channel MP3s and two-sided transcripts are packaged under `artifacts/final`; calls 01–11 passed manual audio/transcript review and calls 12–15 await listening review.
 
 Twilio Programmable Voice places each outbound call from one consistent E.164 number to the assessment destination, which is an immutable code constant rather than CLI or environment input. Twilio receives inline TwiML containing `<Connect><ConversationRelay>`, then opens a signed WSS connection to FastAPI. ConversationRelay owns telephone audio, speech recognition, speech synthesis, turn detection, and caller barge-in. FastAPI validates Twilio signatures, loads one synthetic YAML scenario, tracks conversation history, and streams `gpt-4.1-mini` Responses API text deltas back as ConversationRelay `text` messages. A restricted Twilio API key is used for call creation and recording download; the account Auth Token is retained only for signed-callback validation.
 

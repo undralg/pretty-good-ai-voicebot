@@ -2,11 +2,11 @@
 
 Python automated-patient simulator for the Pretty Good AI engineering challenge.
 
-> **Current status:** The live voice stack is implemented, tested, and published at [github.com/undralg/pretty-good-ai-voicebot](https://github.com/undralg/pretty-good-ai-voicebot). Twenty-two sequential attempts produced 21 recordings; thirteen chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. Calls 01–11 passed manual audio/transcript review. The new completed-reschedule control and its read-only audit, calls 12–13, passed objective checks and await listening review. Appointment states are agent-reported rather than independently inspected. The two required Loom videos and final form submission remain.
+> **Current status:** The live voice stack is implemented, tested, and published at [github.com/undralg/pretty-good-ai-voicebot](https://github.com/undralg/pretty-good-ai-voicebot). Twenty-four sequential attempts produced 23 recordings; fifteen chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. Calls 01–11 passed manual audio/transcript review. Calls 12–15—the completed reschedule and audit plus the hours and outside-hours controls—passed objective checks and await listening review. Appointment states and practice hours are agent-reported rather than independently inspected. The two required Loom videos and final form submission remain.
 
 ## What it does
 
-The bot calls only the assessment line at `+18054398008`, acts as a synthetic patient, and steers toward a scenario goal while responding naturally to the assessment agent. Fifteen authored scenarios cover scheduling, rescheduling, cancellation, refill safety, urgent symptoms, privacy, multiple intents, correction handling, parent/child identity separation, accessibility, insurance grounding, and cross-call state integrity.
+The bot calls only the assessment line at `+18054398008`, acts as a synthetic patient, and steers toward a scenario goal while responding naturally to the assessment agent. Seventeen authored scenarios cover scheduling, rescheduling, cancellation, refill safety, urgent symptoms, privacy, multiple intents, correction handling, parent/child identity separation, accessibility, insurance grounding, office-hours consistency, and cross-call state integrity.
 
 No real patient data is used. The destination cannot be supplied through the CLI or environment, and live execution requires two separate acknowledgements.
 
@@ -24,7 +24,7 @@ Official references:
 
 ## Evidence
 
-- [Call index](CALL_INDEX.md) — thirteen selected recordings and transcripts in actual chronological order
+- [Call index](CALL_INDEX.md) — fifteen selected recordings and transcripts in actual chronological order
 - [Bug report](BUG_REPORT.md) — evidence-backed candidates, with manual-audio status stated
 - [Capability matrix](docs/CAPABILITY_MATRIX.md) — separates assessment requirements, broader product claims, and unknown test-line configuration
 - [Manual audio review](docs/MANUAL_AUDIO_REVIEW.md) — final human listening checklist
@@ -95,7 +95,7 @@ The automated suite covers:
 - deterministic transfer/goodbye and graceful end-session messages;
 - callback ordering, absent recordings, scenario snapshots, and artifact paths.
 
-Current local result: **42 tests passed** and Ruff passed.
+Current local result: **44 tests passed** and Ruff passed.
 
 ## Artifact handling
 
@@ -105,7 +105,7 @@ The transcripts and audio may still contain the dedicated Twilio originating num
 
 ## Remaining human checkpoints
 
-1. Listen to calls 12–13 and either mark them passed or keep the already-reviewed eleven-call set.
+1. Listen to calls 12–15 and either mark them passed or keep the already-reviewed eleven-call set.
 2. Record two public Loom videos with the submitter's own webcam and voice: a project walkthrough and a genuine AI-assisted debugging session.
 3. Open the public repository, Looms, recordings, and transcripts while signed out.
 4. Obtain explicit approval before submitting the external form.
