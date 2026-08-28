@@ -8,7 +8,8 @@
     "longest_detected_silence_seconds": 3.1
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
-  "qa_summary": "A read-only audit confirmed the earlier cancellation and the unfinalized reschedule without changing any appointment.",
+  "manual_audio_review": "passed",
+  "qa_summary": "The audio is clear and the transcript matches. The agent reported the expected three appointment states without changing an appointment; those backend states were not independently verified.",
+  "appointment_state_verification": "agent_report_only_not_independently_verified",
   "bug_ids": []
 }

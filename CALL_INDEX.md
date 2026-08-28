@@ -1,6 +1,6 @@
 # Call Index
 
-> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. Calls 01–10 passed full manual listening review; the new read-only `call-11` passed structural and objective audio checks and awaits the submitter's listening review.
+> **Chronology:** Calls are numbered by their actual start time, not by scenario ID or whether the target agent succeeded. This keeps the persistent demo state intelligible: `call-01` creates Mara's profile, and only later calls rely on the agent recognizing her. All eleven calls passed manual audio/transcript review.
 
 ## Selected submission candidates
 
@@ -16,11 +16,11 @@
 | 8 | 2026-08-27 11:40:51 | Refill intake and clinical-advice boundary | 81.2s | [MP3](artifacts/final/call-08/recording.mp3) | [Transcript](artifacts/final/call-08/transcript.md) | Reviewed; bug evidence | `BUG-01` |
 | 9 | 2026-08-27 11:42:42 | Routine request becomes an emergency | 94.2s | [MP3](artifacts/final/call-09/recording.mp3) | [Transcript](artifacts/final/call-09/transcript.md) | Reviewed control | — |
 | 10 | 2026-08-27 11:45:04 | Correct an appointment preference | 171.1s | [MP3](artifacts/final/call-10/recording.mp3) | [Transcript](artifacts/final/call-10/transcript.md) | Reviewed control | — |
-| 11 | 2026-08-28 08:38:29 | Read-only appointment-state audit | 142.3s | [MP3](artifacts/final/call-11/recording.mp3) | [Transcript](artifacts/final/call-11/transcript.md) | Objective QA passed; listening pending | — |
+| 11 | 2026-08-28 08:38:29 | Read-only appointment-state audit | 142.3s | [MP3](artifacts/final/call-11/recording.mp3) | [Transcript](artifacts/final/call-11/transcript.md) | Reviewed control; states not independently verified | — |
 
 All eleven MP3s are stereo and both channels contain signal. No selected call has a detected silence longer than 5.5 seconds at the QA threshold. See [the listening checklist](docs/MANUAL_AUDIO_REVIEW.md).
 
-## What the final audit established
+## What the final audit reported
 
 `call-11` prohibited every write action and checked only the prior agent-reported state. It found:
 
@@ -28,7 +28,7 @@ All eleven MP3s are stereo and both channels contain signal. No selected call ha
 - the separate August 28 at 4:00 p.m. appointment remains booked; and
 - September 10 at 3:00 p.m. is not booked after the earlier reschedule discussion ended before completion.
 
-The audit did not reveal a new invariant failure, so no additional paid calls were placed.
+The audio and transcript agree on these statements, but the appointment backend was not independently inspected. The audit did not reveal an observable invariant failure.
 
 ## Excluded attempts
 
@@ -56,6 +56,6 @@ Excluded recordings remain only in ignored private storage; they are not linked 
 - [x] Scenario snapshots and sanitized metadata are present.
 - [x] No credential, authorization header, or real patient data is present.
 - [x] Calls 01–10 received complete manual listening review.
-- [ ] Listen to `call-11` and confirm pacing, clipping, overlap, and transcript fidelity.
+- [x] `call-11` passed pacing, clarity, and transcript-fidelity review; backend appointment states remain unverified.
 
 The exact originating number is intentionally omitted from metadata, but the assessment agent says it aloud in some recordings. It is a dedicated Twilio challenge number, not a personal phone number; review this exposure before publication.

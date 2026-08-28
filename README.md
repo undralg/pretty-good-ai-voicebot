@@ -2,7 +2,7 @@
 
 Python automated-patient simulator for the Pretty Good AI engineering challenge.
 
-> **Current status:** The live voice stack is implemented, tested, and published at [github.com/undralg/pretty-good-ai-voicebot](https://github.com/undralg/pretty-good-ai-voicebot). Twenty sequential attempts produced 19 recordings; eleven chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. Calls 01–10 passed manual listening review. The final read-only state audit, `call-11`, passed objective QA and awaits the submitter's listening review. The two required Loom videos and final form submission remain.
+> **Current status:** The live voice stack is implemented, tested, and published at [github.com/undralg/pretty-good-ai-voicebot](https://github.com/undralg/pretty-good-ai-voicebot). Twenty sequential attempts produced 19 recordings; eleven chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. All eleven passed manual audio/transcript review. The appointment states reported in the final read-only audit were not independently verified. The two required Loom videos and final form submission remain.
 
 ## What it does
 
@@ -105,9 +105,8 @@ The transcripts and audio may still contain the dedicated Twilio originating num
 
 ## Remaining human checkpoints
 
-1. Listen to `call-11` and either mark it passed or exclude it; the ten reviewed calls already satisfy the minimum.
-2. Record two public Loom videos with the submitter's own webcam and voice: a project walkthrough and a genuine AI-assisted debugging session.
-3. Open the public repository, Looms, recordings, and transcripts while signed out.
-4. Obtain explicit approval before submitting the external form.
+1. Record two public Loom videos with the submitter's own webcam and voice: a project walkthrough and a genuine AI-assisted debugging session.
+2. Open the public repository, Looms, recordings, and transcripts while signed out.
+3. Obtain explicit approval before submitting the external form.
 
 The project deliberately stops at these checkpoints because an automated assistant cannot truthfully perform the user's listening, webcam narration, publication approval, or final-submission approval.

@@ -8,7 +8,7 @@ def test_project_structure_validates(project_root) -> None:
 
     assert report.ok, report.errors
     assert not report.errors
-    assert any("manual audio review" in warning for warning in report.warnings)
+    assert not report.warnings
 
 
 def test_packaged_calls_follow_actual_start_time(project_root) -> None:

@@ -5,7 +5,7 @@
 - [x] At least ten complete calls are packaged with stereo MP3 and two-speaker transcripts.
 - [x] Calls are numbered in actual chronological order.
 - [x] Calls 01–10 passed manual listening review.
-- [ ] Listen to `call-11` and mark it passed or exclude it.
+- [x] `call-11` passed audio/transcript review; document that appointment states were not independently verified.
 - [x] Bug report is limited to three defensible findings with explicit limitations.
 - [x] Capability matrix separates assessment requirements from unknown test-line configuration.
 
