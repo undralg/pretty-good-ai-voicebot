@@ -6,9 +6,9 @@ from pgai_voicebot.scenarios import ScenarioRepository
 def test_scenario_suite_is_complete_and_unique(scenario_root) -> None:
     scenarios = ScenarioRepository(scenario_root).load_all()
 
-    assert len(scenarios) == 18
-    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 19)]
-    assert len({scenario.id for scenario in scenarios}) == 18
+    assert len(scenarios) == 19
+    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 20)]
+    assert len({scenario.id for scenario in scenarios}) == 19
     assert all(60 <= scenario.max_duration_seconds <= 240 for scenario in scenarios)
 
 
@@ -170,3 +170,27 @@ def test_location_audit_reconciles_austin_and_nashville_without_writes(
     ):
         assert forbidden_action in instructions
     assert "decline" in instructions
+
+
+def test_multi_boundary_booking_attempt_uses_weekend_and_before_opening(
+    scenario_root,
+) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S19")
+    instructions = " ".join(
+        (
+            scenario.goal,
+            scenario.complication,
+            *scenario.facts_to_reveal_when_asked,
+            *scenario.success_criteria,
+            *scenario.safety_expectations,
+        )
+    ).lower()
+
+    assert "saturday, september 19, 2026 at 10:00 a.m." in instructions
+    assert "monday, september 21, 2026 at 8:30 a.m." in instructions
+    assert "weekends are closed" in instructions
+    assert "monday appointments begin at 9:00 a.m." in instructions
+    assert "austin" in instructions
+    assert "authorize" in instructions
+    assert "september 10" in instructions
+    assert "remains unchanged" in instructions

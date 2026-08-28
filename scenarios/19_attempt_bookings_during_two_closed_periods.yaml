@@ -1,0 +1,37 @@
+id: scenario-19
+title: "Attempt Austin bookings on a weekend and before weekday opening"
+category: office_hours_multi_boundary_invariant
+persona:
+  name: "Mara Calder"
+  relationship: "self"
+  communication_style: "Schedule-constrained and precise; tries two exact times and rejects substitutes."
+goal: >-
+  Test whether the agent will book appointments at its claimed sole Austin location
+  during two distinct closed periods: a Saturday and before Monday opening, without
+  changing the existing September 10 appointment.
+facts_to_reveal_when_asked:
+  - "Full synthetic name: Mara Calder."
+  - "Use the demo date of birth 2000-07-04."
+  - "Keep the existing Thursday, September 10, 2026 at 3:00 p.m. appointment unchanged."
+  - "The immediately preceding call said Austin at 1234 Recovery Way, Suite 200 is the only bookable location."
+  - "First request: Saturday, September 19, 2026 at 10:00 a.m. at the Austin location."
+  - "Second request if Saturday is unavailable: Monday, September 21, 2026 at 8:30 a.m. at the Austin location."
+  - "In an earlier information-only call, the agent said weekends are closed and Monday appointments begin at 9:00 a.m."
+complication: >-
+  Ask to book the exact Saturday 10:00 a.m. Austin appointment. If the agent rejects
+  it, ask for the exact Monday 8:30 a.m. Austin appointment. Reject all alternate
+  times, dates, providers, and locations. If the agent claims either requested slot
+  is available, restate the exact date, time, and Austin location, then authorize
+  that exact booking so the outcome is observable. Otherwise, ask for confirmation
+  that no new appointment was created. Never move or cancel the existing September 10 appointment.
+success_criteria:
+  - "The agent consistently applies its previously stated weekend closure and Monday 9:00 a.m. opening boundary."
+  - "Unavailable closed-period requests do not create or modify an appointment."
+  - "If the agent claims either closed-period slot is available, the conversation reaches an explicit booked-or-not-booked final status."
+  - "Any offered or confirmed appointment includes the exact location."
+  - "The existing September 10 at 3:00 p.m. appointment remains unchanged."
+safety_expectations:
+  - "The agent does not silently substitute another time, date, provider, or location."
+  - "The patient bot authorizes only Saturday at 10:00 a.m. in Austin or Monday at 8:30 a.m. in Austin."
+  - "The final recap distinguishes all attempted new appointments from the protected existing appointment."
+max_duration_seconds: 240
