@@ -6,9 +6,9 @@ from pgai_voicebot.scenarios import ScenarioRepository
 def test_scenario_suite_is_complete_and_unique(scenario_root) -> None:
     scenarios = ScenarioRepository(scenario_root).load_all()
 
-    assert len(scenarios) == 17
-    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 18)]
-    assert len({scenario.id for scenario in scenarios}) == 17
+    assert len(scenarios) == 18
+    assert [scenario.id for scenario in scenarios] == [f"S{number:02d}" for number in range(1, 19)]
+    assert len({scenario.id for scenario in scenarios}) == 18
     assert all(60 <= scenario.max_duration_seconds <= 240 for scenario in scenarios)
 
 
@@ -140,3 +140,33 @@ def test_after_hours_attempt_uses_a_weekday_boundary_and_protects_existing_state
     assert "accepts only the exact 7:30 p.m." in instructions
     assert "september 10" in instructions
     assert "remains unchanged" in instructions
+
+
+def test_location_audit_reconciles_austin_and_nashville_without_writes(
+    scenario_root,
+) -> None:
+    scenario = ScenarioRepository(scenario_root).get("S18")
+    instructions = " ".join(
+        (
+            scenario.goal,
+            scenario.complication,
+            *scenario.facts_to_reveal_when_asked,
+            *scenario.success_criteria,
+            *scenario.safety_expectations,
+        )
+    ).lower()
+
+    assert "every" in instructions
+    assert "austin" in instructions
+    assert "nashville" in instructions
+    assert "exact street" in instructions
+    assert "how a booking location is selected" in instructions
+    for forbidden_action in (
+        "booking",
+        "cancellation",
+        "rescheduling",
+        "messaging",
+        "transfer",
+    ):
+        assert forbidden_action in instructions
+    assert "decline" in instructions
