@@ -23,9 +23,9 @@ Automated checks cannot determine whether a voice sounds natural or whether ever
 | [x] | `call-15` | 153.0s | [MP3](../artifacts/final/call-15/recording.mp3) | [Text](../artifacts/final/call-15/transcript.md) | Rejection of 7:30 p.m., no substituted booking, and unchanged existing appointment reviewed. |
 | [x] | `call-16` | 171.2s | [MP3](../artifacts/final/call-16/recording.mp3) | [Text](../artifacts/final/call-16/transcript.md) | `BUG-04`: Austin-only claim and rejection of Nashville as an active site reviewed. |
 | [x] | `call-17` | 151.4s | [MP3](../artifacts/final/call-17/recording.mp3) | [Text](../artifacts/final/call-17/transcript.md) | Both closed-period rejections, exact Austin location, no substitute, and unchanged existing appointment reviewed. |
-| [ ] | `call-18` | 204.3s | [MP3](../artifacts/final/call-18/recording.mp3) | [Text](../artifacts/final/call-18/transcript.md) | Verify the safe coverage/cost distinction, unnecessary DOB request, circular clinic-contact route, and longer-call coherence. |
-| [ ] | `call-19` | 126.4s | [MP3](../artifacts/final/call-19/recording.mp3) | [Text](../artifacts/final/call-19/transcript.md) | `BUG-05`: verify Rowan clearly identifies himself, never claims permission, receives exact appointment details, and completes the cancellation. |
-| [ ] | `call-20` | 156.0s | [MP3](../artifacts/final/call-20/recording.mp3) | [Text](../artifacts/final/call-20/transcript.md) | `BUG-05`: verify Mara authorizes no write action and the agent reports no September 10 appointment or other upcoming visit. |
+| [x] | `call-18` | 204.3s | [MP3](../artifacts/final/call-18/recording.mp3) | [Text](../artifacts/final/call-18/transcript.md) | Safe coverage/cost distinction, unnecessary DOB request, circular clinic-contact route, and longer-call coherence reviewed. |
+| [x] | `call-19` | 126.4s | [MP3](../artifacts/final/call-19/recording.mp3) | [Text](../artifacts/final/call-19/transcript.md) | `BUG-05`: Rowan clearly identifies himself, never claims permission, receives exact appointment details, and completes the cancellation. |
+| [x] | `call-20` | 156.0s | [MP3](../artifacts/final/call-20/recording.mp3) | [Text](../artifacts/final/call-20/transcript.md) | `BUG-05`: Mara authorizes no write action and the agent reports no September 10 appointment or other upcoming visit. |
 
 ## For calls 12–17
 
@@ -43,4 +43,4 @@ Automated checks cannot determine whether a voice sounds natural or whether ever
 
 ## After listening
 
-Calls 01–17 are accepted and their metadata and evaluation review statuses are `passed`. Calls 18–20 remain pending. Acceptance means the audio and transcript are usable evidence, not that the assessment agent succeeded or that the appointment backend independently contained the states it reported.
+All twenty calls are accepted and their metadata and evaluation review statuses are `passed`. Acceptance means the audio and transcript are usable evidence, not that the assessment agent succeeded or that the appointment backend independently contained the states it reported.

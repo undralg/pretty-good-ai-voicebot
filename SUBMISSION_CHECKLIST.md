@@ -7,9 +7,9 @@
 - [x] Calls 01–10 passed manual listening review.
 - [x] `call-11` passed audio/transcript review; document that appointment states were not independently verified.
 - [x] Calls 12–17 passed manual listening and transcript review.
-- [ ] Listen to `call-18` and mark it passed or exclude it.
-- [ ] Listen to `call-19` and `call-20` and mark them passed or exclude them.
-- [x] Bug report is limited to five defensible findings with explicit limitations.
+- [x] `call-18` passed manual listening and transcript review.
+- [x] `call-19` and `call-20` passed manual listening and transcript review.
+- [x] Bug report distinguishes four confirmed findings from one policy-dependent authorization finding with explicit limitations.
 - [x] Capability matrix separates assessment requirements from unknown test-line configuration.
 
 ## Code and documentation

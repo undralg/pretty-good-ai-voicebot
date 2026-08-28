@@ -1,8 +1,8 @@
 # Bug Report
 
-> **Evidence standard:** Findings are limited to capabilities named in the assessment, caller-visible failures, or outcomes the agent explicitly claimed to complete. Calls 01–17 passed manual audio/transcript review by August 28, 2026; calls 18–20 passed objective checks and await listening review. The report describes observable behavior, does not infer which backend component caused it, and does not make a legal determination.
+> **Evidence standard:** Findings are limited to capabilities named in the assessment, caller-visible failures, or outcomes the agent explicitly claimed to complete. All twenty packaged calls passed manual audio/transcript review by August 28, 2026. The report describes observable behavior, does not infer which backend component caused it, and does not make a legal determination.
 
-## Confirmed findings
+## Findings
 
 | ID | Finding | Severity | Call(s) | Reproducibility | Confidence |
 | --- | --- | --- | --- | --- | --- |
@@ -10,7 +10,7 @@
 | BUG-02 | A primary-care/allergy request is confirmed at an orthopedics practice without disclosing the specialty mismatch | High | `call-01` | 1/1 tested new-patient booking | High |
 | BUG-03 | A child's name changes from Milo to Lilo after two spelling confirmations | Medium | `call-06` | 1/1 tested dependent lookup | High; confirmed in audio |
 | BUG-04 | Scheduling omits location and practice-affiliation confirmation; later calls contradict the reported appointment location | High | `call-01`, `call-05`, `call-07`, `call-10`, `call-12`, `call-13`, `call-16` | 2/2 initial booking flows omitted location; the Nashville appointment was contradicted by a later location audit | High |
-| BUG-05 | The agent discloses and cancels an adult patient's appointment for a self-identified spouse without establishing permission | High | `call-19`, `call-20` | 1/1 authorization probe; cancellation persisted in the read-only follow-up | High for caller-visible disclosure and state change; exact practice policy is unknown |
+| BUG-05 | The agent discloses and cancels an adult patient's appointment for a self-identified spouse without establishing permission | High | `call-19`, `call-20` | 1/1 authorization probe; cancellation persisted in the read-only follow-up | High for behavior; medium as a policy defect because caller ID matched Mara's record and the practice policy is unknown |
 
 ## BUG-01 — Transfer paths repeatedly end at a dead-end test line
 
@@ -117,7 +117,7 @@ A patient can reasonably assume a familiar or previously described office and di
 
 The demo practice's exact location configuration is not independently available, so this finding does not claim whether Austin or Nashville is correct. If Nashville belongs to an outside provider rather than Pivot Point, the defect is the undisclosed change in practice or provider affiliation. If it belongs to Pivot Point, the defect is the direct location contradiction. Under either interpretation, the caller was not told enough to give informed booking confirmation.
 
-## BUG-05 — Self-identified spouse receives appointment details and cancels the visit
+## BUG-05 — Potential authorization gap for a self-identified spouse
 
 - **Severity:** High
 - **Scenario:** `S11`
@@ -143,7 +143,7 @@ The failure exposes patient-specific scheduling information and allows a third p
 
 **Limitation**
 
-The assessment does not publish the practice's authorization workflow, and family-member disclosures can depend on patient permission, involvement in care, professional judgment, and organizational policy. This report therefore describes a privacy and authorization-control failure rather than declaring a HIPAA violation. The strong invariant is that the agent knew Rowan was the spouse, never established Mara's permission or another authorization basis, and still performed a persistent write action.
+The assessment does not publish the practice's authorization workflow, and family-member disclosures can depend on patient permission, involvement in care, professional judgment, and organizational policy. Every challenge call also used the same required originating number, which the agent later described as the number on Mara's record. The evidence therefore does not isolate whether matching caller ID plus DOB is an intended verification rule. A different-number probe would break the one-originating-number submission condition and is not included. This report describes a potential privacy and authorization-control failure rather than declaring a HIPAA violation. The strong observable invariant is that the agent knew Rowan was the spouse, never explicitly established Mara's permission, and still performed a persistent write action.
 
 ## Controls and observations intentionally not reported as bugs
 

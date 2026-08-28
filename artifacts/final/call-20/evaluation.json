@@ -8,7 +8,7 @@
     "longest_detected_silence_seconds": 1.9
   },
   "transcript_structure_check": "passed",
-  "manual_audio_review": "pending",
+  "manual_audio_review": "passed",
   "qa_summary": "A read-only call by Mara reported no upcoming appointments, confirming that the September 10 cancellation claimed in call-19 persisted.",
   "bug_ids": [
     "BUG-05"

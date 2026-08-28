@@ -7,7 +7,7 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 ### 0:00–0:25 — Goal and result
 
 - Explain that the system is an automated synthetic patient calling only the assessment number.
-- State the result: twenty chronological calls, five defensible bugs, and deeper audits for rescheduling, location consistency, office hours, insurance grounding, and authorization state.
+- State the result: twenty chronological calls, four confirmed bugs, one policy-dependent authorization finding, and deeper audits for rescheduling, location consistency, office hours, insurance grounding, and authorization state.
 
 ### 0:25–1:10 — Architecture and engineering choices
 
@@ -24,8 +24,8 @@ Both videos must be public, use the submitter's own voice, and show the submitte
 ### 1:45–2:35 — Strongest findings
 
 - Show `BUG_REPORT.md`.
-- Lead with the self-identified spouse receiving Mara's exact appointment details and completing a cancellation that a read-only follow-up confirmed.
-- Then show the four-of-four dead-end transfer pattern.
+- Lead with the four-of-four dead-end transfer pattern.
+- Then show the self-identified spouse receiving Mara's appointment details and completing a cancellation, while explaining that matching caller ID plus DOB may be the test line's intended verification rule.
 - Show the primary-care/allergy request booked into orthopedics.
 - Briefly mention the confirmed Milo-to-Lilo corruption and the booking-location omission that later became an Austin-versus-Nashville contradiction.
 - Explain that clinical non-answers, minor-account creation, and unknown demo configuration were deliberately not overclaimed.
