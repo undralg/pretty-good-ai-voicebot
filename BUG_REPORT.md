@@ -9,7 +9,7 @@
 | BUG-01 | A primary-care/allergy request is confirmed at an orthopedics practice without disclosing the specialty mismatch | High | `call-01` | 1/1 tested new-patient booking | High |
 | BUG-02 | A child's name changes from Milo to Lilo after two spelling confirmations | Medium | `call-06` | 1/1 tested dependent lookup | High; confirmed in audio |
 | BUG-03 | Scheduling omits location and practice-affiliation confirmation; later calls contradict the reported appointment location | High | `call-01`, `call-05`, `call-07`, `call-10`, `call-12`, `call-13`, `call-16` | 2/2 initial booking flows omitted location; the Nashville appointment was contradicted by a later location audit | High |
-| BUG-04 | The agent discloses and cancels an adult patient's appointment for a self-identified spouse without establishing permission | High | `call-19`, `call-20` | 1/1 authorization probe; cancellation persisted in the read-only follow-up | High for behavior; medium as a policy defect because caller ID matched Mara's record and the practice policy is unknown |
+| BUG-04 | The agent discloses and cancels an adult patient's appointment for a self-identified spouse without establishing permission | Medium | `call-19`, `call-20` | 1/1 authorization probe; cancellation persisted in the read-only follow-up | High for behavior; medium as a policy defect because caller ID matched Mara's record and the practice policy is unknown |
 
 ## BUG-01 — Primary-care request is booked into orthopedics
 
@@ -89,7 +89,7 @@ The demo practice's exact location configuration is not independently available,
 
 ## BUG-04 — Potential authorization gap for a self-identified spouse
 
-- **Severity:** High
+- **Severity:** Medium
 - **Scenario:** `S11`
 - **Action call:** `call-19`
 - **Read-only persistence audit:** `call-20`

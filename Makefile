@@ -1,13 +1,18 @@
 PYTHON ?= python3.12
+UV ?= uv
 VENV := .venv
 BIN := $(VENV)/bin
 
-.PHONY: install test lint validate list dry-run rotate-key preflight serve live-stack
+.PHONY: install lock lock-check test lint validate list dry-run rotate-key preflight serve live-stack
 
 install:
-	$(PYTHON) -m venv $(VENV)
-	$(BIN)/python -m pip install --upgrade pip
-	$(BIN)/python -m pip install -e '.[dev]'
+	$(UV) sync --python $(PYTHON) --extra dev --locked
+
+lock:
+	$(UV) lock
+
+lock-check:
+	$(UV) lock --check
 
 test:
 	$(BIN)/pytest

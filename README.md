@@ -2,7 +2,7 @@
 
 Python automated-patient simulator for the Pretty Good AI engineering challenge.
 
-> **Current status:** The live voice stack is implemented, tested, and published at [github.com/undralg/pretty-good-ai-voicebot](https://github.com/undralg/pretty-good-ai-voicebot). Twenty-nine sequential attempts produced 28 recordings; twenty chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. All twenty passed manual audio/transcript review. The latest linked pair records a spouse disclosure/cancellation and a read-only call confirming that the cancellation persisted. Appointment states, locations, and practice hours remain agent-reported rather than independently inspected.
+> **Current status:** The live voice stack is implemented, tested, and published at [github.com/undralg/pretty-good-ai-voicebot](https://github.com/undralg/pretty-good-ai-voicebot). Twenty chronological calls are packaged with dual-channel MP3s, two-speaker transcripts, immutable scenario snapshots, metadata, and evaluations. All twenty passed manual audio/transcript review. The latest linked pair records a spouse disclosure/cancellation and a read-only call confirming that the cancellation persisted. Appointment states, locations, and practice hours remain agent-reported rather than independently inspected.
 
 ## What it does
 
@@ -32,14 +32,21 @@ Official references:
 
 Objective QA confirmed that every selected MP3 is stereo, both channels carry non-silent audio, durations are 81–223 seconds, and the longest detected silence is 5.5 seconds. These checks do not replace listening.
 
+## Demo videos
+
+- [Project walkthrough](https://www.loom.com/share/caddb7b529034676bcca12fd95722348) — architecture, evidence, and strongest findings (`2:57`)
+- [AI-assisted debugging — Test Results and Call Logic Review](https://www.loom.com/share/cb731557094b4b22bea0e7ed9758f56d) — dependency-warning diagnosis, maintainable fix, and verification (`18:22`)
+
 ## Local setup
 
-Requirements: Python 3.12, `ffmpeg`, `cloudflared`, a paid Twilio project with ConversationRelay enabled, one voice-capable originating number, and a funded OpenAI API project.
+Requirements: Python 3.12, [`uv`](https://docs.astral.sh/uv/getting-started/installation/), `ffmpeg`, `cloudflared`, a paid Twilio project with ConversationRelay enabled, one voice-capable originating number, and a funded OpenAI API project.
 
 ```bash
 make install
 cp .env.example .env
 ```
+
+`make install` syncs the committed `uv.lock`, including the `dev` extra, and fails if the lock is missing or stale. After changing dependencies in `pyproject.toml`, run `make lock` and commit both files. To update one package within its declared range, run `uv lock --upgrade-package <package>`, rerun the checks below, and commit the updated lock. Use `make lock-check` to verify that the files remain synchronized.
 
 Populate the ignored `.env`:
 
@@ -62,6 +69,7 @@ ARTIFACT_ROOT=artifacts/private
 
 ```bash
 # No paid calls.
+make lock-check
 make test
 make lint
 make validate
@@ -98,6 +106,6 @@ Current local result: **48 tests passed** and Ruff passed.
 
 ## Artifact handling
 
-`artifacts/private/` is ignored and contains all attempts, including excluded failures. `scripts/package_candidate_calls.py` copies an explicit chronological allowlist into `artifacts/final/`, removes the source number and provider Call SID from metadata, and marks every selection `pending_manual_audio_review`. It never promotes calls by globbing or by provider status alone.
+Raw attempts are kept in ignored `artifacts/private/` storage during review. `scripts/package_candidate_calls.py` copies an explicit chronological allowlist into `artifacts/final/`, removes the source number and provider Call SID from metadata, and marks every selection `pending_manual_audio_review`. It never promotes calls by globbing or by provider status alone.
 
 The transcripts and audio may still contain the dedicated Twilio originating number when the assessment agent says it aloud. That disclosure was reviewed and explicitly approved before public publication; it is a dedicated challenge number, not a personal phone number.
