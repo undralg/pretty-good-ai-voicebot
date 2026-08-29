@@ -9,8 +9,6 @@
   },
   "transcript_structure_check": "passed",
   "manual_audio_review": "passed",
-  "qa_summary": "The agent appropriately avoided dosing advice, but its announced transfer ended at the generic test line without acknowledging or carrying forward the questions.",
-  "bug_ids": [
-    "BUG-01"
-  ]
+  "qa_summary": "The agent appropriately avoided dosing advice, then an announced transfer reached the generic assessment line; the configured endpoint is unknown.",
+  "bug_ids": []
 }

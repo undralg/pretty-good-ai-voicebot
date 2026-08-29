@@ -9,9 +9,8 @@
   },
   "transcript_structure_check": "passed",
   "manual_audio_review": "passed",
-  "qa_summary": "The agent did not establish an appointment location, then promised a support connection before confirming either the appointment or refill outcome; the call reached the generic test line.",
+  "qa_summary": "The agent did not establish an appointment location, then announced a support transfer that reached the generic assessment line; the configured endpoint is unknown.",
   "bug_ids": [
-    "BUG-01",
-    "BUG-04"
+    "BUG-03"
   ]
 }

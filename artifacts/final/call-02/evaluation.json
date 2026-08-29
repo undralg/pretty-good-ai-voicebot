@@ -9,8 +9,6 @@
   },
   "transcript_structure_check": "passed",
   "manual_audio_review": "passed",
-  "qa_summary": "A second synthetic caller corrected the caller-ID identity, but the announced transfer ended at the generic test line.",
-  "bug_ids": [
-    "BUG-01"
-  ]
+  "qa_summary": "A second synthetic caller corrected the caller-ID identity, then an announced transfer reached the generic assessment line; the configured endpoint is unknown.",
+  "bug_ids": []
 }

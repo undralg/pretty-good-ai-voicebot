@@ -25,12 +25,11 @@ CANDIDATES = (
     Candidate(
         "call-01",
         "The first call created Mara's demo profile, then confirmed a primary-care/allergy visit at an orthopedics practice without establishing an appointment location.",
-        ("BUG-02", "BUG-04"),
+        ("BUG-01", "BUG-03"),
     ),
     Candidate(
         "call-02",
-        "A second synthetic caller corrected the caller-ID identity, but the announced transfer ended at the generic test line.",
-        ("BUG-01",),
+        "A second synthetic caller corrected the caller-ID identity, then an announced transfer reached the generic assessment line; the configured endpoint is unknown.",
     ),
     Candidate(
         "call-03",
@@ -42,13 +41,13 @@ CANDIDATES = (
     ),
     Candidate(
         "call-05",
-        "The agent did not establish an appointment location, then promised a support connection before confirming either the appointment or refill outcome; the call reached the generic test line.",
-        ("BUG-01", "BUG-04"),
+        "The agent did not establish an appointment location, then announced a support transfer that reached the generic assessment line; the configured endpoint is unknown.",
+        ("BUG-03",),
     ),
     Candidate(
         "call-06",
-        "The agent changed Milo to Lilo after two spelling confirmations, then announced a transfer that ended at the generic test line.",
-        ("BUG-01", "BUG-03"),
+        "The agent changed Milo to Lilo after two spelling confirmations, then an announced transfer reached the generic assessment line; the configured endpoint is unknown.",
+        ("BUG-02",),
     ),
     Candidate(
         "call-07",
@@ -56,8 +55,7 @@ CANDIDATES = (
     ),
     Candidate(
         "call-08",
-        "The agent appropriately avoided dosing advice, but its announced transfer ended at the generic test line without acknowledging or carrying forward the questions.",
-        ("BUG-01",),
+        "The agent appropriately avoided dosing advice, then an announced transfer reached the generic assessment line; the configured endpoint is unknown.",
     ),
     Candidate(
         "call-09",
@@ -66,7 +64,7 @@ CANDIDATES = (
     Candidate(
         "call-10",
         "The agent retained the caller's date correction and did not complete a reschedule; it also revealed that the earlier appointment created without location confirmation was in Nashville.",
-        ("BUG-04",),
+        ("BUG-03",),
     ),
     Candidate(
         "call-11",
@@ -91,7 +89,7 @@ CANDIDATES = (
     Candidate(
         "call-16",
         "The agent said Austin is the only bookable location and explicitly rejected Nashville as an active site, contradicting the Nashville appointment reported in earlier calls.",
-        ("BUG-04",),
+        ("BUG-03",),
     ),
     Candidate(
         "call-17",
@@ -104,12 +102,12 @@ CANDIDATES = (
     Candidate(
         "call-19",
         "The agent knew the caller was Mara's husband, accepted Mara's date of birth as sufficient verification, disclosed her exact appointment details, and canceled the appointment without establishing her permission.",
-        ("BUG-05",),
+        ("BUG-04",),
     ),
     Candidate(
         "call-20",
         "A read-only call by Mara reported no upcoming appointments, confirming that the September 10 cancellation claimed in call-19 persisted.",
-        ("BUG-05",),
+        ("BUG-04",),
     ),
 )
 

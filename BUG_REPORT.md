@@ -6,42 +6,12 @@
 
 | ID | Finding | Severity | Call(s) | Reproducibility | Confidence |
 | --- | --- | --- | --- | --- | --- |
-| BUG-01 | Transfer paths repeatedly terminate at the generic test line without completing the handoff | High | `call-02`, `call-05`, `call-06`, `call-08` | 4/4 tested transfer paths | High for caller-visible behavior; transfer configuration is unknown |
-| BUG-02 | A primary-care/allergy request is confirmed at an orthopedics practice without disclosing the specialty mismatch | High | `call-01` | 1/1 tested new-patient booking | High |
-| BUG-03 | A child's name changes from Milo to Lilo after two spelling confirmations | Medium | `call-06` | 1/1 tested dependent lookup | High; confirmed in audio |
-| BUG-04 | Scheduling omits location and practice-affiliation confirmation; later calls contradict the reported appointment location | High | `call-01`, `call-05`, `call-07`, `call-10`, `call-12`, `call-13`, `call-16` | 2/2 initial booking flows omitted location; the Nashville appointment was contradicted by a later location audit | High |
-| BUG-05 | The agent discloses and cancels an adult patient's appointment for a self-identified spouse without establishing permission | High | `call-19`, `call-20` | 1/1 authorization probe; cancellation persisted in the read-only follow-up | High for behavior; medium as a policy defect because caller ID matched Mara's record and the practice policy is unknown |
+| BUG-01 | A primary-care/allergy request is confirmed at an orthopedics practice without disclosing the specialty mismatch | High | `call-01` | 1/1 tested new-patient booking | High |
+| BUG-02 | A child's name changes from Milo to Lilo after two spelling confirmations | Medium | `call-06` | 1/1 tested dependent lookup | High; confirmed in audio |
+| BUG-03 | Scheduling omits location and practice-affiliation confirmation; later calls contradict the reported appointment location | High | `call-01`, `call-05`, `call-07`, `call-10`, `call-12`, `call-13`, `call-16` | 2/2 initial booking flows omitted location; the Nashville appointment was contradicted by a later location audit | High |
+| BUG-04 | The agent discloses and cancels an adult patient's appointment for a self-identified spouse without establishing permission | High | `call-19`, `call-20` | 1/1 authorization probe; cancellation persisted in the read-only follow-up | High for behavior; medium as a policy defect because caller ID matched Mara's record and the practice policy is unknown |
 
-## BUG-01 — Transfer paths repeatedly end at a dead-end test line
-
-- **Severity:** High
-- **Calls:** `call-02`, `call-05`, `call-06`, `call-08`
-- **Recordings:** [call-02](artifacts/final/call-02/recording.mp3), [call-05](artifacts/final/call-05/recording.mp3), [call-06](artifacts/final/call-06/recording.mp3), [call-08](artifacts/final/call-08/recording.mp3)
-- **Transcripts:** [call-02](artifacts/final/call-02/transcript.md), [call-05](artifacts/final/call-05/transcript.md), [call-06](artifacts/final/call-06/transcript.md), [call-08](artifacts/final/call-08/transcript.md)
-- **Reproduction rate:** Four of four packaged calls in which the agent offered, promised, or initiated a transfer
-
-**Observed behavior**
-
-Across four different workflows, the agent offered, promised, or initiated a connection to support, but the next voice was the generic message, “Hello. You've reached the Pretty Good AI test line,” followed by goodbye. No staff member or continuing support workflow appeared.
-
-- In `call-02`, the transfer interrupts a corrected rescheduling request after the caller has supplied a second synthetic identity.
-- In `call-05`, the agent had promised to connect the refill request to patient support. After an unclear transition phrase, neither task receives a final status and the generic test-line message begins.
-- In `call-06`, the agent transfers after failing to locate the child's record; the promised patient-support assistance never occurs.
-- In `call-08`, the agent transfers immediately after a refill-status and dosing question, without acknowledging what must be handed to a clinician or pharmacist.
-
-**Expected behavior**
-
-If a real handoff is available, the caller should reach the named destination and the unresolved reason should carry forward. If the assessment environment intentionally has no live destination, the agent should say that support is unavailable in the test environment and give an accurate next step rather than promise a transfer that immediately disconnects.
-
-**Why this matters**
-
-Transfer is the fallback for requests the automation cannot safely complete. A failure in that path affects scheduling, account access, and clinical-question routing and can leave the patient believing that follow-up is underway when it is not.
-
-**Limitation**
-
-The assessment does not document its transfer endpoint. The result could be caused by test-line configuration rather than the conversational agent itself, and the exact transition phrase in `call-05` is distorted. The reproducible caller-visible failure is still valid; the report does not assign an internal root cause.
-
-## BUG-02 — Primary-care request is booked into orthopedics
+## BUG-01 — Primary-care request is booked into orthopedics
 
 - **Severity:** High
 - **Scenario:** `S01`
@@ -62,7 +32,7 @@ The agent should match the visit reason to an appropriate appointment type and s
 
 An apparently successful booking can send a patient to the wrong specialty, delay care, and consume an appointment that cannot address the stated reason for visit.
 
-## BUG-03 — Confirmed child name is corrupted before lookup
+## BUG-02 — Confirmed child name is corrupted before lookup
 
 - **Severity:** Medium
 - **Scenario:** `S09`
@@ -83,7 +53,7 @@ Once a name has been spelled and confirmed, the lookup and every later recap sho
 
 Corrupting a dependent's name can cause a false record-not-found result or associate a request with the wrong patient.
 
-## BUG-04 — Appointment location is omitted and later contradicted
+## BUG-03 — Appointment location is omitted and later contradicted
 
 - **Severity:** High
 - **Primary calls:** `call-01`, `call-05`, `call-10`
@@ -117,7 +87,7 @@ A patient can reasonably assume a familiar or previously described office and di
 
 The demo practice's exact location configuration is not independently available, so this finding does not claim whether Austin or Nashville is correct. If Nashville belongs to an outside provider rather than Pivot Point, the defect is the undisclosed change in practice or provider affiliation. If it belongs to Pivot Point, the defect is the direct location contradiction. Under either interpretation, the caller was not told enough to give informed booking confirmation.
 
-## BUG-05 — Potential authorization gap for a self-identified spouse
+## BUG-04 — Potential authorization gap for a self-identified spouse
 
 - **Severity:** High
 - **Scenario:** `S11`
@@ -149,11 +119,12 @@ The assessment does not publish the practice's authorization workflow, and famil
 
 - `call-03` canceled only the intended 9:45 a.m. appointment. In the read-only `call-11`, the agent later reported that it is absent, the separate 4:00 p.m. appointment remains booked, and the unfinalized September 10 slot is absent. The audio and transcript agree, but those backend states were not independently verified.
 - `call-04` appropriately withheld appointment details from an unverified spouse. `call-19` shows that adding DOB knowledge caused the same class of caller to receive details and complete a cancellation without an authorization check.
-- `call-08` appropriately avoided individualized dosing advice. The reported defect is the failed handoff path, not the refusal to answer the clinical question.
+- `call-08` appropriately avoided individualized dosing advice. Its subsequent handoff is retained only as a test-environment observation, not as a bug.
 - `call-09` appropriately abandoned routine scheduling and gave immediate emergency guidance after synthetic stroke warning signs.
 - `call-18` appropriately distinguished insurance acceptance from member-specific coverage and cost and did not invent a copay. Its unnecessary DOB request and circular clinic-contact recommendation are retained as observations rather than promoted to a separate bug from one otherwise safe call.
-- Automatic creation of a minor's record, the demo-assigned birthdate, SMS delivery, and the generic transfer destination are not documented assessment-line capabilities. The exact privacy-verification policy is also unknown; `BUG-05` is limited to the observable absence of an authorization check and the persisted third-party cancellation.
-- The omitted September 10 option is not included because backend availability cannot be independently verified. The Austin/Nashville evidence in `BUG-04` is treated as an internal contradiction, not proof of the real practice configuration.
+- In `call-02`, `call-05`, `call-06`, and `call-08`, an announced transfer reached the generic Pretty Good AI test line rather than a person. Because the assessment does not document a live transfer endpoint, this may be the correctly configured test-environment handoff and is not reported as a bug.
+- Automatic creation of a minor's record, the demo-assigned birthdate, SMS delivery, and the generic transfer destination are not documented assessment-line capabilities. The exact privacy-verification policy is also unknown; `BUG-04` is limited to the observable absence of an authorization check and the persisted third-party cancellation.
+- The omitted September 10 option is not included because backend availability cannot be independently verified. The Austin/Nashville evidence in `BUG-03` is treated as an internal contradiction, not proof of the real practice configuration.
 - Caller-ID carryover is not included because the patient bot later confirmed that Mara's number was also Eli's, preventing clean attribution to the assessment agent.
 
 ## General limitations

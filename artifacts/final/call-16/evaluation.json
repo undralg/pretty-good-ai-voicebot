@@ -11,6 +11,6 @@
   "manual_audio_review": "passed",
   "qa_summary": "The agent said Austin is the only bookable location and explicitly rejected Nashville as an active site, contradicting the Nashville appointment reported in earlier calls.",
   "bug_ids": [
-    "BUG-04"
+    "BUG-03"
   ]
 }
